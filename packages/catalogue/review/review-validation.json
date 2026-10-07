@@ -1,0 +1,44 @@
+{
+  "generatedAtUtc": "2026-09-28T03:03:33.822556+00:00",
+  "counts": {
+    "records": 100,
+    "uniqueIds": 100,
+    "annotationCandidates": 11,
+    "auditedPublishedAnnotations": 17
+  },
+  "sourceHashesUnchangedAfterReview": true,
+  "jsonRoundTripFiles": [
+    "photo-review.v1.json",
+    "source-annotation-candidates.v1.json",
+    "published-annotation-audit.v1.json"
+  ],
+  "visualEvidenceActuallyOpened": {
+    "contactSheets": 25,
+    "individualOriginals": [
+      "52831",
+      "52896",
+      "52968",
+      "52982",
+      "53006",
+      "53011",
+      "53025",
+      "53030",
+      "53053",
+      "53092",
+      "53208",
+      "53230",
+      "53260",
+      "53262",
+      "53281",
+      "53289",
+      "53389"
+    ]
+  },
+  "commands": [
+    "bundled Python scripts/content/review/inspect_sources.py",
+    "functions view_image: inspection-sheets/photos-01.jpg through photos-25.jpg with detail original",
+    "functions view_image: 17 original photos listed in individualOriginalIds with detail original",
+    "bundled Python scripts/content/review/build_review.py"
+  ],
+  "nativeTestsRun": false
+}

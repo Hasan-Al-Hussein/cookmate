@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "catalogue": {
+    "version": "cookmate-2026-09-28.v2",
+    "fingerprint": "383be590385bea53149d7697ae7faed6b6098efda12e7679a0524cfaab2df217"
+  },
+  "revisionId": "bundled:383be590385bea53149d7697ae7faed6b6098efda12e7679a0524cfaab2df217",
+  "review": {
+    "reviewerId": "codex-source-comparison",
+    "reviewedAt": "2026-10-01T01:36:43Z",
+    "source": "CookMate-Dataset.xlsx, Instructions!A188:D192",
+    "workbookSha256": "c30b9ad983a0cde05f3263a088d0b9a640afcc5acff9b1fca8515a1e8faffe65",
+    "scope": "Codex compared the five original worksheet passages directly with the bundled text. These explicit presentation roles preserve all source text and anchors. This is not human approval, culinary verification, a correction, or a content-rights review."
+  },
+  "recipes": [
+    {
+      "recipeId": "52819",
+      "passages": [
+        {
+          "sequence": 1,
+          "role": "introduction",
+          "source": { "sheet": "Instructions", "row": 188, "column": "D" },
+          "rawText": "Cooking in a cajun spice and cayenne pepper marinade makes this fish super succulent and flavoursome. Top with a zesty dressing and serve in a tortilla for a quick, fuss-free main that's delightfully summery."
+        },
+        {
+          "sequence": 2,
+          "role": "procedure",
+          "source": { "sheet": "Instructions", "row": 189, "column": "D" },
+          "rawText": "On a large plate, mix the cajun spice and cayenne pepper with a little seasoning and use to coat the fish all over."
+        },
+        {
+          "sequence": 3,
+          "role": "procedure",
+          "source": { "sheet": "Instructions", "row": 190, "column": "D" },
+          "rawText": "Heat a little oil in a frying pan, add in the fish and cook over a medium heat until golden. Reduce the heat and continue frying until the fish is cooked through, about 10 minutes. Cook in batches if you don’t have enough room in the pan."
+        },
+        {
+          "sequence": 4,
+          "role": "procedure",
+          "source": { "sheet": "Instructions", "row": 191, "column": "D" },
+          "rawText": "Meanwhile, prepare the dressing by combining all the ingredients with a little seasoning."
+        },
+        {
+          "sequence": 5,
+          "role": "procedure",
+          "source": { "sheet": "Instructions", "row": 192, "column": "D" },
+          "rawText": "Soften the tortillas by heating in the microwave for 5-10 seconds. Pile high with the avocado, lettuce and spring onion, add a spoonful of salsa, top with large flakes of fish and drizzle over the dressing."
+        }
+      ]
+    }
+  ]
+}

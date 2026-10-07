@@ -1,0 +1,12 @@
+
+> cookmate-workspace@0.1.0 typecheck
+> npm run typecheck --workspaces --if-present && tsc -p tsconfig.tools.json
+
+
+> @cookmate/mobile@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @cookmate/contracts@0.1.0 typecheck
+> tsc -p tsconfig.json
+

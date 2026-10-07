@@ -1,0 +1,659 @@
+{
+  "formatVersion": 1,
+  "createdAtUtc": "2026-09-28T05:59:14.207Z",
+  "status": "Data gate amendment frozen for integration; independent RPF-01 closed",
+  "scope": "Incremental recovery performance amendment; desktop data verification only",
+  "baselineManifest": "packages/domain/evidence/current/data-source-freeze.json",
+  "baselineManifestSha256": "cd54f2f1cd71e6e2b416ab0574ef8696539a08c03501dbe720f2c04416e19e74",
+  "previousCorrectnessAmendment": "packages/domain/evidence/current/data-assistant-recovery-amendment.json",
+  "previousCorrectnessAmendmentSha256": "687beacd639110a3befa5335a4e3040e723f110624cdab4c2f1d1415c900dd5f",
+  "apiVersion": "2",
+  "localCommandSchemaVersion": 2,
+  "databaseSchemaVersion": 2,
+  "operationReceiptSchemaVersion": 1,
+  "contractSchemaFingerprint": "af10dd470af0c2f68e02713d88dd2b21b655673dfedccde610e255a70c36d569",
+  "catalogueVersion": "cookmate-2026-09-27.v1",
+  "catalogueFingerprint": "1c564aed197f0ff13e0c8a81c95d775960f8c7f021cd3e948f116ae471b5e1ef",
+  "fileCount": 85,
+  "changedSinceCorrectnessAmendment": 15,
+  "checks": [
+    {
+      "command": "node --import tsx --test --test-concurrency=1 --test-reporter=tap packages/domain/test/*.test.ts packages/catalogue/test/*.test.ts",
+      "result": "168 passed, 0 failed",
+      "durationMs": 24235.816
+    },
+    {
+      "command": "domain TypeScript; all Data production TypeScript; 15 amended-file Prettier check",
+      "result": "passed, no diagnostics"
+    },
+    {
+      "command": "independent focused recoveryGate/writerObserver tests and isolated orphan/query-plan/factory/cleanup probe",
+      "result": "14 passed; probe exit0; RPF-01 closed",
+      "durationMs": 8200.0241
+    }
+  ],
+  "evidence": [
+    {
+      "path": "packages/domain/evidence/current/recovery-performance-suite.tap",
+      "sha256": "6bda9c75386be48295118942aa6493895f4c0e2a1d8a77b562e564ab37251525"
+    },
+    {
+      "path": "packages/domain/evidence/current/recovery-performance-focused.txt",
+      "sha256": "33855ed675c2dc07532db6dcc34831a215fe2ecd11f1838c80fb2d501aed0436"
+    },
+    {
+      "path": "packages/domain/evidence/current/recovery-performance-suite-repaired.tap",
+      "sha256": "02993dc8ac7bc95d2d87430ca34a77f6cacdb190f7184d77c37b7505dacc4b98"
+    },
+    {
+      "path": "packages/domain/evidence/current/recovery-performance-review.md",
+      "sha256": "5ee293b7dbdc79081cdc24c4858f1f5535bb2aa2eb8d9127c4a3449964ed3120"
+    },
+    {
+      "path": "packages/domain/evidence/current/recovery-performance-probe.ts",
+      "sha256": "98d790c74128e0b9ea5462045ea401b872d86d5948ba0a8791b6a53c269c3e6e"
+    },
+    {
+      "path": "packages/domain/evidence/current/RECOVERY_PERFORMANCE_AMENDMENT_2026-09-28.md",
+      "sha256": "8fccf8332ca05b66f088325ee4175d06b73b8369a27429c5cbd9f09ce96aaee8"
+    }
+  ],
+  "files": [
+    {
+      "path": "apps/mobile/src/data/acceptanceRecords.ts",
+      "previousSha256": "2fc8d50ee013870adc0444a986dd044d959a90fd76c3a8d306c2142d96541939",
+      "sha256": "2fc8d50ee013870adc0444a986dd044d959a90fd76c3a8d306c2142d96541939",
+      "bytes": 5085,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/actionPlanRecords.ts",
+      "previousSha256": "3e8e991f3b1e4b18fd771f61212b099ea98622bf61352c66315a4dfd173b23d5",
+      "sha256": "3e8e991f3b1e4b18fd771f61212b099ea98622bf61352c66315a4dfd173b23d5",
+      "bytes": 12369,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/assistantActionRepository.ts",
+      "previousSha256": "d4f00e808d74f3e178970c4d41e0a4c8c1d20d2698564609e4eb26929846794f",
+      "sha256": "5abf66a981abc8b7f11832fe6d2807c5f793c92c27f41ef8b5d32ae9784d821a",
+      "bytes": 33240,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/assistantContextRepository.ts",
+      "previousSha256": "41889bcad82323cb64f89bfd47bbd73d2c4c7b28c67e9c727b8c11ba8e89054f",
+      "sha256": "41889bcad82323cb64f89bfd47bbd73d2c4c7b28c67e9c727b8c11ba8e89054f",
+      "bytes": 19012,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/assistantIntentRecords.ts",
+      "previousSha256": "ec942cb09fbb0cf52732453801f03bd92bfb8afcbf0f8f1fe3ecc53e99f357fa",
+      "sha256": "ec942cb09fbb0cf52732453801f03bd92bfb8afcbf0f8f1fe3ecc53e99f357fa",
+      "bytes": 9090,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/assistantRecordValidation.ts",
+      "previousSha256": "5a7b6248759921f8132ce3635108ff6c6cf257f883a9c671b3a350a3e72713c3",
+      "sha256": "5a7b6248759921f8132ce3635108ff6c6cf257f883a9c671b3a350a3e72713c3",
+      "bytes": 2800,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/assistantRecovery.ts",
+      "previousSha256": "a70a7ec9bc054d70c7258c96326675566a75ac78f5b2a3e0e9772764e07b8304",
+      "sha256": "2abbb425e848002cfc94fd259e5e466840ebc2f6e0745906564808c985824595",
+      "bytes": 2857,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/assistantTurnRepository.ts",
+      "previousSha256": "a65da4170f6cc5ffe8e57703037950074ee41bde4cd79800a78e9036ba1d8b0a",
+      "sha256": "5a2a4ca4e551e791c79b6b92c253d559a82117b28fddbb0af836e85bc2894375",
+      "bytes": 31028,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/catalogueRepository.ts",
+      "previousSha256": "3b85aaaade25a41b814321db72d544f659ed4ae27745fc60e3fb36f25a3b9e21",
+      "sha256": "3b85aaaade25a41b814321db72d544f659ed4ae27745fc60e3fb36f25a3b9e21",
+      "bytes": 3901,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/clearConversationCommand.ts",
+      "previousSha256": "64564eb129fba9392ab9cb7c8ee0998db666dee11c7706dcc4fc5b36134e1bba",
+      "sha256": "64564eb129fba9392ab9cb7c8ee0998db666dee11c7706dcc4fc5b36134e1bba",
+      "bytes": 2586,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/commandExecutor.ts",
+      "previousSha256": "ce9693b81529b7895e6621a09b92987c0c72f28360dcae51f4b293f9c932406b",
+      "sha256": "fec339a10bba8dd2350e6aaef6b7649176dd78349223e935f3e18cf7e4f38d68",
+      "bytes": 20892,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/conversationRecords.ts",
+      "previousSha256": "883598329155a31c176807c7502a1c006f0629fc82688f8a4c1e81fc00a737d2",
+      "sha256": "883598329155a31c176807c7502a1c006f0629fc82688f8a4c1e81fc00a737d2",
+      "bytes": 5644,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/conversationRepository.ts",
+      "previousSha256": "70a3ce0ec952b37dcc35c6b5b7e1b47750d4081f93a5d87f75fe53123499b99b",
+      "sha256": "b33c0aad1aacf8995400d300f5e409a72eb8e9f5c22039c0d7af5d6d4b3633ab",
+      "bytes": 6948,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/directActionReview.ts",
+      "previousSha256": "725081030c591fb80bca0f8fcd82c23ead6daa948b0642c0d7568f45ccdcf209",
+      "sha256": "725081030c591fb80bca0f8fcd82c23ead6daa948b0642c0d7568f45ccdcf209",
+      "bytes": 10909,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/directRecoveryRepository.ts",
+      "previousSha256": "c23ecd3037216d6986c779177d0d6b984a8a7a953d15b3b9073005d00a3403da",
+      "sha256": "5f356ffc5977be9138a3fd665ff7346fd9a675c1e57318f9791ed5806a4a3ff8",
+      "bytes": 6123,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/favouriteCommands.ts",
+      "previousSha256": "abf1417ac32a0a7e602d98c8cbceab13f4bd74e92df9eb1ef4f9964df80cb371",
+      "sha256": "abf1417ac32a0a7e602d98c8cbceab13f4bd74e92df9eb1ef4f9964df80cb371",
+      "bytes": 2003,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/initialize.ts",
+      "previousSha256": "c5bdb0e13b443dc40d55252d40fd51f95282c001d0d78f7003624dba3805da53",
+      "sha256": "c5bdb0e13b443dc40d55252d40fd51f95282c001d0d78f7003624dba3805da53",
+      "bytes": 9984,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/localStore.ts",
+      "previousSha256": "b0ec1460fc65a159111da5f90942845f67e52c0442c12854c2bb11d0945dca41",
+      "sha256": "8b63190debb37518785a3b17b63e098801d98f91e07fe31d7c7e924759217e16",
+      "bytes": 14342,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/memoryAcceptance.ts",
+      "previousSha256": "db8c6e3b447b7c8714df84a021132a00a94840714f492fb6dd9d8d912ddd6488",
+      "sha256": "db8c6e3b447b7c8714df84a021132a00a94840714f492fb6dd9d8d912ddd6488",
+      "bytes": 4818,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/memoryRecords.ts",
+      "previousSha256": "e13a2bd34e1e9d78ba6e75b21df1b10c62985e2a449479dc1c1c0240ee60d39a",
+      "sha256": "e13a2bd34e1e9d78ba6e75b21df1b10c62985e2a449479dc1c1c0240ee60d39a",
+      "bytes": 11602,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/nativeAdapter.ts",
+      "previousSha256": "492337b44b7d4b8e332f7aeb6b82fa5b74a8fc513de3a72ff1163590579e4b91",
+      "sha256": "492337b44b7d4b8e332f7aeb6b82fa5b74a8fc513de3a72ff1163590579e4b91",
+      "bytes": 1469,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/nativeConnection.ts",
+      "previousSha256": "a5316ffa650da4888f33462d36325e4423e7e5c9332bbab8e9af3d9651aaf6ef",
+      "sha256": "a5316ffa650da4888f33462d36325e4423e7e5c9332bbab8e9af3d9651aaf6ef",
+      "bytes": 776,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/nativeStore.ts",
+      "previousSha256": "039c7099b84719dc85c3a6fa5c2fc3b2f4cc50fa577b94b60a36de22cf8450a5",
+      "sha256": "039c7099b84719dc85c3a6fa5c2fc3b2f4cc50fa577b94b60a36de22cf8450a5",
+      "bytes": 635,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/planCommands.ts",
+      "previousSha256": "d24873bd955db2cae9f6c66622267598be631567539f98b8e1208e4234e2fe54",
+      "sha256": "d24873bd955db2cae9f6c66622267598be631567539f98b8e1208e4234e2fe54",
+      "bytes": 11437,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/preferenceCommands.ts",
+      "previousSha256": "0210615c0630a893e5217f190d762a817adb4f045377db9c7cc5616b6fdd6a5d",
+      "sha256": "0210615c0630a893e5217f190d762a817adb4f045377db9c7cc5616b6fdd6a5d",
+      "bytes": 4409,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/preferenceProvenance.ts",
+      "previousSha256": "e9be23e89d05e7cf2247383670d051941978aca422cf47836068ea3fb7b45a1f",
+      "sha256": "e9be23e89d05e7cf2247383670d051941978aca422cf47836068ea3fb7b45a1f",
+      "bytes": 3024,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/query.ts",
+      "previousSha256": "87a838fc61820f1a6f333483ef1c21bce6843a44663504ab9a5bec07dd3081dc",
+      "sha256": "87a838fc61820f1a6f333483ef1c21bce6843a44663504ab9a5bec07dd3081dc",
+      "bytes": 1463,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/recoveryGate.ts",
+      "previousSha256": null,
+      "sha256": "9d917a06315fd64fc0f664c9b44c9fcb2187e53bd512cb9e2ca14cd4f2ce65d2",
+      "bytes": 16567,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/schema.ts",
+      "previousSha256": "9bf45abc61f1cca2b77cbbbf2a0ea02dbd867883939c89148cb82e5666b0e72a",
+      "sha256": "9bf45abc61f1cca2b77cbbbf2a0ea02dbd867883939c89148cb82e5666b0e72a",
+      "bytes": 15499,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/schemaCompatibility.ts",
+      "previousSha256": "39a0652fd2509508b87662633af54feb685c9ab7845226a2e09d923487569d7b",
+      "sha256": "39a0652fd2509508b87662633af54feb685c9ab7845226a2e09d923487569d7b",
+      "bytes": 1302,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/shoppingCommands.ts",
+      "previousSha256": "0c73253f13659c937761795dafc207892b3dcf8f4998055a57b532b11925f677",
+      "sha256": "0c73253f13659c937761795dafc207892b3dcf8f4998055a57b532b11925f677",
+      "bytes": 3788,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/shoppingRepository.ts",
+      "previousSha256": "8e130cab7a6b3089dacb98a0bd3bb4a83acdac5638c11d3d66cf22b21e8459d4",
+      "sha256": "8e130cab7a6b3089dacb98a0bd3bb4a83acdac5638c11d3d66cf22b21e8459d4",
+      "bytes": 11941,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/sql.ts",
+      "previousSha256": "b76b59f4d539f5ab64e5b0d97266458a49ad1f099cb0abd47520ee6bab660fcf",
+      "sha256": "f301a04c8592c5b961c4c3ce68a5fe4e152a1f007909677a5f94a663038c3c55",
+      "bytes": 9296,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "apps/mobile/src/data/stateRepositories.ts",
+      "previousSha256": "39f33fe6969045632ae8166bac1908db98f49f143b35f178bc94f2d794acd60d",
+      "sha256": "39f33fe6969045632ae8166bac1908db98f49f143b35f178bc94f2d794acd60d",
+      "bytes": 6564,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/data/storedText.ts",
+      "previousSha256": "dd4a570737846353f4628adae66890f414c8f389fcbd374d440092a2d1ff14d3",
+      "sha256": "dd4a570737846353f4628adae66890f414c8f389fcbd374d440092a2d1ff14d3",
+      "bytes": 543,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "apps/mobile/src/domain/commandPlatform.ts",
+      "previousSha256": "1511b28b53a77bbe4816e723f87fa3752b8fe6a3fa5d938e748140dd4ab55b46",
+      "sha256": "1511b28b53a77bbe4816e723f87fa3752b8fe6a3fa5d938e748140dd4ab55b46",
+      "bytes": 388,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/generated/catalogue.json",
+      "previousSha256": "f153eb9e31928233602109a2cbae5d7598475d7dc5f641d9b47074fac8062193",
+      "sha256": "f153eb9e31928233602109a2cbae5d7598475d7dc5f641d9b47074fac8062193",
+      "bytes": 354525,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/generated/provenance.json",
+      "previousSha256": "342914858b0ec601732e65360c9f48fbca96541d8c1b857bf6c7796975786e6d",
+      "sha256": "342914858b0ec601732e65360c9f48fbca96541d8c1b857bf6c7796975786e6d",
+      "bytes": 40298,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/reviewed-annotations.json",
+      "previousSha256": "d99d76e95e74cb13d84b4a0ea7c3213b95cea0fc5ab928b1445364c3acc49635",
+      "sha256": "d99d76e95e74cb13d84b4a0ea7c3213b95cea0fc5ab928b1445364c3acc49635",
+      "bytes": 10335,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/reviewed-photo-treatment.json",
+      "previousSha256": "ee4b85a2f57f85023e82b41ea0657918ebbb755d4b7cc0576630364ca0a4e182",
+      "sha256": "ee4b85a2f57f85023e82b41ea0657918ebbb755d4b7cc0576630364ca0a4e182",
+      "bytes": 557,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/src/catalogue.ts",
+      "previousSha256": "68d476e632a11d7e4b3ecb6228be400b8957e7f7fed426beeeebd724f8a67b90",
+      "sha256": "68d476e632a11d7e4b3ecb6228be400b8957e7f7fed426beeeebd724f8a67b90",
+      "bytes": 5319,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/src/index.ts",
+      "previousSha256": "04de7c2900a0e354016a04fc45718e4c6292e6977d26c9bc1179d3e1a5553cf9",
+      "sha256": "04de7c2900a0e354016a04fc45718e4c6292e6977d26c9bc1179d3e1a5553cf9",
+      "bytes": 591,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/src/photo-assets.ts",
+      "previousSha256": "dcce0b002d29f7f26579b76efbd4c6e507cd9eef9cebc7ab532cd7de35f3134c",
+      "sha256": "dcce0b002d29f7f26579b76efbd4c6e507cd9eef9cebc7ab532cd7de35f3134c",
+      "bytes": 6173,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/catalogue/src/provenance.ts",
+      "previousSha256": "1c5df2d9acf785ca8cbc7f6b9e051cfc36f98a54e3dd2cadc23fe857be9bdf81",
+      "sha256": "1c5df2d9acf785ca8cbc7f6b9e051cfc36f98a54e3dd2cadc23fe857be9bdf81",
+      "bytes": 1962,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/conversationPorts.ts",
+      "previousSha256": "83207ef36bd3d5a9d058abbd16cec2ea4f3ee9a5f75dd4d958cc30799651c7f6",
+      "sha256": "a9031b48957bdc1344494f310de79740f3f2e0bb6c78a8ecb1979d97ad38e0d1",
+      "bytes": 11324,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "packages/domain/src/dates.ts",
+      "previousSha256": "8796b92f6f17e360444adaab16d7e85d92928ccdfc7fa88942adea2e5a3d844b",
+      "sha256": "8796b92f6f17e360444adaab16d7e85d92928ccdfc7fa88942adea2e5a3d844b",
+      "bytes": 3426,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/directActions.ts",
+      "previousSha256": "d76bc38600a76e285acab875de9600de94ebf67c24e442a6919fe246e1d902e1",
+      "sha256": "d76bc38600a76e285acab875de9600de94ebf67c24e442a6919fe246e1d902e1",
+      "bytes": 2513,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/generated/search-identity.json",
+      "previousSha256": "88d0a509adde2c561ee0c41ed19e037137d02bad3916e3ff01b6e7611caaf081",
+      "sha256": "88d0a509adde2c561ee0c41ed19e037137d02bad3916e3ff01b6e7611caaf081",
+      "bytes": 121,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/index.ts",
+      "previousSha256": "4dbb9cf7a130d75f5066cc1a28d25513c67560440bb8eecdce01593fefe8bcf6",
+      "sha256": "003848f416c3eafe120e8fe2a378b34d55b767109ac1d4cdcee91a4f6288326f",
+      "bytes": 2152,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "packages/domain/src/prepareCommand.ts",
+      "previousSha256": "cfc471e7d279806d3541a814ecf2580593f7c14bc89bde0849af7f052884652d",
+      "sha256": "cfc471e7d279806d3541a814ecf2580593f7c14bc89bde0849af7f052884652d",
+      "bytes": 2801,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/quantities.ts",
+      "previousSha256": "1ebd8c09d72cd4de9564d23656d0447d7b5034083ff2825ee4a6b3032e676a95",
+      "sha256": "1ebd8c09d72cd4de9564d23656d0447d7b5034083ff2825ee4a6b3032e676a95",
+      "bytes": 5606,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/receipts.ts",
+      "previousSha256": "0b7537da18a5b157e4955e68ee59ca7ffd0b6ec03b37439280140d2dff4beeb6",
+      "sha256": "0b7537da18a5b157e4955e68ee59ca7ffd0b6ec03b37439280140d2dff4beeb6",
+      "bytes": 834,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/search.ts",
+      "previousSha256": "cb51b70b1412cc091b2dc3402132aaeff3233f7f504c68b8e772e53fe3e39450",
+      "sha256": "cb51b70b1412cc091b2dc3402132aaeff3233f7f504c68b8e772e53fe3e39450",
+      "bytes": 10521,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/src/services.ts",
+      "previousSha256": "3ac31069c639c63788568fbc53549247d14104b061ff600d89163e2a9b50c4a0",
+      "sha256": "3e66651806edd5ec99fb77d79ba5b96f1f8cde53104aa4ad479f9261097b7a94",
+      "bytes": 5355,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "packages/domain/src/shoppingProjection.ts",
+      "previousSha256": "9b47ca35546cb86df0955d539a0bb02c9893c61b2c23cfa0ccc5c3ea56685180",
+      "sha256": "9b47ca35546cb86df0955d539a0bb02c9893c61b2c23cfa0ccc5c3ea56685180",
+      "bytes": 7931,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/assistantActions.test.ts",
+      "previousSha256": "eb9f7f7eb3105af4a8bc9d3237d5ebba25b1e153207ccde38906b3d229743805",
+      "sha256": "eb9f7f7eb3105af4a8bc9d3237d5ebba25b1e153207ccde38906b3d229743805",
+      "bytes": 47547,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/clearConversation.test.ts",
+      "previousSha256": "c73d4713c0d57fe5c9af94bdbea260b394367ec71bca01d8ee878b871185a840",
+      "sha256": "c73d4713c0d57fe5c9af94bdbea260b394367ec71bca01d8ee878b871185a840",
+      "bytes": 10851,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/combinedEdit.test.ts",
+      "previousSha256": "76fbeb7d800aff9730aad48664a42c08c82c99f89571f4b32a7e5e08ed74277b",
+      "sha256": "76fbeb7d800aff9730aad48664a42c08c82c99f89571f4b32a7e5e08ed74277b",
+      "bytes": 16259,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/commands.test.ts",
+      "previousSha256": "fde7de92b9314bb58ef1456bfd6db8708fec05eac3d832856bd3549c09f79e7a",
+      "sha256": "fde7de92b9314bb58ef1456bfd6db8708fec05eac3d832856bd3549c09f79e7a",
+      "bytes": 17630,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/conversation.test.ts",
+      "previousSha256": "e7a3339f3ac8a0fe048a1df5f4ed58adca8d1c1bfa5ce86d6b2256ef500b16c7",
+      "sha256": "e7a3339f3ac8a0fe048a1df5f4ed58adca8d1c1bfa5ce86d6b2256ef500b16c7",
+      "bytes": 27343,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/database.test.ts",
+      "previousSha256": "a71315f5ba72d831cd342d4dece124cd8a652109ae74fbb8b6611050c7743119",
+      "sha256": "a71315f5ba72d831cd342d4dece124cd8a652109ae74fbb8b6611050c7743119",
+      "bytes": 24923,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/dates.test.ts",
+      "previousSha256": "4b34e43cdae7a0364631fe3298d7b715ca77d505cd30af52d51d1ca7d5766fa5",
+      "sha256": "4b34e43cdae7a0364631fe3298d7b715ca77d505cd30af52d51d1ca7d5766fa5",
+      "bytes": 3158,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/helpers/recoveryGate.ts",
+      "previousSha256": null,
+      "sha256": "4e9f28bd1f2d9d9d6f5bdcf988ba18b75198536ba7e9b70fd6c9172e2a0133ff",
+      "bytes": 11834,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "packages/domain/test/helpers/sqlite.ts",
+      "previousSha256": "658b42fc7516277d06b64df8552c80c5fbb06a0cd3fdc8449122c7c4cc683e95",
+      "sha256": "658b42fc7516277d06b64df8552c80c5fbb06a0cd3fdc8449122c7c4cc683e95",
+      "bytes": 1732,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/localStore.test.ts",
+      "previousSha256": "a9280866ef05068281725ac28d90b7eddc552e6bb1f2e823fb71d42940a02444",
+      "sha256": "a9280866ef05068281725ac28d90b7eddc552e6bb1f2e823fb71d42940a02444",
+      "bytes": 36377,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/memoryPersistence.test.ts",
+      "previousSha256": "45e840fedf6cfe8fe8330915a76dd715eab5778d793602defe8ff53956324eda",
+      "sha256": "45e840fedf6cfe8fe8330915a76dd715eab5778d793602defe8ff53956324eda",
+      "bytes": 29893,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/nativeAdapter.test.ts",
+      "previousSha256": "1b1a636ce1c3944434d24dd124562a5c5800fd488ecac1ade6c6cfb7f303463a",
+      "sha256": "1b1a636ce1c3944434d24dd124562a5c5800fd488ecac1ade6c6cfb7f303463a",
+      "bytes": 3061,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/planningShopping.test.ts",
+      "previousSha256": "381bc57546813e30c06ffd86a11ef37f1d3b41eaf2a074f995be1da7785c27ad",
+      "sha256": "381bc57546813e30c06ffd86a11ef37f1d3b41eaf2a074f995be1da7785c27ad",
+      "bytes": 24239,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/preferenceProvenance.test.ts",
+      "previousSha256": "ebcf8bb126703936ee007ff7b575eff8f4c099d0786ce4b5e2f91e3c824c11e9",
+      "sha256": "ebcf8bb126703936ee007ff7b575eff8f4c099d0786ce4b5e2f91e3c824c11e9",
+      "bytes": 21887,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/preferences.test.ts",
+      "previousSha256": "d8dd4de6833feceeb884416881624b1428ddf0b7c33036eb54e9805142dc5845",
+      "sha256": "d8dd4de6833feceeb884416881624b1428ddf0b7c33036eb54e9805142dc5845",
+      "bytes": 9938,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/prepareCommand.test.ts",
+      "previousSha256": "29ab475df39aa7b16123170701c8d6bd57e962582f3fcd0bbd428928b9d5cd3e",
+      "sha256": "29ab475df39aa7b16123170701c8d6bd57e962582f3fcd0bbd428928b9d5cd3e",
+      "bytes": 3890,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/quantities.test.ts",
+      "previousSha256": "c5c227fe85494bed9849b333016cd0944502b0720eab764331ac54fd5b9c2cc2",
+      "sha256": "c5c227fe85494bed9849b333016cd0944502b0720eab764331ac54fd5b9c2cc2",
+      "bytes": 4339,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/recoveryGate.test.ts",
+      "previousSha256": null,
+      "sha256": "d6c63b2443f6059dbba04f08d45625fb64e41d671c79e7cdc23028e4891a7f79",
+      "bytes": 18033,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "packages/domain/test/schemaCompatibility.test.ts",
+      "previousSha256": "3ae5a238540ca810426ca84ce1585f0e543657316e642866afa97a32189efd89",
+      "sha256": "3ae5a238540ca810426ca84ce1585f0e543657316e642866afa97a32189efd89",
+      "bytes": 23961,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/search.test.ts",
+      "previousSha256": "9fe198a590eb1671885450d327cae55e4ea0f691b0504ab741f81cdced559af4",
+      "sha256": "9fe198a590eb1671885450d327cae55e4ea0f691b0504ab741f81cdced559af4",
+      "bytes": 4579,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/shoppingProjection.test.ts",
+      "previousSha256": "69dfe42438d92bf465133253f84d95b082692d19ef7e404df7d1681a9945e4eb",
+      "sha256": "69dfe42438d92bf465133253f84d95b082692d19ef7e404df7d1681a9945e4eb",
+      "bytes": 6808,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "packages/domain/test/writerObserver.test.ts",
+      "previousSha256": null,
+      "sha256": "d58dde09b1c6f070baed8122c09aa740bd766abf4068887524668aee2df66cd0",
+      "bytes": 4244,
+      "changedSinceCorrectnessAmendment": true
+    },
+    {
+      "path": "scripts/content/fingerprint_search.py",
+      "previousSha256": "ed65fb61685fc404fa46916fe95568d5663c88c01fe2cb6eba50f473a7707d64",
+      "sha256": "ed65fb61685fc404fa46916fe95568d5663c88c01fe2cb6eba50f473a7707d64",
+      "bytes": 620,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/prepare_catalogue.py",
+      "previousSha256": "cb9df3f91e4c78e6c6392c84108159b585448da9690cea9dd67567e30c7b34d4",
+      "sha256": "cb9df3f91e4c78e6c6392c84108159b585448da9690cea9dd67567e30c7b34d4",
+      "bytes": 12658,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/publish_photo_evidence.py",
+      "previousSha256": "7e9fb10444c619b89e2eea4b175528d13c9c8a8537ad740a36d898017fba0c79",
+      "sha256": "7e9fb10444c619b89e2eea4b175528d13c9c8a8537ad740a36d898017fba0c79",
+      "bytes": 4557,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/record_annotation_evidence.py",
+      "previousSha256": "0ab3bfb9476be2ade4ee3c533fc85e7a71e2a10904de6b3358444b8a8a2c9eda",
+      "sha256": "0ab3bfb9476be2ade4ee3c533fc85e7a71e2a10904de6b3358444b8a8a2c9eda",
+      "bytes": 2349,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/review/build_review.py",
+      "previousSha256": "0bbe4a49a4c6a1003155110991aa4e641a7efe51baf4d6315f65c5e48a186aac",
+      "sha256": "0bbe4a49a4c6a1003155110991aa4e641a7efe51baf4d6315f65c5e48a186aac",
+      "bytes": 15735,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/review/inspect_sources.py",
+      "previousSha256": "55f69ed3274c3f0d5687d9dd5c91a63de092d63b91a6cb67781243fd68608ada",
+      "sha256": "55f69ed3274c3f0d5687d9dd5c91a63de092d63b91a6cb67781243fd68608ada",
+      "bytes": 5487,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/verify_catalogue.py",
+      "previousSha256": "f4da4c0de1dca5de031faa7ff0dd5e8291dbf0475c3d1a32d399cf545366fecc",
+      "sha256": "f4da4c0de1dca5de031faa7ff0dd5e8291dbf0475c3d1a32d399cf545366fecc",
+      "bytes": 5216,
+      "changedSinceCorrectnessAmendment": false
+    },
+    {
+      "path": "scripts/content/workbook_source.py",
+      "previousSha256": "2a1bec787890e794ce6e5110eeeb55ac67a65b092164cbeb7f10024250c1975f",
+      "sha256": "2a1bec787890e794ce6e5110eeeb55ac67a65b092164cbeb7f10024250c1975f",
+      "bytes": 3400,
+      "changedSinceCorrectnessAmendment": false
+    }
+  ],
+  "frozenAtUtc": "2026-09-28T06:06:42.875Z"
+}

@@ -1,0 +1,38 @@
+{
+  "upstream": {
+    "url": "https://registry.npmjs.org/decode-uri-component/0.5.0",
+    "fetchedAt": "2026-09-28T06:16:09.902Z",
+    "name": "decode-uri-component",
+    "requested": "0.5.0",
+    "version": "0.5.0",
+    "type": "module",
+    "exports": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "engines": {
+      "node": ">=14.16"
+    },
+    "dist": {
+      "shasum": "4592fa1e1d640ec5e2760e2e168ad2ab5f2c9da1",
+      "tarball": "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.5.0.tgz",
+      "fileCount": 5,
+      "integrity": "sha512-1BiQVoK8C9gUbQU6NzAtO/tkz2qOFpEObMWpcFvhx4fYnj4Oc5yzaJN/LD36ihkVUdXyh5ZekzX+yM+ty/SrPg==",
+      "signatures": [
+        {
+          "sig": "MEYCIQDtFtzR1Kl5pGUz07xfGDBEP1qLO9WtplHX52NB77SA+gIhAMHSp31keq5A57Lhm9axZ4GRNt/WmWzoH7mAq/5u5y64",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 8556
+    }
+  },
+  "sourceSha256": {
+    "index.js": "9401353df38f8010ad7035fe8d666bce6a4902bc1cff809afc4ab23fa2e0bdaa",
+    "index.d.ts": "f7f52a51b25daac3448d6b455a89738dfa1f004eccaca168318834093a315ba2",
+    "license": "ed7a9a0f74e43951b2520efe1a4349cb9ed5f3dff0b0f268e2e51a4d38df7ea4",
+    "package.json": "8900e5bd4176ce39e17c647facc5aaa0726db4cd0a3e789ed7582da60c22e185",
+    "readme.md": "4c341a0e19d537e679a680504b1ae1537d3698d81ae64e8c431a84b964d15046"
+  },
+  "expectedArtifactIntegrity": "sha512-J6mSmGz9UZzup/4enRbqplO8qAEQ3UD3iDNyUkz7Z4w73ffkNHtQJJbTrg/BYEjkcpirT6PHR3e7wav5yBzXkg=="
+}

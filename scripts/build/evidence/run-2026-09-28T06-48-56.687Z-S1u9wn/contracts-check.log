@@ -1,0 +1,5 @@
+
+> cookmate-workspace@0.1.0 contracts:check
+> node scripts/build/generate-contracts.mjs --check
+
+Checked 19 validators (445786 bytes; gzip 34641).

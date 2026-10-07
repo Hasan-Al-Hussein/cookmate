@@ -1,0 +1,32 @@
+{
+  "name": "decode-uri-component",
+  "version": "0.5.0-cookmate.2",
+  "private": true,
+  "description": "CookMate query-string 7 CJS compatibility package derived from decode-uri-component 0.5.0",
+  "license": "MIT",
+  "type": "commonjs",
+  "sideEffects": false,
+  "main": "./index.js",
+  "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "files": [
+    "index.js",
+    "upstream.cjs",
+    "index.d.ts",
+    "upstream.d.ts",
+    "UPSTREAM.md"
+  ],
+  "cookmateCompatibility": {
+    "upstreamName": "decode-uri-component",
+    "upstreamVersion": "0.5.0",
+    "upstreamTarball": "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.5.0.tgz",
+    "upstreamIntegrity": "sha512-1BiQVoK8C9gUbQU6NzAtO/tkz2qOFpEObMWpcFvhx4fYnj4Oc5yzaJN/LD36ihkVUdXyh5ZekzX+yM+ty/SrPg==",
+    "upstreamSourceSha256": "9401353df38f8010ad7035fe8d666bce6a4902bc1cff809afc4ab23fa2e0bdaa",
+    "adaptation": "CJS export and declaration plus separate legacy plus-to-space ingress wrapper; scanner unchanged"
+  }
+}

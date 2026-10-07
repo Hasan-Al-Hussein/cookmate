@@ -1,0 +1,572 @@
+TAP version 13
+# Subtest: all source records validate and preserve unknowns, repeats, headings and distinct Alfredo IDs
+ok 1 - all source records validate and preserve unknowns, repeats, headings and distinct Alfredo IDs
+  ---
+  duration_ms: 10.736
+  type: 'test'
+  ...
+# Subtest: source membership is recipe-specific and rejects malformed discriminated citations
+ok 2 - source membership is recipe-specific and rejects malformed discriminated citations
+  ---
+  duration_ms: 2.3443
+  type: 'test'
+  ...
+# Subtest: annotation IDs resolve only under their owning recipe
+ok 3 - annotation IDs resolve only under their owning recipe
+  ---
+  duration_ms: 3.6359
+  type: 'test'
+  ...
+# Subtest: reviewed runtime notes preserve source amounts, missing measures and the alternative garnish
+ok 4 - reviewed runtime notes preserve source amounts, missing measures and the alternative garnish
+  ---
+  duration_ms: 1.2202
+  type: 'test'
+  ...
+# Subtest: photo uncertainty has explicit source notes without image-inferred ingredient demand
+ok 5 - photo uncertainty has explicit source notes without image-inferred ingredient demand
+  ---
+  duration_ms: 1.241
+  type: 'test'
+  ...
+# Subtest: invalid joins, duplicate identities and reordered passages fail before publication
+ok 6 - invalid joins, duplicate identities and reordered passages fail before publication
+  ---
+  duration_ms: 2.5982
+  type: 'test'
+  ...
+# Subtest: callers cannot change source data or boundary membership after construction
+ok 7 - callers cannot change source data or boundary membership after construction
+  ---
+  duration_ms: 4.0522
+  type: 'test'
+  ...
+# Subtest: prepared identity covers source provenance and every runtime record
+ok 8 - prepared identity covers source provenance and every runtime record
+  ---
+  duration_ms: 40.6054
+  type: 'test'
+  ...
+# Subtest: every packaged photo preserves original bytes and has a literal native asset mapping
+ok 9 - every packaged photo preserves original bytes and has a literal native asset mapping
+  ---
+  duration_ms: 3082.5803
+  type: 'test'
+  ...
+# (node:61020) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: real clear command removes transcript/reference/request/draft scope while preserving cooking state and receipts
+ok 10 - real clear command removes transcript/reference/request/draft scope while preserving cooking state and receipts
+  ---
+  duration_ms: 203.0063
+  type: 'test'
+  ...
+# Subtest: clear stops pending reply acceptance and uncommitted chat commands; stale clear does not affect the new generation
+ok 11 - clear stops pending reply acceptance and uncommitted chat commands; stale clear does not affect the new generation
+  ---
+  duration_ms: 154.8832
+  type: 'test'
+  ...
+# Subtest: clear receipt fault rolls back transcript deletion and generation before an exact successful retry
+ok 12 - clear receipt fault rolls back transcript deletion and generation before an exact successful retry
+  ---
+  duration_ms: 180.189
+  type: 'test'
+  ...
+# (node:96176) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: registered direct favourite command commits once; duplicate delivery returns the durable receipt
+ok 13 - registered direct favourite command commits once; duplicate delivery returns the durable receipt
+  ---
+  duration_ms: 441.7767
+  type: 'test'
+  ...
+# Subtest: changed payload, cancellation and changed intent revisions cannot mutate a registered operation
+ok 14 - changed payload, cancellation and changed intent revisions cannot mutate a registered operation
+  ---
+  duration_ms: 206.4709
+  type: 'test'
+  ...
+# Subtest: receipt insertion failure rolls back mutation, revisions and intent phase, then same operation retries safely
+ok 15 - receipt insertion failure rolls back mutation, revisions and intent phase, then same operation retries safely
+  ---
+  duration_ms: 218.3631
+  type: 'test'
+  ...
+# Subtest: lost COMMIT acknowledgement reconciles the actual receipt through the independent reader
+ok 16 - lost COMMIT acknowledgement reconciles the actual receipt through the independent reader
+  ---
+  duration_ms: 302.5221
+  type: 'test'
+  ...
+# Subtest: lost acknowledgement with an unavailable reader remains uncertain until actual receipt recovery
+ok 17 - lost acknowledgement with an unavailable reader remains uncertain until actual receipt recovery
+  ---
+  duration_ms: 172.2122
+  type: 'test'
+  ...
+# Subtest: chat origin and relative-date guards reject changed context before running a domain handler
+ok 18 - chat origin and relative-date guards reject changed context before running a domain handler
+  ---
+  duration_ms: 255.638
+  type: 'test'
+  ...
+# Subtest: executed favourite and its receipt survive file close and no-reseed reopen
+ok 19 - executed favourite and its receipt survive file close and no-reseed reopen
+  ---
+  duration_ms: 160.6303
+  type: 'test'
+  ...
+# Subtest: cancelling a partially dispatched frozen batch keeps its committed receipt and stops remaining slots
+ok 20 - cancelling a partially dispatched frozen batch keeps its committed receipt and stops remaining slots
+  ---
+  duration_ms: 128.2401
+  type: 'test'
+  ...
+# (node:85048) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: transcript pagination preserves display order and old references outside the current page
+ok 21 - transcript pagination preserves display order and old references outside the current page
+  ---
+  duration_ms: 248.7655
+  type: 'test'
+  ...
+# Subtest: turn request precedes response durably; response references bind to the actual displayed message and guards
+ok 22 - turn request precedes response durably; response references bind to the actual displayed message and guards
+  ---
+  duration_ms: 153.8063
+  type: 'test'
+  ...
+# Subtest: connection changes and a second active turn cannot accept or append a stale response
+ok 23 - connection changes and a second active turn cannot accept or append a stale response
+  ---
+  duration_ms: 160.0917
+  type: 'test'
+  ...
+# Subtest: response reference insertion failure rolls back reply, guards and message status for exact retry
+ok 24 - response reference insertion failure rolls back reply, guards and message status for exact retry
+  ---
+  duration_ms: 173.6302
+  type: 'test'
+  ...
+# Subtest: invalid transcript/reference records fail visibly; valid empty query is distinct
+ok 25 - invalid transcript/reference records fail visibly; valid empty query is distinct
+  ---
+  duration_ms: 66.8281
+  type: 'test'
+  ...
+# Subtest: startup recovery stops unfinished authority, retains receipts and is idempotent
+ok 26 - startup recovery stops unfinished authority, retains receipts and is idempotent
+  ---
+  duration_ms: 121.4118
+  type: 'test'
+  ...
+# Subtest: startup recovery rejects malformed nested turn metadata atomically without deleting it
+ok 27 - startup recovery rejects malformed nested turn metadata atomically without deleting it
+  ---
+  duration_ms: 61.3117
+  type: 'test'
+  ...
+# Subtest: begin, accept, failure and draft lost acknowledgements notify once only after durable entity proof
+ok 28 - begin, accept, failure and draft lost acknowledgements notify once only after durable entity proof
+  ---
+  duration_ms: 366.2048
+  type: 'test'
+  ...
+# Subtest: failed lifecycle/phase contradictions are rejected without concealing or rewriting corruption
+ok 29 - failed lifecycle/phase contradictions are rejected without concealing or rewriting corruption
+  ---
+  duration_ms: 127.1832
+  type: 'test'
+  ...
+# Subtest: an unrelated durable revision never proves a rolled-back turn notification
+ok 30 - an unrelated durable revision never proves a rolled-back turn notification
+  ---
+  duration_ms: 84.7943
+  type: 'test'
+  ...
+# Subtest: runtime day/connection changes during awaited begin or response writes roll back obsolete acceptance
+ok 31 - runtime day/connection changes during awaited begin or response writes roll back obsolete acceptance
+  ---
+  duration_ms: 306.8523
+  type: 'test'
+  ...
+# (node:94020) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: desktop SQLite seeds faithful records, FK constraints and schema atomically
+ok 32 - desktop SQLite seeds faithful records, FK constraints and schema atomically
+  ---
+  duration_ms: 135.1742
+  type: 'test'
+  ...
+# Subtest: FK must be enabled on actual writer before BEGIN; queue recovers from rejected command
+ok 33 - FK must be enabled on actual writer before BEGIN; queue recovers from rejected command
+  ---
+  duration_ms: 122.0512
+  type: 'test'
+  ...
+# Subtest: interrupted seed rolls back schema and marker, preserving a genuinely fresh database
+ok 34 - interrupted seed rolls back schema and marker, preserving a genuinely fresh database
+  ---
+  duration_ms: 21.2877
+  type: 'test'
+  ...
+# Subtest: reopen preserves existing state and rejects catalogue/version mismatch without reset
+ok 35 - reopen preserves existing state and rejects catalogue/version mismatch without reset
+  ---
+  duration_ms: 255.7407
+  type: 'test'
+  ...
+# Subtest: unversioned existing state is not overwritten during initialization
+ok 36 - unversioned existing state is not overwritten during initialization
+  ---
+  duration_ms: 27.156
+  type: 'test'
+  ...
+# Subtest: calendar and occupied-slot constraints reject invalid rows while allowing leap day and past dates
+ok 37 - calendar and occupied-slot constraints reject invalid rows while allowing leap day and past dates
+  ---
+  duration_ms: 97.7201
+  type: 'test'
+  ...
+# Subtest: serialized callbacks retain exact handle; escaped handle cannot write after commit
+ok 38 - serialized callbacks retain exact handle; escaped handle cannot write after commit
+  ---
+  duration_ms: 124.4826
+  type: 'test'
+  ...
+# Subtest: receipt can outlive conversation clearing and direct UI requires no origin
+ok 39 - receipt can outlive conversation clearing and direct UI requires no origin
+  ---
+  duration_ms: 99.2511
+  type: 'test'
+  ...
+# Subtest: catalogue repository hydrates every source record and serializes overlapping read snapshots
+ok 40 - catalogue repository hydrates every source record and serializes overlapping read snapshots
+  ---
+  duration_ms: 576.3474
+  type: 'test'
+  ...
+# Subtest: a failed rollback invalidates the connection instead of permitting another transaction
+ok 41 - a failed rollback invalidates the connection instead of permitting another transaction
+  ---
+  duration_ms: 6.185
+  type: 'test'
+  ...
+# Subtest: an accidentally unawaited in-scope statement settles before COMMIT and its failure rolls back
+ok 42 - an accidentally unawaited in-scope statement settles before COMMIT and its failure rolls back
+  ---
+  duration_ms: 3.9123
+  type: 'test'
+  ...
+# Subtest: state repositories preserve empty states, stable ordering, cross-week selections and receipt data
+ok 43 - state repositories preserve empty states, stable ordering, cross-week selections and receipt data
+  ---
+  duration_ms: 232.5203
+  type: 'test'
+  ...
+# Subtest: a malformed saved collection fails visibly without overwriting it or hiding healthy collections
+ok 44 - a malformed saved collection fails visibly without overwriting it or hiding healthy collections
+  ---
+  duration_ms: 157.1226
+  type: 'test'
+  ...
+# Subtest: receipt hydration rejects impossible nested dates and unknown source IDs but preserves valid historical effects
+ok 45 - receipt hydration rejects impossible nested dates and unknown source IDs but preserves valid historical effects
+  ---
+  duration_ms: 59.2917
+  type: 'test'
+  ...
+# Subtest: transaction scope finalizes leaked prepared handles exactly once on success and failure
+ok 46 - transaction scope finalizes leaked prepared handles exactly once on success and failure
+  ---
+  duration_ms: 2.0843
+  type: 'test'
+  ...
+# Subtest: statement cleanup failure rolls back and prevents reuse of a damaged connection
+ok 47 - statement cleanup failure rolls back and prevents reuse of a damaged connection
+  ---
+  duration_ms: 2.2251
+  type: 'test'
+  ...
+# Subtest: Monday weeks retain exact calendar dates across month, year and leap-day boundaries
+ok 48 - Monday weeks retain exact calendar dates across month, year and leap-day boundaries
+  ---
+  duration_ms: 17.658
+  type: 'test'
+  ...
+# Subtest: supported boundaries disable navigation and retain the final partial week
+ok 49 - supported boundaries disable navigation and retain the final partial week
+  ---
+  duration_ms: 2.954
+  type: 'test'
+  ...
+# Subtest: pending relative dates notice day/timezone changes without changing a resolved calendar date
+ok 50 - pending relative dates notice day/timezone changes without changing a resolved calendar date
+  ---
+  duration_ms: 1.0286
+  type: 'test'
+  ...
+# Subtest: calendar arithmetic round-trips every supported date against independent Gregorian UTC arithmetic
+ok 51 - calendar arithmetic round-trips every supported date against independent Gregorian UTC arithmetic
+  ---
+  duration_ms: 537.5838
+  type: 'test'
+  ...
+# (node:69384) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: native-shaped read cleanup failure invalidates the queue at SELECT 1 AS value
+ok 52 - native-shaped read cleanup failure invalidates the queue at SELECT 1 AS value
+  ---
+  duration_ms: 29.4477
+  type: 'test'
+  ...
+# Subtest: native-shaped read cleanup failure invalidates the queue at PRAGMA foreign_keys
+ok 53 - native-shaped read cleanup failure invalidates the queue at PRAGMA foreign_keys
+  ---
+  duration_ms: 1.644
+  type: 'test'
+  ...
+# Subtest: ordinary native-shaped SQL read errors with successful cleanup permit later queued reads
+ok 54 - ordinary native-shaped SQL read errors with successful cleanup permit later queued reads
+  ---
+  duration_ms: 2.7077
+  type: 'test'
+  ...
+# (node:77224) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: relative-date context changed during awaited SQL rolls back the whole command before commit
+ok 55 - relative-date context changed during awaited SQL rolls back the whole command before commit
+  ---
+  duration_ms: 425.3579
+  type: 'test'
+  ...
+# Subtest: actual plan commands require explicit selection, preserve repeated occurrences and keep exact retry/no-op distinct
+ok 56 - actual plan commands require explicit selection, preserve repeated occurrences and keep exact retry/no-op distinct
+  ---
+  duration_ms: 483.1128
+  type: 'test'
+  ...
+# Subtest: selected placement-only edit leaves every demand mark unchanged; recipe replacement retains ID and selection with reset demand
+ok 57 - selected placement-only edit leaves every demand mark unchanged; recipe replacement retains ID and selection with reset demand
+  ---
+  duration_ms: 427.0718
+  type: 'test'
+  ...
+# Subtest: occupied move matrix preserves source occurrence identity/inclusion and never inherits destination selection or credit
+ok 58 - occupied move matrix preserves source occurrence identity/inclusion and never inherits destination selection or credit
+  ---
+  duration_ms: 859.5444
+  type: 'test'
+  ...
+# Subtest: occurrence A/B and scope-only changes reject stale occupied confirmations without overwriting state
+ok 59 - occurrence A/B and scope-only changes reject stale occupied confirmations without overwriting state
+  ---
+  duration_ms: 343.6993
+  type: 'test'
+  ...
+# Subtest: projection and receipt faults roll back a real occupied move, selection, purchase state and revisions; same command retries
+ok 60 - projection and receipt faults roll back a real occupied move, selection, purchase state and revisions; same command retries
+  ---
+  duration_ms: 328.5015
+  type: 'test'
+  ...
+# Subtest: purchase revision and demand guards reject stale toggles; deselect/reselect and sole occurrence deletion cannot restore credit
+ok 61 - purchase revision and demand guards reject stale toggles; deselect/reselect and sole occurrence deletion cannot restore credit
+  ---
+  duration_ms: 248.0265
+  type: 'test'
+  ...
+# Subtest: purchase and selection commands serialized concurrently cannot mark changed demand
+ok 62 - purchase and selection commands serialized concurrently cannot mark changed demand
+  ---
+  duration_ms: 131.0302
+  type: 'test'
+  ...
+# Subtest: real shopping rows and receipts survive close/reopen, and persisted quantity corruption returns failure without reset
+ok 63 - real shopping rows and receipts survive close/reopen, and persisted quantity corruption returns failure without reset
+  ---
+  duration_ms: 118.9039
+  type: 'test'
+  ...
+# Subtest: lost acknowledgement on an occupied move reconciles its durable receipt without duplicate moves or notifications
+ok 64 - lost acknowledgement on an occupied move reconciles its durable receipt without duplicate moves or notifications
+  ---
+  duration_ms: 140.3179
+  type: 'test'
+  ...
+# (node:99528) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: explicit preference create/update/deduplicate uses current collection authority and truthful receipts
+ok 65 - explicit preference create/update/deduplicate uses current collection authority and truthful receipts
+  ---
+  duration_ms: 214.6298
+  type: 'test'
+  ...
+# Subtest: preference removal/clear is scoped, with no-op behavior and no hidden transcript import
+ok 66 - preference removal/clear is scoped, with no-op behavior and no hidden transcript import
+  ---
+  duration_ms: 177.8954
+  type: 'test'
+  ...
+# Subtest: receipt insertion failure rolls back clearing multiple preferences and exact operation can retry
+ok 67 - receipt insertion failure rolls back clearing multiple preferences and exact operation can retry
+  ---
+  duration_ms: 142.5394
+  type: 'test'
+  ...
+# Subtest: preference capacity and edit collisions cannot overwrite other saved preferences
+ok 68 - preference capacity and edit collisions cannot overwrite other saved preferences
+  ---
+  duration_ms: 122.9291
+  type: 'test'
+  ...
+# Subtest: app-owned identities distinguish deliberate new intents while one frozen command can be retried
+ok 69 - app-owned identities distinguish deliberate new intents while one frozen command can be retried
+  ---
+  duration_ms: 14.2344
+  type: 'test'
+  ...
+# Subtest: caller mutation during asynchronous hashing cannot change the frozen action
+ok 70 - caller mutation during asynchronous hashing cannot change the frozen action
+  ---
+  duration_ms: 4.6434
+  type: 'test'
+  ...
+# Subtest: invalid source identity, impossible dates and bad platform hashes fail before dispatch
+ok 71 - invalid source identity, impossible dates and bad platform hashes fail before dispatch
+  ---
+  duration_ms: 4.8188
+  type: 'test'
+  ...
+# Subtest: explicit conversation origin and relative date guard are included in the fingerprint
+ok 72 - explicit conversation origin and relative date guard are included in the fingerprint
+  ---
+  duration_ms: 5.9916
+  type: 'test'
+  ...
+# Subtest: supported source integer/decimal/fraction grammar produces reduced exact values
+ok 73 - supported source integer/decimal/fraction grammar produces reduced exact values
+  ---
+  duration_ms: 5.3411
+  type: 'test'
+  ...
+# Subtest: unknown, ranges, qualifiers and package sizes remain raw contributions instead of guessed totals
+ok 74 - unknown, ranges, qualifiers and package sizes remain raw contributions instead of guessed totals
+  ---
+  duration_ms: 0.9967
+  type: 'test'
+  ...
+# Subtest: compatible totals are exact and incompatible units never silently combine
+ok 75 - compatible totals are exact and incompatible units never silently combine
+  ---
+  duration_ms: 4.6872
+  type: 'test'
+  ...
+# Subtest: ingredient grouping uses reviewed case equivalence only; all source rows and repeated components remain distinct inputs
+ok 76 - ingredient grouping uses reviewed case equivalence only; all source rows and repeated components remain distinct inputs
+  ---
+  duration_ms: 12.6297
+  type: 'test'
+  ...
+# (node:88800) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: old and incomplete version-one layouts fail incompatibility without touching saved state
+ok 77 - old and incomplete version-one layouts fail incompatibility without touching saved state
+  ---
+  duration_ms: 341.8392
+  type: 'test'
+  ...
+# Subtest: assistant context has bounded versioned lifecycle and cascades independently of receipts
+ok 78 - assistant context has bounded versioned lifecycle and cascades independently of receipts
+  ---
+  duration_ms: 93.4975
+  type: 'test'
+  ...
+# Subtest: source oracle preserves independent Alfredo identities and Unicode/fragment/case matching
+ok 79 - source oracle preserves independent Alfredo identities and Unicode/fragment/case matching
+  ---
+  duration_ms: 13.9114
+  type: 'test'
+  ...
+# Subtest: filters combine with query using AND, including all selected exact source ingredients
+ok 80 - filters combine with query using AND, including all selected exact source ingredients
+  ---
+  duration_ms: 3.3583
+  type: 'test'
+  ...
+# Subtest: country/demonym alias is explicit and preserves original source label
+ok 81 - country/demonym alias is explicit and preserves original source label
+  ---
+  duration_ms: 2.1958
+  type: 'test'
+  ...
+# Subtest: typos remain separate labelled suggestions and cannot relax explicit filters
+ok 82 - typos remain separate labelled suggestions and cannot relax explicit filters
+  ---
+  duration_ms: 15.3282
+  type: 'test'
+  ...
+# Subtest: source-backed reasons resolve through the exact shared citation boundary
+ok 83 - source-backed reasons resolve through the exact shared citation boundary
+  ---
+  duration_ms: 15.9792
+  type: 'test'
+  ...
+# Subtest: unsupported or malformed criteria are failures instead of silently ignored filters
+ok 84 - unsupported or malformed criteria are failures instead of silently ignored filters
+  ---
+  duration_ms: 1.953
+  type: 'test'
+  ...
+# Subtest: repeat consumers preserve source/rule identity, stable order and caller isolation
+ok 85 - repeat consumers preserve source/rule identity, stable order and caller isolation
+  ---
+  duration_ms: 14.5173
+  type: 'test'
+  ...
+# Subtest: search rule fingerprint matches the shipped source implementation
+ok 86 - search rule fingerprint matches the shipped source implementation
+  ---
+  duration_ms: 50.5469
+  type: 'test'
+  ...
+# Subtest: all source rows and exactly six reviewed instruction-only demands contribute once per selected occurrence
+ok 87 - all source rows and exactly six reviewed instruction-only demands contribute once per selected occurrence
+  ---
+  duration_ms: 137.8613
+  type: 'test'
+  ...
+# Subtest: repeated component rows aggregate safely with traceability, while incompatible and unknown demand stay separate
+ok 88 - repeated component rows aggregate safely with traceability, while incompatible and unknown demand stay separate
+  ---
+  duration_ms: 6.5255
+  type: 'test'
+  ...
+# Subtest: demand identity ignores display/date order but detects a different contributing occurrence despite equal total
+ok 89 - demand identity ignores display/date order but detects a different contributing occurrence despite equal total
+  ---
+  duration_ms: 1.8787
+  type: 'test'
+  ...
+# Subtest: purchase progress preserves exact unchanged demand, but changed, removed/re-added and split/merged demand requires review
+ok 90 - purchase progress preserves exact unchanged demand, but changed, removed/re-added and split/merged demand requires review
+  ---
+  duration_ms: 0.9273
+  type: 'test'
+  ...
+# Subtest: projection takes ownership before asynchronous hashes and rejects unknown or duplicate selected sources
+ok 91 - projection takes ownership before asynchronous hashes and rejects unknown or duplicate selected sources
+  ---
+  duration_ms: 3.9032
+  type: 'test'
+  ...
+1..91
+# tests 91
+# suites 0
+# pass 91
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7490.4473

@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "CookMate",
+    "slug": "cookmate-private-prototype",
+    "version": "0.1.0",
+    "icon": "./assets/brand/app-icon.png",
+    "scheme": "cookmate",
+    "platforms": ["ios", "web"],
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#910D16",
+          "image": "./assets/brand/app-icon.png",
+          "imageWidth": 176,
+          "dark": { "backgroundColor": "#910D16", "image": "./assets/brand/app-icon.png" }
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "dev.cookmate.prototype",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Connect to your private CookMate laptop gateway for assistant requests."
+      }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7785b222-b27d-46f6-b77f-d7333896d954"
+      }
+    },
+    "owner": "oqh0s-team"
+  }
+}

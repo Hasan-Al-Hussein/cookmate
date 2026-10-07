@@ -1,0 +1,55 @@
+
+> cookmate-workspace@0.1.0 mobile:bundle
+> npm run export:native --workspace @cookmate/mobile
+
+
+> @cookmate/mobile@0.1.0 export:native
+> expo export --platform ios --max-workers 1
+
+Expo Autolinking module resolution enabled
+Starting Metro Bundler
+
+iOS Bundling failed 7311ms node_modules\expo-router\entry.js (1373 modules)
+
+Error: Unable to resolve module ./constants.js from C:\Users\hp\OneDrive - ku.ac.ae\Documents\ChatGPT\App Development\cookmate-app\packages\contracts\src\memory.ts: 
+
+None of these files exist:
+  * ..\..\packages\contracts\src\constants.js(.ios.ts|.native.ts|.ts|.ios.tsx|.native.tsx|.tsx|.ios.mjs|.native.mjs|.mjs|.ios.js|.native.js|.js|.ios.jsx|.native.jsx|.jsx|.ios.json|.native.json|.json|.ios.cjs|.native.cjs|.cjs|.ios.scss|.native.scss|.scss|.ios.sass|.native.sass|.sass|.ios.css|.native.css|.css)
+  * ..\..\packages\contracts\src\constants.js
+[0m [90m 13 |[39m } [36mfrom[39m [32m'./generated/validators.js'[39m[33m;[39m
+ [90m 14 |[39m [36mimport[39m type { [33mContractCheck[39m } [36mfrom[39m [32m'./semantics.js'[39m[33m;[39m
+[31m[1m>[22m[39m[90m 15 |[39m [36mimport[39m { [33mMAX_ASSISTANT_BODY_BYTES[39m } [36mfrom[39m [32m'./constants.js'[39m[33m;[39m
+ [90m    |[39m                                           [31m[1m^[22m[39m
+ [90m 16 |[39m
+ [90m 17 |[39m [36mfunction[39m invalid[33m<[39m[33mT[39m[33m>[39m(
+ [90m 18 |[39m   field[33m:[39m string[33m,[39m[0m
+
+Import stack:
+
+ packages\contracts\src\memory.ts
+ | import "./constants.js"
+
+ packages\contracts\src\index.ts
+ | import "./memory"
+
+ packages\domain\src\prepareCommand.ts
+ | import "@cookmate/contracts"
+
+ packages\domain\src\index.ts
+ | import "./prepareCommand"
+
+ apps\mobile\src\features\shopping\ShoppingSelectionScreen.tsx
+ | import "@cookmate/domain"
+
+ apps\mobile\app\shopping-meals.tsx
+ | import "../src/features/shopping/ShoppingSelectionScreen"
+
+ apps\mobile\app (require.context)
+
+npm error Lifecycle script `export:native` failed with error:
+npm error code 1
+npm error path C:\Users\hp\OneDrive - ku.ac.ae\Documents\ChatGPT\App Development\cookmate-app\apps\mobile
+npm error workspace @cookmate/mobile@0.1.0
+npm error location C:\Users\hp\OneDrive - ku.ac.ae\Documents\ChatGPT\App Development\cookmate-app\apps\mobile
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c expo export --platform ios --max-workers 1

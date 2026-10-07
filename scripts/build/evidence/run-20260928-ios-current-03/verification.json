@@ -1,0 +1,10 @@
+{
+  "startedAt": "2026-09-28T07:44:30.8256930Z",
+  "finishedAt": "2026-09-28T07:44:43.9592091Z",
+  "exitCode": 0,
+  "scope": "Current iOS Metro export on Windows; no native execution",
+  "output": "apps/mobile/dist/root-integration-20260928-03",
+  "appConfigSha256": "ad98f6cdbd1783bf694024ffd0a075385e223ef6b36bd634bde84b00991cf303",
+  "disclosureSha256": "1e8f3864cf83914138ca4bee7b4d43350464f2d32ff1ec9c1833dcb02aeea70d",
+  "iconSha256": "026c17eecdde68653a1a9592901d2566ebe6d11e965ecdb8f006175a9d2be9e2"
+}

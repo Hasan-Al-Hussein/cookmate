@@ -1,0 +1,322 @@
+TAP version 13
+# (node:24876) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: transcript pagination preserves display order and old references outside the current page
+ok 1 - transcript pagination preserves display order and old references outside the current page
+  ---
+  duration_ms: 31.1102
+  type: 'test'
+  ...
+# Subtest: turn request precedes response durably; response references bind to the actual displayed message and guards
+ok 2 - turn request precedes response durably; response references bind to the actual displayed message and guards
+  ---
+  duration_ms: 38.9655
+  type: 'test'
+  ...
+# Subtest: connection changes and a second active turn cannot accept or append a stale response
+ok 3 - connection changes and a second active turn cannot accept or append a stale response
+  ---
+  duration_ms: 22.6815
+  type: 'test'
+  ...
+# Subtest: response reference insertion failure rolls back reply, guards and message status for exact retry
+ok 4 - response reference insertion failure rolls back reply, guards and message status for exact retry
+  ---
+  duration_ms: 34.5607
+  type: 'test'
+  ...
+# Subtest: invalid transcript/reference records fail visibly; valid empty query is distinct
+ok 5 - invalid transcript/reference records fail visibly; valid empty query is distinct
+  ---
+  duration_ms: 25.7659
+  type: 'test'
+  ...
+# Subtest: startup recovery stops unfinished authority, retains receipts and is idempotent
+ok 6 - startup recovery stops unfinished authority, retains receipts and is idempotent
+  ---
+  duration_ms: 21.4135
+  type: 'test'
+  ...
+# Subtest: startup recovery rejects malformed nested turn metadata atomically without deleting it
+ok 7 - startup recovery rejects malformed nested turn metadata atomically without deleting it
+  ---
+  duration_ms: 29.2951
+  type: 'test'
+  ...
+# Subtest: begin, accept, failure and draft lost acknowledgements notify once only after durable entity proof
+ok 8 - begin, accept, failure and draft lost acknowledgements notify once only after durable entity proof
+  ---
+  duration_ms: 135.2776
+  type: 'test'
+  ...
+# Subtest: failed lifecycle/phase contradictions are rejected without concealing or rewriting corruption
+ok 9 - failed lifecycle/phase contradictions are rejected without concealing or rewriting corruption
+  ---
+  duration_ms: 31.3472
+  type: 'test'
+  ...
+# Subtest: an unrelated durable revision never proves a rolled-back turn notification
+ok 10 - an unrelated durable revision never proves a rolled-back turn notification
+  ---
+  duration_ms: 32.7873
+  type: 'test'
+  ...
+# Subtest: runtime day/connection changes during awaited begin or response writes roll back obsolete acceptance
+ok 11 - runtime day/connection changes during awaited begin or response writes roll back obsolete acceptance
+  ---
+  duration_ms: 110.3145
+  type: 'test'
+  ...
+# (node:95596) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: acknowledged draft events carry immutable exact headers with constant nonempty-history work
+ok 12 - acknowledged draft events carry immutable exact headers with constant nonempty-history work
+  ---
+  duration_ms: 1049.9637
+  type: 'test'
+  ...
+# {"retainedIntents":1,"drafts":20,"sql":480,"historicalBodies":0}
+# {"retainedIntents":33,"drafts":20,"sql":480,"historicalBodies":0}
+# Subtest: lost draft commit acknowledgement reconciles without a draft-only certificate
+ok 13 - lost draft commit acknowledgement reconciles without a draft-only certificate
+  ---
+  duration_ms: 49.5503
+  type: 'test'
+  ...
+# Subtest: public action recovery discovers cancelled plans beyond thirty intents, tracks metadata revision drift and invalidates on clear
+ok 14 - public action recovery discovers cancelled plans beyond thirty intents, tracks metadata revision drift and invalidates on clear
+  ---
+  duration_ms: 812.5957
+  type: 'test'
+  ...
+# Subtest: saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt
+ok 15 - saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt
+  ---
+  duration_ms: 63.2713
+  type: 'test'
+  ...
+# Subtest: public restore queries preserve installation identity and discover interrupted and historical intents across reopen and clear
+ok 16 - public restore queries preserve installation identity and discover interrupted and historical intents across reopen and clear
+  ---
+  duration_ms: 100.132
+  type: 'test'
+  ...
+# Subtest: direct recovery verifies frozen command fingerprints before describing or dismissing notices
+ok 17 - direct recovery verifies frozen command fingerprints before describing or dismissing notices
+  ---
+  duration_ms: 40.3287
+  type: 'test'
+  ...
+# Subtest: core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen
+ok 18 - core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen
+  ---
+  duration_ms: 47.7355
+  type: 'test'
+  ...
+# Subtest: direct review resolves destination identity and selection consequences; intervening changes reject guarded edit
+ok 19 - direct review resolves destination identity and selection consequences; intervening changes reject guarded edit
+  ---
+  duration_ms: 93.0903
+  type: 'test'
+  ...
+# Subtest: factory rejects incompatible persisted database without clearing it and closes failed-start ownership
+ok 20 - factory rejects incompatible persisted database without clearing it and closes failed-start ownership
+  ---
+  duration_ms: 57.6756
+  type: 'test'
+  ...
+# Subtest: close waits for an in-flight command before releasing either connection
+ok 21 - close waits for an in-flight command before releasing either connection
+  ---
+  duration_ms: 56.432
+  type: 'test'
+  ...
+# Subtest: full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical
+ok 22 - full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical
+  ---
+  duration_ms: 550.283
+  type: 'test'
+  ...
+# Subtest: subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected
+ok 23 - subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected
+  ---
+  duration_ms: 63.3769
+  type: 'test'
+  ...
+# Subtest: direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay
+ok 24 - direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay
+  ---
+  duration_ms: 102.4263
+  type: 'test'
+  ...
+# Subtest: recovery waits behind live writer and never turns unavailable storage into empty or not-executed success
+ok 25 - recovery waits behind live writer and never turns unavailable storage into empty or not-executed success
+  ---
+  duration_ms: 39.393
+  type: 'test'
+  ...
+# Subtest: full assistant binds one live runtime to the same store and honors close without exposing native handles
+ok 26 - full assistant binds one live runtime to the same store and honors close without exposing native handles
+  ---
+  duration_ms: 35.6569
+  type: 'test'
+  ...
+# (node:95432) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: scope change owns its caller input and proves a lost commit acknowledgement before notifying
+ok 27 - scope change owns its caller input and proves a lost commit acknowledgement before notifying
+  ---
+  duration_ms: 67.9584
+  type: 'test'
+  ...
+# Subtest: immutable acknowledgement rejects corrupted output metadata without rewriting history
+ok 28 - immutable acknowledgement rejects corrupted output metadata without rewriting history
+  ---
+  duration_ms: 47.1177
+  type: 'test'
+  ...
+# Subtest: scope rollback followed by exact retry publishes one notification while the earlier reader was unavailable
+ok 29 - scope rollback followed by exact retry publishes one notification while the earlier reader was unavailable
+  ---
+  duration_ms: 22.592
+  type: 'test'
+  ...
+# Subtest: full USER evidence, NUL and correction survive more than 25 turns beyond history window
+ok 30 - full USER evidence, NUL and correction survive more than 25 turns beyond history window
+  ---
+  duration_ms: 259.9049
+  type: 'test'
+  ...
+# Subtest: atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch
+ok 31 - atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch
+  ---
+  duration_ms: 29.8129
+  type: 'test'
+  ...
+# Subtest: acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict
+ok 32 - acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict
+  ---
+  duration_ms: 34.7832
+  type: 'test'
+  ...
+# Subtest: oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel
+ok 33 - oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel
+  ---
+  duration_ms: 465.5722
+  type: 'test'
+  ...
+# Subtest: fault at acceptance record rolls back reply, memory, review state, projection and context together
+ok 34 - fault at acceptance record rolls back reply, memory, review state, projection and context together
+  ---
+  duration_ms: 20.6943
+  type: 'test'
+  ...
+# Subtest: explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change
+ok 35 - explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change
+  ---
+  duration_ms: 93.9307
+  type: 'test'
+  ...
+# Subtest: disk reopen preserves full evidence, explicit scope and immutable acceptance envelope
+ok 36 - disk reopen preserves full evidence, explicit scope and immutable acceptance envelope
+  ---
+  duration_ms: 57.8313
+  type: 'test'
+  ...
+# Subtest: pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally
+ok 37 - pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally
+  ---
+  duration_ms: 124.1392
+  type: 'test'
+  ...
+# Subtest: a 33-entry linked group cannot be silently severed by explicit carry selection
+ok 38 - a 33-entry linked group cannot be silently severed by explicit carry selection
+  ---
+  duration_ms: 425.4705
+  type: 'test'
+  ...
+# (node:98320) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: cold discovery rejects orphan recovery evidence after freshness invalidation without changing it
+ok 39 - cold discovery rejects orphan recovery evidence after freshness invalidation without changing it
+  ---
+  duration_ms: 291.7783
+  type: 'test'
+  ...
+# Subtest: 32/100 settled plans use bounded cold audits and zero historical bodies or hashes on warm/draft checks
+ok 40 - 32/100 settled plans use bounded cold audits and zero historical bodies or hashes on warm/draft checks
+  ---
+  duration_ms: 5037.7763
+  type: 'test'
+  ...
+# {"retainedSettled":32,"cold":{"sql":691,"writerSql":691,"readerSql":0,"hashes":32,"bodies":928,"bodyBytes":616022,"transactions":1,"ports":1},"warm":{"sql":17,"writerSql":17,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":1,"ports":1},"draftAndRefresh":{"sql":41,"writerSql":41,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":2,"ports":1},"journalAndRefresh":{"sql":55,"writerSql":55,"readerSql":0,"hashes":1,"bodies":24,"bodyBytes":19352,"transactions":2,"ports":1}}
+# {"retainedSettled":100,"cold":{"sql":2173,"writerSql":2173,"readerSql":0,"hashes":100,"bodies":2900,"bodyBytes":2024580,"transactions":4,"ports":4},"warm":{"sql":17,"writerSql":17,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":1,"ports":1},"draftAndRefresh":{"sql":41,"writerSql":41,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":2,"ports":1},"journalAndRefresh":{"sql":55,"writerSql":55,"readerSql":0,"hashes":1,"bodies":24,"bodyBytes":19408,"transactions":2,"ports":1}}
+# Subtest: cold continuation survives drafts and does not omit a newly inserted intent before the keyset cursor
+ok 41 - cold continuation survives drafts and does not omit a newly inserted intent before the keyset cursor
+  ---
+  duration_ms: 1037.8684
+  type: 'test'
+  ...
+# Subtest: partial receipt progress remains a candidate until cancellation proves the reserved remainder unexecuted
+ok 42 - partial receipt progress remains a candidate until cancellation proves the reserved remainder unexecuted
+  ---
+  duration_ms: 59.3648
+  type: 'test'
+  ...
+# Subtest: clear during cold progress replaces coverage generation and retains only independent direct intents
+ok 43 - clear during cold progress replaces coverage generation and retains only independent direct intents
+  ---
+  duration_ms: 503.6386
+  type: 'test'
+  ...
+# Subtest: no-plan message corruption, missing plans and receipt deletion are detected after unexpected same-handle writes
+ok 44 - no-plan message corruption, missing plans and receipt deletion are detected after unexpected same-handle writes
+  ---
+  duration_ms: 139.7456
+  type: 'test'
+  ...
+# Subtest: external commits before BEGIN and after COMMIT never publish a stale reusable baseline
+ok 45 - external commits before BEGIN and after COMMIT never publish a stale reusable baseline
+  ---
+  duration_ms: 82.7776
+  type: 'test'
+  ...
+# Subtest: cold discovery rejects missing assistant context for active and no-plan intents after external deletion
+ok 46 - cold discovery rejects missing assistant context for active and no-plan intents after external deletion
+  ---
+  duration_ms: 86.7189
+  type: 'test'
+  ...
+# Subtest: unknown impact invalidates before callback; rollback and lost acknowledgement never certify staged recovery
+ok 47 - unknown impact invalidates before callback; rollback and lost acknowledgement never certify staged recovery
+  ---
+  duration_ms: 117.854
+  type: 'test'
+  ...
+# Subtest: read-only mutation, invalid draft, schema change and unavailable fences fail closed
+ok 48 - read-only mutation, invalid draft, schema change and unavailable fences fail closed
+  ---
+  duration_ms: 92.1395
+  type: 'test'
+  ...
+# Subtest: an oversized single receipt fails before decoding its body and a closed gate rejects old continuations
+ok 49 - an oversized single receipt fails before decoding its body and a closed gate rejects old continuations
+  ---
+  duration_ms: 71.6055
+  type: 'test'
+  ...
+# Subtest: schema identity is verified at first use and retained across failed coverage audits
+ok 50 - schema identity is verified at first use and retained across failed coverage audits
+  ---
+  duration_ms: 47.3904
+  type: 'test'
+  ...
+1..50
+# tests 50
+# suites 0
+# pass 50
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14947.9282

@@ -1,0 +1,18 @@
+{
+  "name": "@cookmate/account-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@cookmate/account-sync": "0.1.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "esbuild": "0.28.2"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test --test-concurrency=1 test/*.test.ts",
+    "build": "node scripts/build.mjs"
+  }
+}

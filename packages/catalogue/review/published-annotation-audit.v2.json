@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "cookmate-annotation-audit-v2",
+  "catalogueVersion": "cookmate-2026-09-28.v2",
+  "reviewStatus": "reviewed_static_delta",
+  "reviewer": "source_photo_review (independent static review; no new photo inspection or candidate execution)",
+  "reviewedArtifact": "candidate/packages/catalogue/reviewed-annotations.json",
+  "reviewedArtifactSha256": "ef77102d2c758f5b60cae6af684e76b8bb90970d77defd1a29d3d9dc91abe423",
+  "annotationCount": 20,
+  "photoTreatmentSha256": "b4a8189701e2e7f6108811161f79ea4be400b3b46c061171122ae9411b0e1071",
+  "amendmentAddendumSha256": "0d329284732ce1211d832f63146595175edef3ca7c249da821715b252cf73395",
+  "baselineAnnotationAuditSha256": "0b760df16530531c1836be3cec0c140cafe469e1194169ef7703a44a654c44fa",
+  "scope": "Only the three approved notes, exact individual locators and two photo exceptions; original 17-note order is retained. Historical v1 audit remains separate.",
+  "executionStatus": "NOT_RUN",
+  "limits": "Static source/wording delta review only. No fresh all-100 inspection, generated output, native proof or culinary verification.",
+  "staticReview": {
+    "path": "stage/static-review.md",
+    "sha256": "ac161a0dbf294498feb6648ad37278528f0319f0bfe3572df1d6e5b751bea3a1",
+    "scope": "Approved note/treatment delta only; execution remains NOT_RUN."
+  }
+}

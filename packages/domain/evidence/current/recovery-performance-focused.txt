@@ -1,0 +1,23 @@
+(node:96012) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ 32/100 settled plans use bounded cold audits and zero historical bodies or hashes on warm/draft checks (5844.3701ms)
+ℹ {"retainedSettled":32,"cold":{"sql":691,"writerSql":691,"readerSql":0,"hashes":32,"bodies":928,"bodyBytes":616022,"transactions":1,"ports":1},"warm":{"sql":17,"writerSql":17,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":1,"ports":1},"draftAndRefresh":{"sql":41,"writerSql":41,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":2,"ports":1},"journalAndRefresh":{"sql":55,"writerSql":55,"readerSql":0,"hashes":1,"bodies":24,"bodyBytes":19352,"transactions":2,"ports":1}}
+ℹ {"retainedSettled":100,"cold":{"sql":2173,"writerSql":2173,"readerSql":0,"hashes":100,"bodies":2900,"bodyBytes":2024580,"transactions":4,"ports":4},"warm":{"sql":17,"writerSql":17,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":1,"ports":1},"draftAndRefresh":{"sql":41,"writerSql":41,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":2,"ports":1},"journalAndRefresh":{"sql":55,"writerSql":55,"readerSql":0,"hashes":1,"bodies":24,"bodyBytes":19408,"transactions":2,"ports":1}}
+✔ cold continuation survives drafts and does not omit a newly inserted intent before the keyset cursor (1071.3577ms)
+✔ partial receipt progress remains a candidate until cancellation proves the reserved remainder unexecuted (62.3694ms)
+✔ clear during cold progress replaces coverage generation and retains only independent direct intents (507.7121ms)
+✔ no-plan message corruption, missing plans and receipt deletion are detected after unexpected same-handle writes (154.4748ms)
+✔ external commits before BEGIN and after COMMIT never publish a stale reusable baseline (82.4019ms)
+✔ cold discovery rejects missing assistant context for active and no-plan intents after external deletion (78.9836ms)
+✔ unknown impact invalidates before callback; rollback and lost acknowledgement never certify staged recovery (126.5205ms)
+✔ read-only mutation, invalid draft, schema change and unavailable fences fail closed (133.4054ms)
+✔ an oversized single receipt fails before decoding its body and a closed gate rejects old continuations (138.1405ms)
+✔ schema identity is verified at first use and retained across failed coverage audits (64.4664ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9058.2456

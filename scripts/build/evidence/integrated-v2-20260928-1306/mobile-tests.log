@@ -1,0 +1,24 @@
+
+> cookmate-workspace@0.1.0 test:mobile
+> npm run test --workspace @cookmate/mobile
+
+
+> @cookmate/mobile@0.1.0 test
+> jest --runInBand
+
+PASS src/features/workspace/recoveryFeedback.test.tsx
+PASS src/foundation/FoundationProbeScreen.test.tsx
+PASS src/features/assistant/ActionContinuationReview.test.tsx
+PASS src/features/workspace/localIntegration.test.tsx
+PASS src/features/source-content-notice.test.tsx
+PASS src/features/assistant/assistantRuntime.test.ts
+PASS src/features/assistant/assistantViews.test.tsx
+PASS src/features/representative.test.tsx
+PASS src/features/assistant/assistantRecovery.test.ts
+PASS src/features/photo-source-notice.test.tsx
+
+Test Suites: 10 passed, 10 total
+Tests:       241 passed, 241 total
+Snapshots:   0 total
+Time:        10.556 s, estimated 73 s
+Ran all test suites.

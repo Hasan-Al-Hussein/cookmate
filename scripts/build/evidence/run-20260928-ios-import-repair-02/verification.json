@@ -1,0 +1,8 @@
+{
+  "startedAt": "2026-09-28T06:56:27.8316550Z",
+  "finishedAt": "2026-09-28T06:56:39.8629412Z",
+  "exitCode": 0,
+  "scope": "iOS Metro export on Windows; no native execution",
+  "amendmentSha256": "7e2e9904a86cba11519dc2ae1e4c2526ce37cb1c44c20ebe6236213a62b06e43",
+  "output": "apps/mobile/dist/root-integration-20260928-02"
+}

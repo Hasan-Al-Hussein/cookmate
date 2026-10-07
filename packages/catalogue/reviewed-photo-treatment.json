@@ -1,0 +1,25 @@
+{
+  "ruleVersion": "photo-treatment-v1",
+  "exceptions": [
+    {
+      "recipeId": "53262",
+      "preserveFullFrame": true,
+      "warningAnnotationId": null,
+      "creditAnnotationId": "53262-image-credit-distinction"
+    },
+    {
+      "recipeId": "53230",
+      "preserveFullFrame": true,
+      "warningAnnotationId": "53230-photo-uncertainty",
+      "creditAnnotationId": null
+    },
+    {
+      "recipeId": "53208",
+      "preserveFullFrame": true,
+      "warningAnnotationId": "53208-photo-uncertainty",
+      "creditAnnotationId": null
+    },
+    {"recipeId":"53389","preserveFullFrame":true,"warningAnnotationId":"53389-photo-uncertainty","creditAnnotationId":null},
+    {"recipeId":"53318","preserveFullFrame":true,"warningAnnotationId":"53318-photo-uncertainty","creditAnnotationId":null}
+  ]
+}

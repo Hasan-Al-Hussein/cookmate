@@ -1,0 +1,3027 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cookmate.invalid/contracts/v2",
+  "title": "CookMateContract",
+  "anyOf": [
+    {
+      "$ref": "#/definitions/AssistantTurnRequest"
+    },
+    {
+      "$ref": "#/definitions/AssistantTurnResponse"
+    },
+    {
+      "$ref": "#/definitions/MemoryUpdate"
+    },
+    {
+      "$ref": "#/definitions/ModelMemoryUpdate"
+    },
+    {
+      "$ref": "#/definitions/WorkingContextSelection"
+    },
+    {
+      "$ref": "#/definitions/AssistantAcceptanceInput"
+    },
+    {
+      "$ref": "#/definitions/AiProposal"
+    },
+    {
+      "$ref": "#/definitions/LocalCommand"
+    },
+    {
+      "$ref": "#/definitions/OperationReceipt"
+    },
+    {
+      "$ref": "#/definitions/CommandResult"
+    },
+    {
+      "$ref": "#/definitions/MultiActionResult"
+    },
+    {
+      "$ref": "#/definitions/PendingIntent"
+    },
+    {
+      "$ref": "#/definitions/Recipe"
+    },
+    {
+      "$ref": "#/definitions/PlanOccurrence"
+    },
+    {
+      "$ref": "#/definitions/ShoppingScope"
+    },
+    {
+      "$ref": "#/definitions/PreferenceSnapshot"
+    },
+    {
+      "$ref": "#/definitions/PairRequest"
+    },
+    {
+      "$ref": "#/definitions/PairResponse"
+    },
+    {
+      "$ref": "#/definitions/HealthResponse"
+    }
+  ],
+  "definitions": {
+    "AppId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 36,
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$",
+      "title": "AppId"
+    },
+    "RecipeId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20,
+      "pattern": "^[0-9]+$",
+      "title": "RecipeId"
+    },
+    "Revision": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991,
+      "title": "Sequence"
+    },
+    "Sequence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9007199254740991,
+      "title": "Sequence"
+    },
+    "Fingerprint": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Fingerprint"
+    },
+    "LocalDate": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10,
+      "pattern": "^(19[0-9]{2}|20[0-9]{2}|2100)-[0-9]{2}-[0-9]{2}$",
+      "title": "LocalDate"
+    },
+    "UtcInstant": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 24,
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\\.[0-9]{3}Z$",
+      "title": "UtcInstant"
+    },
+    "MealKey": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner"
+      ],
+      "title": "MealKey"
+    },
+    "PreferenceType": {
+      "type": "string",
+      "enum": [
+        "cuisine",
+        "ingredient_like",
+        "ingredient_avoid",
+        "dietary_style"
+      ],
+      "title": "PreferenceType"
+    },
+    "CatalogueIdentity": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "fingerprint": {
+          "$ref": "#/definitions/Fingerprint"
+        }
+      },
+      "required": [
+        "version",
+        "fingerprint"
+      ],
+      "additionalProperties": false,
+      "title": "CatalogueIdentity"
+    },
+    "SourceLocator": {
+      "type": "object",
+      "properties": {
+        "sheet": {
+          "type": "string",
+          "enum": [
+            "Recipes",
+            "Ingredients",
+            "Instructions"
+          ]
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "column": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 3
+        }
+      },
+      "required": [
+        "sheet",
+        "row"
+      ],
+      "additionalProperties": false,
+      "title": "SourceLocator"
+    },
+    "IngredientEntry": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "position": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "rawName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "rawMeasure": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 512
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceLocator"
+        }
+      },
+      "required": [
+        "recipeId",
+        "position",
+        "rawName",
+        "rawMeasure",
+        "source"
+      ],
+      "additionalProperties": false,
+      "title": "IngredientEntry"
+    },
+    "InstructionPassage": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "rawText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "presentation": {
+          "type": "string",
+          "enum": [
+            "heading",
+            "passage"
+          ]
+        },
+        "source": {
+          "$ref": "#/definitions/SourceLocator"
+        }
+      },
+      "required": [
+        "recipeId",
+        "sequence",
+        "rawText",
+        "presentation",
+        "source"
+      ],
+      "additionalProperties": false,
+      "title": "InstructionPassage"
+    },
+    "QualityAnnotation": {
+      "type": "object",
+      "properties": {
+        "annotationId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "limited_instructions",
+            "instruction_only_ingredient",
+            "missing_measure",
+            "source_gap"
+          ]
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceLocator"
+          },
+          "maxItems": 20,
+          "minItems": 1
+        },
+        "ruleVersion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        }
+      },
+      "required": [
+        "annotationId",
+        "recipeId",
+        "kind",
+        "note",
+        "evidence",
+        "ruleVersion"
+      ],
+      "additionalProperties": false,
+      "title": "QualityAnnotation"
+    },
+    "Recipe": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "cuisine": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "rawTags": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 0,
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "photoKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "recipePage": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2048
+        },
+        "originalSourceUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "videoUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 2048
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ingredients": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/IngredientEntry"
+          },
+          "maxItems": 100,
+          "minItems": 1
+        },
+        "instructions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/InstructionPassage"
+          },
+          "maxItems": 200,
+          "minItems": 1
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/QualityAnnotation"
+          },
+          "maxItems": 40
+        }
+      },
+      "required": [
+        "recipeId",
+        "title",
+        "category",
+        "cuisine",
+        "rawTags",
+        "photoKey",
+        "recipePage",
+        "originalSourceUrl",
+        "videoUrl",
+        "ingredients",
+        "instructions",
+        "annotations"
+      ],
+      "additionalProperties": false,
+      "title": "Recipe"
+    },
+    "Placement": {
+      "type": "object",
+      "properties": {
+        "actualDate": {
+          "$ref": "#/definitions/LocalDate"
+        },
+        "mealKey": {
+          "$ref": "#/definitions/MealKey"
+        }
+      },
+      "required": [
+        "actualDate",
+        "mealKey"
+      ],
+      "additionalProperties": false,
+      "title": "Placement"
+    },
+    "PlanOccurrence": {
+      "type": "object",
+      "properties": {
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "createdAt": {
+          "$ref": "#/definitions/UtcInstant"
+        },
+        "updatedAt": {
+          "$ref": "#/definitions/UtcInstant"
+        }
+      },
+      "required": [
+        "occurrenceId",
+        "recipeId",
+        "placement",
+        "revision",
+        "createdAt",
+        "updatedAt"
+      ],
+      "additionalProperties": false,
+      "title": "PlanOccurrence"
+    },
+    "ShoppingScope": {
+      "type": "object",
+      "properties": {
+        "scopeId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "occurrenceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppId"
+          },
+          "maxItems": 1000,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "scopeId",
+        "revision",
+        "occurrenceIds"
+      ],
+      "additionalProperties": false,
+      "title": "ShoppingScope"
+    },
+    "SavedPreference": {
+      "type": "object",
+      "properties": {
+        "preferenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "type": {
+          "$ref": "#/definitions/PreferenceType"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "preferenceId",
+        "type",
+        "value",
+        "revision"
+      ],
+      "additionalProperties": false,
+      "title": "SavedPreference"
+    },
+    "PreferenceSnapshot": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "lastRemovalRevision": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Revision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SavedPreference"
+          },
+          "maxItems": 100
+        }
+      },
+      "required": [
+        "revision",
+        "lastRemovalRevision",
+        "items"
+      ],
+      "additionalProperties": false,
+      "title": "PreferenceSnapshot"
+    },
+    "DateContext": {
+      "type": "object",
+      "properties": {
+        "localDate": {
+          "$ref": "#/definitions/LocalDate"
+        },
+        "timeZone": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "utcOffsetMinutes": {
+          "type": "integer",
+          "minimum": -840,
+          "maximum": 840
+        }
+      },
+      "required": [
+        "localDate",
+        "timeZone",
+        "utcOffsetMinutes"
+      ],
+      "additionalProperties": false,
+      "title": "DateContext"
+    },
+    "RelativeDateGuard": {
+      "type": "object",
+      "properties": {
+        "interpretedAt": {
+          "$ref": "#/definitions/DateContext"
+        },
+        "resolvedDate": {
+          "$ref": "#/definitions/LocalDate"
+        },
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        }
+      },
+      "required": [
+        "interpretedAt",
+        "resolvedDate",
+        "sourceMessageId"
+      ],
+      "additionalProperties": false,
+      "title": "RelativeDateGuard"
+    },
+    "ConversationOrigin": {
+      "type": "object",
+      "properties": {
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "generation": {
+          "$ref": "#/definitions/Revision"
+        },
+        "messageId": {
+          "$ref": "#/definitions/AppId"
+        }
+      },
+      "required": [
+        "conversationId",
+        "generation",
+        "messageId"
+      ],
+      "additionalProperties": false,
+      "title": "ConversationOrigin"
+    },
+    "ReferenceSet": {
+      "type": "object",
+      "properties": {
+        "referenceSetId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "messageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "recipeIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RecipeId"
+          },
+          "maxItems": 100,
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "referenceSetId",
+        "messageId",
+        "recipeIds"
+      ],
+      "additionalProperties": false,
+      "title": "ReferenceSet"
+    },
+    "CurrentUserMessage": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "sourceSequence": {
+          "$ref": "#/definitions/Sequence"
+        },
+        "sourceDateContext": {
+          "$ref": "#/definitions/DateContext"
+        },
+        "preferenceRevisionAtSource": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceLinks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcePreferenceLink"
+          }
+        }
+      },
+      "required": [
+        "messageId",
+        "text",
+        "sourceSequence",
+        "sourceDateContext",
+        "preferenceRevisionAtSource",
+        "preferenceLinks"
+      ],
+      "additionalProperties": false,
+      "title": "CurrentUserMessage"
+    },
+    "HistoricalUserTurn": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "role": {
+          "const": "user",
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "sourceSequence": {
+          "$ref": "#/definitions/Sequence"
+        },
+        "sourceDateContext": {
+          "$ref": "#/definitions/DateContext"
+        },
+        "preferenceRevisionAtSource": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceLinks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcePreferenceLink"
+          }
+        }
+      },
+      "required": [
+        "messageId",
+        "role",
+        "text",
+        "sourceSequence",
+        "sourceDateContext",
+        "preferenceRevisionAtSource",
+        "preferenceLinks"
+      ],
+      "additionalProperties": false,
+      "title": "HistoricalUserTurn"
+    },
+    "HistoricalAssistantTurn": {
+      "type": "object",
+      "properties": {
+        "messageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "role": {
+          "const": "assistant",
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "sourceSequence": {
+          "$ref": "#/definitions/Sequence"
+        }
+      },
+      "required": [
+        "messageId",
+        "role",
+        "text",
+        "sourceSequence"
+      ],
+      "additionalProperties": false,
+      "title": "HistoricalAssistantTurn"
+    },
+    "HistoricalTurn": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/HistoricalUserTurn"
+        },
+        {
+          "$ref": "#/definitions/HistoricalAssistantTurn"
+        }
+      ],
+      "title": "HistoricalTurn"
+    },
+    "SourcePreferenceLink": {
+      "type": "object",
+      "properties": {
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "preferenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "type": {
+          "$ref": "#/definitions/PreferenceType"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "savedRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "removedRevision": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Revision"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "sourceMessageId",
+        "preferenceId",
+        "type",
+        "value",
+        "savedRevision",
+        "removedRevision"
+      ],
+      "additionalProperties": false,
+      "title": "SourcePreferenceLink"
+    },
+    "UserMemorySource": {
+      "type": "object",
+      "properties": {
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "sourceSequence": {
+          "$ref": "#/definitions/Sequence"
+        },
+        "sourceDateContext": {
+          "$ref": "#/definitions/DateContext"
+        },
+        "preferenceRevisionAtSource": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceLinks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcePreferenceLink"
+          }
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      },
+      "required": [
+        "sourceMessageId",
+        "sourceSequence",
+        "sourceDateContext",
+        "preferenceRevisionAtSource",
+        "preferenceLinks",
+        "quote"
+      ],
+      "additionalProperties": false,
+      "title": "UserMemorySource"
+    },
+    "ConversationMemoryScope": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "conversation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "title": "ConversationMemoryScope"
+    },
+    "RecipesMemoryScope": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "recipes",
+          "type": "string"
+        },
+        "recipeIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RecipeId"
+          },
+          "maxItems": 6,
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "recipeIds"
+      ],
+      "additionalProperties": false,
+      "title": "RecipesMemoryScope"
+    },
+    "PlacementMemoryScope": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "placement",
+          "type": "string"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        }
+      },
+      "required": [
+        "kind",
+        "placement"
+      ],
+      "additionalProperties": false,
+      "title": "PlacementMemoryScope"
+    },
+    "MemoryScope": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/ConversationMemoryScope"
+        },
+        {
+          "$ref": "#/definitions/RecipesMemoryScope"
+        },
+        {
+          "$ref": "#/definitions/PlacementMemoryScope"
+        }
+      ],
+      "title": "MemoryScope"
+    },
+    "MemoryTarget": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "memory",
+          "type": "string"
+        },
+        "memoryId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "memoryId",
+        "expectedRevision"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryTarget"
+    },
+    "SourceTarget": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "source",
+          "type": "string"
+        },
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        }
+      },
+      "required": [
+        "kind",
+        "sourceMessageId"
+      ],
+      "additionalProperties": false,
+      "title": "SourceTarget"
+    },
+    "RelationTarget": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/MemoryTarget"
+        },
+        {
+          "$ref": "#/definitions/SourceTarget"
+        }
+      ],
+      "title": "RelationTarget"
+    },
+    "MemoryRelation": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "supersedes",
+            "conflicts_with"
+          ]
+        },
+        "target": {
+          "$ref": "#/definitions/RelationTarget"
+        }
+      },
+      "required": [
+        "kind",
+        "target"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryRelation"
+    },
+    "ResolvedMemoryRelation": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "supersedes",
+            "conflicts_with"
+          ]
+        },
+        "target": {
+          "$ref": "#/definitions/MemoryTarget"
+        }
+      },
+      "required": [
+        "kind",
+        "target"
+      ],
+      "additionalProperties": false,
+      "title": "ResolvedMemoryRelation"
+    },
+    "MemoryItem": {
+      "type": "object",
+      "properties": {
+        "memoryId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "sourceSequence": {
+          "$ref": "#/definitions/Sequence"
+        },
+        "sourceDateContext": {
+          "$ref": "#/definitions/DateContext"
+        },
+        "preferenceRevisionAtSource": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceLinks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourcePreferenceLink"
+          }
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "constraint",
+            "correction",
+            "unresolved_intent",
+            "context"
+          ]
+        },
+        "scope": {
+          "$ref": "#/definitions/MemoryScope"
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ResolvedMemoryRelation"
+          },
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "memoryId",
+        "revision",
+        "sourceMessageId",
+        "sourceSequence",
+        "sourceDateContext",
+        "preferenceRevisionAtSource",
+        "preferenceLinks",
+        "quote",
+        "kind",
+        "scope",
+        "relations"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryItem"
+    },
+    "WorkingContextSelection": {
+      "type": "object",
+      "properties": {
+        "afterSequence": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Sequence"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "carryMemoryIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppId"
+          },
+          "maxItems": 32,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "afterSequence",
+        "carryMemoryIds"
+      ],
+      "additionalProperties": false,
+      "title": "WorkingContextSelection"
+    },
+    "MemoryCoverage": {
+      "type": "object",
+      "properties": {
+        "retainedEntryCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "title": "Sequence"
+        },
+        "suppliedEntryCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "title": "Sequence"
+        },
+        "omittedEntryCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "title": "Sequence"
+        },
+        "pendingUserSourceCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "title": "Sequence"
+        },
+        "pendingWorkingSourceCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "title": "Sequence"
+        },
+        "suppliedReviewTargetCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991,
+          "title": "Sequence"
+        },
+        "selectionStatus": {
+          "type": "string",
+          "enum": [
+            "within_budget",
+            "narrowing_required"
+          ]
+        }
+      },
+      "required": [
+        "retainedEntryCount",
+        "suppliedEntryCount",
+        "omittedEntryCount",
+        "pendingUserSourceCount",
+        "pendingWorkingSourceCount",
+        "suppliedReviewTargetCount",
+        "selectionStatus"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryCoverage"
+    },
+    "MemoryContext": {
+      "type": "object",
+      "properties": {
+        "projectionRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "baseContextRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "workingContext": {
+          "$ref": "#/definitions/WorkingContextSelection"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MemoryItem"
+          },
+          "maxItems": 32
+        },
+        "reviewTargetMessageIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppId"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "pendingSources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UserMemorySource"
+          },
+          "maxItems": 7
+        },
+        "coverage": {
+          "$ref": "#/definitions/MemoryCoverage"
+        }
+      },
+      "required": [
+        "projectionRevision",
+        "baseContextRevision",
+        "workingContext",
+        "items",
+        "reviewTargetMessageIds",
+        "pendingSources",
+        "coverage"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryContext"
+    },
+    "ReviewDisposition": {
+      "type": "object",
+      "properties": {
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "disposition": {
+          "type": "string",
+          "enum": [
+            "retain",
+            "non_memory",
+            "unresolved"
+          ]
+        }
+      },
+      "required": [
+        "sourceMessageId",
+        "disposition"
+      ],
+      "additionalProperties": false,
+      "title": "ReviewDisposition"
+    },
+    "MemoryEntryProposal": {
+      "type": "object",
+      "properties": {
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "constraint",
+            "correction",
+            "unresolved_intent",
+            "context"
+          ]
+        },
+        "scope": {
+          "$ref": "#/definitions/MemoryScope"
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MemoryRelation"
+          },
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "sourceMessageId",
+        "quote",
+        "kind",
+        "scope",
+        "relations"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryEntryProposal"
+    },
+    "ModelMemoryEntryProposal": {
+      "type": "object",
+      "properties": {
+        "sourceMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "constraint",
+            "correction",
+            "unresolved_intent",
+            "context"
+          ]
+        },
+        "scope": {
+          "$ref": "#/definitions/MemoryScope"
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MemoryRelation"
+          },
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "sourceMessageId",
+        "kind",
+        "scope",
+        "relations"
+      ],
+      "additionalProperties": false,
+      "title": "ModelMemoryEntryProposal"
+    },
+    "MemoryUpdate": {
+      "type": "object",
+      "properties": {
+        "baseRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "baseContextRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReviewDisposition"
+          },
+          "maxItems": 8,
+          "minItems": 1
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/MemoryEntryProposal"
+          },
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "baseRevision",
+        "baseContextRevision",
+        "reviews",
+        "entries"
+      ],
+      "additionalProperties": false,
+      "title": "MemoryUpdate"
+    },
+    "ModelMemoryUpdate": {
+      "type": "object",
+      "properties": {
+        "baseRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "baseContextRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "reviews": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReviewDisposition"
+          },
+          "maxItems": 8,
+          "minItems": 1
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ModelMemoryEntryProposal"
+          },
+          "maxItems": 8
+        }
+      },
+      "required": [
+        "baseRevision",
+        "baseContextRevision",
+        "reviews",
+        "entries"
+      ],
+      "additionalProperties": false,
+      "title": "ModelMemoryUpdate"
+    },
+    "RecipeSourceReference": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "section": {
+          "const": "recipe",
+          "type": "string"
+        }
+      },
+      "required": [
+        "recipeId",
+        "section"
+      ],
+      "additionalProperties": false,
+      "title": "RecipeSourceReference"
+    },
+    "IngredientSourceReference": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "section": {
+          "const": "ingredient",
+          "type": "string"
+        },
+        "position": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "recipeId",
+        "section",
+        "position"
+      ],
+      "additionalProperties": false,
+      "title": "IngredientSourceReference"
+    },
+    "InstructionSourceReference": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "section": {
+          "const": "instruction",
+          "type": "string"
+        },
+        "position": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "recipeId",
+        "section",
+        "position"
+      ],
+      "additionalProperties": false,
+      "title": "InstructionSourceReference"
+    },
+    "AnnotationSourceReference": {
+      "type": "object",
+      "properties": {
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "section": {
+          "const": "annotation",
+          "type": "string"
+        },
+        "annotationId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        }
+      },
+      "required": [
+        "recipeId",
+        "section",
+        "annotationId"
+      ],
+      "additionalProperties": false,
+      "title": "AnnotationSourceReference"
+    },
+    "SourceReference": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/RecipeSourceReference"
+        },
+        {
+          "$ref": "#/definitions/IngredientSourceReference"
+        },
+        {
+          "$ref": "#/definitions/InstructionSourceReference"
+        },
+        {
+          "$ref": "#/definitions/AnnotationSourceReference"
+        }
+      ],
+      "title": "SourceReference"
+    },
+    "EmptyTarget": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "empty",
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "title": "EmptyTarget"
+    },
+    "OccupiedTarget": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "occupied",
+          "type": "string"
+        },
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "occurrenceId",
+        "expectedRevision"
+      ],
+      "additionalProperties": false,
+      "title": "OccupiedTarget"
+    },
+    "PlanTarget": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/EmptyTarget"
+        },
+        {
+          "$ref": "#/definitions/OccupiedTarget"
+        }
+      ],
+      "title": "PlanTarget"
+    },
+    "SaveRecipeProposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "saveRecipe",
+          "type": "string"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        }
+      },
+      "required": [
+        "kind",
+        "recipeId"
+      ],
+      "additionalProperties": false,
+      "title": "SaveRecipeProposal"
+    },
+    "AddPlanProposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "addPlan",
+          "type": "string"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        },
+        "expectedTarget": {
+          "$ref": "#/definitions/PlanTarget"
+        }
+      },
+      "required": [
+        "kind",
+        "recipeId",
+        "placement",
+        "expectedTarget"
+      ],
+      "additionalProperties": false,
+      "title": "AddPlanProposal"
+    },
+    "SavePreferenceProposal": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "savePreference",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/PreferenceType"
+        },
+        "explicitValue": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        }
+      },
+      "required": [
+        "kind",
+        "type",
+        "explicitValue"
+      ],
+      "additionalProperties": false,
+      "title": "SavePreferenceProposal"
+    },
+    "AiProposal": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/SaveRecipeProposal"
+        },
+        {
+          "$ref": "#/definitions/AddPlanProposal"
+        },
+        {
+          "$ref": "#/definitions/SavePreferenceProposal"
+        }
+      ],
+      "title": "AiProposal"
+    },
+    "AssistantContext": {
+      "type": "object",
+      "properties": {
+        "history": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HistoricalTurn"
+          },
+          "maxItems": 20
+        },
+        "memory": {
+          "$ref": "#/definitions/MemoryContext"
+        },
+        "referenceSets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceSet"
+          },
+          "maxItems": 10
+        },
+        "preferences": {
+          "$ref": "#/definitions/PreferenceSnapshot"
+        },
+        "planOccurrences": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PlanOccurrence"
+          },
+          "maxItems": 42
+        },
+        "date": {
+          "$ref": "#/definitions/DateContext"
+        },
+        "selectedRecipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "selectedPlacement": {
+          "$ref": "#/definitions/Placement"
+        }
+      },
+      "required": [
+        "history",
+        "memory",
+        "referenceSets",
+        "preferences",
+        "planOccurrences",
+        "date"
+      ],
+      "additionalProperties": false,
+      "title": "AssistantContext"
+    },
+    "ContractError": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "invalid_input",
+            "unauthenticated",
+            "pairing_expired",
+            "pairing_revoked",
+            "incompatible_version",
+            "unknown_recipe",
+            "stale_target",
+            "stale_context",
+            "operation_conflict",
+            "already_pending",
+            "too_large",
+            "busy",
+            "quota",
+            "network_unavailable",
+            "untrusted_endpoint",
+            "provider_unavailable",
+            "provider_refused",
+            "deadline",
+            "invalid_model_result",
+            "unsupported_request",
+            "storage_failure",
+            "migration_failure",
+            "cancelled"
+          ]
+        },
+        "messageKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "retry": {
+          "type": "string",
+          "enum": [
+            "never",
+            "after_correction",
+            "after_reconnect",
+            "after_delay",
+            "reconcile"
+          ]
+        },
+        "field": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "operationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "retryAfterSeconds": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 86400
+        }
+      },
+      "required": [
+        "code",
+        "messageKey",
+        "retry"
+      ],
+      "additionalProperties": false,
+      "title": "ContractError"
+    },
+    "AssistantTurnRequest": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "catalogue": {
+          "$ref": "#/definitions/CatalogueIdentity"
+        },
+        "requestId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "intentRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "conversationGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "connectionGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "message": {
+          "$ref": "#/definitions/CurrentUserMessage"
+        },
+        "context": {
+          "$ref": "#/definitions/AssistantContext"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "saveRecipe",
+              "addPlan",
+              "savePreference"
+            ]
+          },
+          "maxItems": 3,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "apiVersion",
+        "catalogue",
+        "requestId",
+        "userIntentId",
+        "intentRevision",
+        "conversationId",
+        "conversationGeneration",
+        "connectionGeneration",
+        "message",
+        "context",
+        "capabilities"
+      ],
+      "additionalProperties": false,
+      "title": "AssistantTurnRequest"
+    },
+    "AnswerResponse": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "catalogue": {
+          "$ref": "#/definitions/CatalogueIdentity"
+        },
+        "requestId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "intentRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "conversationGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "connectionGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "kind": {
+          "const": "answer",
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceReference"
+          },
+          "maxItems": 100
+        },
+        "referenceSets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceSet"
+          },
+          "maxItems": 10
+        },
+        "memoryUpdate": {
+          "$ref": "#/definitions/MemoryUpdate"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "catalogue",
+        "requestId",
+        "userIntentId",
+        "intentRevision",
+        "conversationId",
+        "conversationGeneration",
+        "connectionGeneration",
+        "preferenceRevision",
+        "kind",
+        "text",
+        "sources",
+        "referenceSets",
+        "memoryUpdate"
+      ],
+      "additionalProperties": false,
+      "title": "AnswerResponse"
+    },
+    "ClarificationResponse": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "catalogue": {
+          "$ref": "#/definitions/CatalogueIdentity"
+        },
+        "requestId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "intentRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "conversationGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "connectionGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "kind": {
+          "const": "clarification",
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceReference"
+          },
+          "maxItems": 100
+        },
+        "referenceSets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceSet"
+          },
+          "maxItems": 10
+        },
+        "memoryUpdate": {
+          "$ref": "#/definitions/MemoryUpdate"
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "recipe",
+              "date",
+              "meal",
+              "preference",
+              "reference",
+              "intent"
+            ]
+          },
+          "maxItems": 6,
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "apiVersion",
+        "catalogue",
+        "requestId",
+        "userIntentId",
+        "intentRevision",
+        "conversationId",
+        "conversationGeneration",
+        "connectionGeneration",
+        "preferenceRevision",
+        "kind",
+        "text",
+        "sources",
+        "referenceSets",
+        "memoryUpdate",
+        "missing"
+      ],
+      "additionalProperties": false,
+      "title": "ClarificationResponse"
+    },
+    "ProposalResponse": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "catalogue": {
+          "$ref": "#/definitions/CatalogueIdentity"
+        },
+        "requestId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "intentRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "conversationGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "connectionGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "kind": {
+          "const": "proposal",
+          "type": "string"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 8000
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SourceReference"
+          },
+          "maxItems": 100
+        },
+        "referenceSets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ReferenceSet"
+          },
+          "maxItems": 10
+        },
+        "memoryUpdate": {
+          "$ref": "#/definitions/MemoryUpdate"
+        },
+        "proposals": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AiProposal"
+          },
+          "maxItems": 8,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "apiVersion",
+        "catalogue",
+        "requestId",
+        "userIntentId",
+        "intentRevision",
+        "conversationId",
+        "conversationGeneration",
+        "connectionGeneration",
+        "preferenceRevision",
+        "kind",
+        "text",
+        "sources",
+        "referenceSets",
+        "memoryUpdate",
+        "proposals"
+      ],
+      "additionalProperties": false,
+      "title": "ProposalResponse"
+    },
+    "ErrorResponse": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "catalogue": {
+          "$ref": "#/definitions/CatalogueIdentity"
+        },
+        "requestId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "intentRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "conversationGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "connectionGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "preferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "kind": {
+          "const": "error",
+          "type": "string"
+        },
+        "error": {
+          "$ref": "#/definitions/ContractError"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "catalogue",
+        "requestId",
+        "userIntentId",
+        "intentRevision",
+        "conversationId",
+        "conversationGeneration",
+        "connectionGeneration",
+        "preferenceRevision",
+        "kind",
+        "error"
+      ],
+      "additionalProperties": false,
+      "title": "ErrorResponse"
+    },
+    "AssistantTurnResponse": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/AnswerResponse"
+        },
+        {
+          "$ref": "#/definitions/ClarificationResponse"
+        },
+        {
+          "$ref": "#/definitions/ProposalResponse"
+        },
+        {
+          "$ref": "#/definitions/ErrorResponse"
+        }
+      ],
+      "title": "AssistantTurnResponse"
+    },
+    "NormalAssistantTurnResponse": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/AnswerResponse"
+        },
+        {
+          "$ref": "#/definitions/ClarificationResponse"
+        },
+        {
+          "$ref": "#/definitions/ProposalResponse"
+        }
+      ],
+      "title": "NormalAssistantTurnResponse"
+    },
+    "AcceptanceEnvelope": {
+      "type": "object",
+      "properties": {
+        "assistantMessageId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedIntentRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "assistantMessageId",
+        "expectedIntentRevision"
+      ],
+      "additionalProperties": false,
+      "title": "AcceptanceEnvelope"
+    },
+    "AssistantAcceptanceInput": {
+      "type": "object",
+      "properties": {
+        "normalizationVersion": {
+          "const": 1,
+          "type": "number"
+        },
+        "frozenRequest": {
+          "$ref": "#/definitions/AssistantTurnRequest"
+        },
+        "normalizedResponse": {
+          "$ref": "#/definitions/NormalAssistantTurnResponse"
+        },
+        "envelope": {
+          "$ref": "#/definitions/AcceptanceEnvelope"
+        }
+      },
+      "required": [
+        "normalizationVersion",
+        "frozenRequest",
+        "normalizedResponse",
+        "envelope"
+      ],
+      "additionalProperties": false,
+      "title": "AssistantAcceptanceInput"
+    },
+    "SetFavouriteCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "setFavourite",
+          "type": "string"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "saved": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "kind",
+        "recipeId",
+        "saved"
+      ],
+      "additionalProperties": false,
+      "title": "SetFavouriteCommand"
+    },
+    "AddPlanCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "addPlan",
+          "type": "string"
+        },
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        },
+        "expectedTarget": {
+          "$ref": "#/definitions/EmptyTarget"
+        }
+      },
+      "required": [
+        "kind",
+        "occurrenceId",
+        "recipeId",
+        "placement",
+        "expectedTarget"
+      ],
+      "additionalProperties": false,
+      "title": "AddPlanCommand"
+    },
+    "ReplacePlanRecipeCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "replacePlanRecipe",
+          "type": "string"
+        },
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "expectedShoppingScopeRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        }
+      },
+      "required": [
+        "kind",
+        "occurrenceId",
+        "expectedRevision",
+        "expectedShoppingScopeRevision",
+        "recipeId",
+        "placement"
+      ],
+      "additionalProperties": false,
+      "title": "ReplacePlanRecipeCommand"
+    },
+    "EditPlanCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "editPlan",
+          "type": "string"
+        },
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "expectedShoppingScopeRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        }
+      },
+      "required": [
+        "kind",
+        "occurrenceId",
+        "expectedRevision",
+        "expectedShoppingScopeRevision",
+        "recipeId",
+        "placement"
+      ],
+      "additionalProperties": false,
+      "title": "EditPlanCommand"
+    },
+    "MovePlanReplacingCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "movePlanReplacing",
+          "type": "string"
+        },
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "expectedShoppingScopeRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "destinationOccurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedDestinationRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        }
+      },
+      "required": [
+        "kind",
+        "occurrenceId",
+        "expectedRevision",
+        "expectedShoppingScopeRevision",
+        "destinationOccurrenceId",
+        "expectedDestinationRevision",
+        "recipeId",
+        "placement"
+      ],
+      "additionalProperties": false,
+      "title": "MovePlanReplacingCommand"
+    },
+    "RemovePlanCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "removePlan",
+          "type": "string"
+        },
+        "occurrenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "expectedShoppingScopeRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "occurrenceId",
+        "expectedRevision",
+        "expectedShoppingScopeRevision"
+      ],
+      "additionalProperties": false,
+      "title": "RemovePlanCommand"
+    },
+    "SetShoppingSelectionCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "setShoppingSelection",
+          "type": "string"
+        },
+        "expectedShoppingScopeRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "expectedShoppingRevision": {
+          "$ref": "#/definitions/Sequence"
+        },
+        "occurrenceIds": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AppId"
+          },
+          "maxItems": 1000,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "expectedShoppingScopeRevision",
+        "occurrenceIds"
+      ],
+      "additionalProperties": false,
+      "title": "SetShoppingSelectionCommand"
+    },
+    "SetPurchasedCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "setPurchased",
+          "type": "string"
+        },
+        "scopeId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "groupKey": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "expectedDemandFingerprint": {
+          "$ref": "#/definitions/Fingerprint"
+        },
+        "expectedRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "purchased": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "kind",
+        "scopeId",
+        "groupKey",
+        "expectedDemandFingerprint",
+        "expectedRevision",
+        "purchased"
+      ],
+      "additionalProperties": false,
+      "title": "SetPurchasedCommand"
+    },
+    "SavePreferenceCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "savePreference",
+          "type": "string"
+        },
+        "preferenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "type": {
+          "$ref": "#/definitions/PreferenceType"
+        },
+        "explicitValue": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "expectedPreferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "preferenceId",
+        "type",
+        "explicitValue",
+        "expectedPreferenceRevision"
+      ],
+      "additionalProperties": false,
+      "title": "SavePreferenceCommand"
+    },
+    "RemovePreferenceCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "removePreference",
+          "type": "string"
+        },
+        "preferenceId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedPreferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "preferenceId",
+        "expectedPreferenceRevision"
+      ],
+      "additionalProperties": false,
+      "title": "RemovePreferenceCommand"
+    },
+    "ClearPreferencesCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "clearPreferences",
+          "type": "string"
+        },
+        "expectedPreferenceRevision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "expectedPreferenceRevision"
+      ],
+      "additionalProperties": false,
+      "title": "ClearPreferencesCommand"
+    },
+    "ClearConversationCommand": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "clearConversation",
+          "type": "string"
+        },
+        "conversationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "expectedGeneration": {
+          "$ref": "#/definitions/Revision"
+        },
+        "expectedScopeFingerprint": {
+          "$ref": "#/definitions/Fingerprint"
+        }
+      },
+      "required": [
+        "kind",
+        "conversationId",
+        "expectedGeneration"
+      ],
+      "additionalProperties": false,
+      "title": "ClearConversationCommand"
+    },
+    "CommandPayload": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/SetFavouriteCommand"
+        },
+        {
+          "$ref": "#/definitions/AddPlanCommand"
+        },
+        {
+          "$ref": "#/definitions/ReplacePlanRecipeCommand"
+        },
+        {
+          "$ref": "#/definitions/EditPlanCommand"
+        },
+        {
+          "$ref": "#/definitions/MovePlanReplacingCommand"
+        },
+        {
+          "$ref": "#/definitions/RemovePlanCommand"
+        },
+        {
+          "$ref": "#/definitions/SetShoppingSelectionCommand"
+        },
+        {
+          "$ref": "#/definitions/SetPurchasedCommand"
+        },
+        {
+          "$ref": "#/definitions/SavePreferenceCommand"
+        },
+        {
+          "$ref": "#/definitions/RemovePreferenceCommand"
+        },
+        {
+          "$ref": "#/definitions/ClearPreferencesCommand"
+        },
+        {
+          "$ref": "#/definitions/ClearConversationCommand"
+        }
+      ],
+      "title": "CommandPayload"
+    },
+    "LocalCommand": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 2,
+          "type": "number"
+        },
+        "operationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "intentRevision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "payloadFingerprint": {
+          "$ref": "#/definitions/Fingerprint"
+        },
+        "origin": {
+          "$ref": "#/definitions/ConversationOrigin"
+        },
+        "relativeDateGuard": {
+          "$ref": "#/definitions/RelativeDateGuard"
+        },
+        "command": {
+          "$ref": "#/definitions/CommandPayload"
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "operationId",
+        "userIntentId",
+        "intentRevision",
+        "payloadFingerprint",
+        "command"
+      ],
+      "additionalProperties": false,
+      "title": "LocalCommand"
+    },
+    "FavouriteEffect": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "favourite",
+          "type": "string"
+        },
+        "entityId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "saved": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "kind",
+        "entityId",
+        "revision",
+        "saved"
+      ],
+      "additionalProperties": false,
+      "title": "FavouriteEffect"
+    },
+    "PlanEffect": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "plan",
+          "type": "string"
+        },
+        "entityId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "change": {
+          "type": "string",
+          "enum": [
+            "added",
+            "updated",
+            "removed",
+            "unchanged"
+          ]
+        },
+        "recipeId": {
+          "$ref": "#/definitions/RecipeId"
+        },
+        "placement": {
+          "$ref": "#/definitions/Placement"
+        }
+      },
+      "required": [
+        "kind",
+        "entityId",
+        "revision",
+        "change",
+        "recipeId",
+        "placement"
+      ],
+      "additionalProperties": false,
+      "title": "PlanEffect"
+    },
+    "OtherEffect": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "shopping_selection",
+            "purchase",
+            "preference",
+            "conversation"
+          ]
+        },
+        "entityId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 256
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        }
+      },
+      "required": [
+        "kind",
+        "entityId",
+        "revision"
+      ],
+      "additionalProperties": false,
+      "title": "OtherEffect"
+    },
+    "EffectSummary": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/FavouriteEffect"
+        },
+        {
+          "$ref": "#/definitions/PlanEffect"
+        },
+        {
+          "$ref": "#/definitions/OtherEffect"
+        }
+      ],
+      "title": "EffectSummary"
+    },
+    "OperationReceipt": {
+      "type": "object",
+      "properties": {
+        "schemaVersion": {
+          "const": 1,
+          "type": "number"
+        },
+        "operationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "payloadFingerprint": {
+          "$ref": "#/definitions/Fingerprint"
+        },
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "committed",
+            "no_op"
+          ]
+        },
+        "committedAt": {
+          "$ref": "#/definitions/UtcInstant"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/EffectSummary"
+          },
+          "maxItems": 20
+        },
+        "shoppingProjection": {
+          "type": "string",
+          "enum": [
+            "unchanged",
+            "current",
+            "pending"
+          ]
+        }
+      },
+      "required": [
+        "schemaVersion",
+        "operationId",
+        "userIntentId",
+        "payloadFingerprint",
+        "outcome",
+        "committedAt",
+        "effects",
+        "shoppingProjection"
+      ],
+      "additionalProperties": false,
+      "title": "OperationReceipt"
+    },
+    "ReceiptResult": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "receipt",
+          "type": "string"
+        },
+        "receipt": {
+          "$ref": "#/definitions/OperationReceipt"
+        }
+      },
+      "required": [
+        "kind",
+        "receipt"
+      ],
+      "additionalProperties": false,
+      "title": "ReceiptResult"
+    },
+    "FailedCommandResult": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "failed",
+          "type": "string"
+        },
+        "operationId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "error": {
+          "$ref": "#/definitions/ContractError"
+        }
+      },
+      "required": [
+        "kind",
+        "operationId",
+        "error"
+      ],
+      "additionalProperties": false,
+      "title": "FailedCommandResult"
+    },
+    "UncertainCommandResult": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "uncertain",
+          "type": "string"
+        },
+        "operationId": {
+          "$ref": "#/definitions/AppId"
+        }
+      },
+      "required": [
+        "kind",
+        "operationId"
+      ],
+      "additionalProperties": false,
+      "title": "UncertainCommandResult"
+    },
+    "CommandResult": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/ReceiptResult"
+        },
+        {
+          "$ref": "#/definitions/FailedCommandResult"
+        },
+        {
+          "$ref": "#/definitions/UncertainCommandResult"
+        }
+      ],
+      "title": "CommandResult"
+    },
+    "ActionSlot": {
+      "type": "object",
+      "properties": {
+        "slotId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "command": {
+          "$ref": "#/definitions/LocalCommand"
+        }
+      },
+      "required": [
+        "slotId",
+        "command"
+      ],
+      "additionalProperties": false,
+      "title": "ActionSlot"
+    },
+    "MultiActionResult": {
+      "type": "object",
+      "properties": {
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "slots": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "slotId": {
+                "$ref": "#/definitions/AppId"
+              },
+              "result": {
+                "$ref": "#/definitions/CommandResult"
+              }
+            },
+            "required": [
+              "slotId",
+              "result"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 8,
+          "minItems": 1
+        }
+      },
+      "required": [
+        "userIntentId",
+        "slots"
+      ],
+      "additionalProperties": false,
+      "title": "MultiActionResult"
+    },
+    "PendingIntent": {
+      "type": "object",
+      "properties": {
+        "userIntentId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "revision": {
+          "$ref": "#/definitions/Revision"
+        },
+        "origin": {
+          "$ref": "#/definitions/ConversationOrigin"
+        },
+        "phase": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "awaiting_response",
+            "clarification",
+            "confirmation",
+            "ready",
+            "dispatched",
+            "reconciling",
+            "settled",
+            "cancelled"
+          ]
+        },
+        "slots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ActionSlot"
+          },
+          "maxItems": 8
+        },
+        "relativeDateGuard": {
+          "$ref": "#/definitions/RelativeDateGuard"
+        }
+      },
+      "required": [
+        "userIntentId",
+        "revision",
+        "phase",
+        "slots"
+      ],
+      "additionalProperties": false,
+      "title": "PendingIntent"
+    },
+    "PairRequest": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12,
+          "pattern": "^[A-HJ-NP-Z2-9]{12}$"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "code"
+      ],
+      "additionalProperties": false,
+      "title": "PairRequest"
+    },
+    "PairResponse": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        },
+        "clientId": {
+          "$ref": "#/definitions/AppId"
+        },
+        "token": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 43,
+          "pattern": "^[A-Za-z0-9_-]{43}$"
+        },
+        "expiresAt": {
+          "$ref": "#/definitions/UtcInstant"
+        },
+        "catalogue": {
+          "$ref": "#/definitions/CatalogueIdentity"
+        }
+      },
+      "required": [
+        "apiVersion",
+        "clientId",
+        "token",
+        "expiresAt",
+        "catalogue"
+      ],
+      "additionalProperties": false,
+      "title": "PairResponse"
+    },
+    "HealthResponse": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "ready",
+          "type": "string"
+        },
+        "apiVersion": {
+          "const": "2",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "apiVersion"
+      ],
+      "additionalProperties": false,
+      "title": "HealthResponse"
+    }
+  }
+}

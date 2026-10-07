@@ -1,0 +1,279 @@
+[
+  {
+    "annotationId": "53262-instruction-only-salt",
+    "recipeId": "53262",
+    "kind": "instruction_only_ingredient",
+    "note": "The instructions call for 1½ tsp flaky sea salt, but salt has no ingredient row. Review this additional ingredient when shopping; the structured list has not been changed.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 7, "column": "D" },
+      { "sheet": "Ingredients", "row": 6, "column": "D" },
+      { "sheet": "Ingredients", "row": 7, "column": "D" },
+      { "sheet": "Ingredients", "row": 8, "column": "D" },
+      { "sheet": "Ingredients", "row": 9, "column": "D" },
+      { "sheet": "Ingredients", "row": 10, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53150-instruction-only-salt",
+    "recipeId": "53150",
+    "kind": "instruction_only_ingredient",
+    "note": "The instructions call for some sea salt, but salt has no ingredient row. No exact amount is supplied. Review this additional ingredient when shopping.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 466, "column": "D" },
+      { "sheet": "Ingredients", "row": 678, "column": "D" },
+      { "sheet": "Ingredients", "row": 679, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53064-instruction-only-salt",
+    "recipeId": "53064",
+    "kind": "instruction_only_ingredient",
+    "note": "The instructions use salt for the pasta water and seasoning, but salt has no ingredient row. No exact amount is supplied. Review this additional ingredient when shopping.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 327, "column": "D" },
+      { "sheet": "Ingredients", "row": 507, "column": "D" },
+      { "sheet": "Ingredients", "row": 508, "column": "D" },
+      { "sheet": "Ingredients", "row": 509, "column": "D" },
+      { "sheet": "Ingredients", "row": 510, "column": "D" },
+      { "sheet": "Ingredients", "row": 511, "column": "D" },
+      { "sheet": "Ingredients", "row": 512, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52835-instruction-only-salt",
+    "recipeId": "52835",
+    "kind": "instruction_only_ingredient",
+    "note": "The instructions call for 2 tsp salt in the pasta water, but salt has no ingredient row. Review this additional ingredient when shopping; the earlier instruction says not to add salt at that stage.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 329, "column": "D" },
+      { "sheet": "Instructions", "row": 330, "column": "D" },
+      { "sheet": "Ingredients", "row": 513, "column": "D" },
+      { "sheet": "Ingredients", "row": 514, "column": "D" },
+      { "sheet": "Ingredients", "row": 515, "column": "D" },
+      { "sheet": "Ingredients", "row": 516, "column": "D" },
+      { "sheet": "Ingredients", "row": 517, "column": "D" },
+      { "sheet": "Ingredients", "row": 518, "column": "D" },
+      { "sheet": "Ingredients", "row": 519, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52835-instruction-only-black-pepper",
+    "recipeId": "52835",
+    "kind": "instruction_only_ingredient",
+    "note": "The instructions call for a good grinding of black pepper, but black pepper has no ingredient row. No exact amount is supplied. Review this additional ingredient when shopping.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 329, "column": "D" },
+      { "sheet": "Ingredients", "row": 513, "column": "D" },
+      { "sheet": "Ingredients", "row": 514, "column": "D" },
+      { "sheet": "Ingredients", "row": 515, "column": "D" },
+      { "sheet": "Ingredients", "row": 516, "column": "D" },
+      { "sheet": "Ingredients", "row": 517, "column": "D" },
+      { "sheet": "Ingredients", "row": 518, "column": "D" },
+      { "sheet": "Ingredients", "row": 519, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52835-alternative-garnish",
+    "recipeId": "52835",
+    "kind": "source_gap",
+    "note": "The instructions offer chives or parsley as alternatives for the garnish. Parsley is listed; chives is not. This does not require buying both.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 331, "column": "D" },
+      { "sheet": "Ingredients", "row": 519, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53076-limited-instructions",
+    "recipeId": "53076",
+    "kind": "limited_instructions",
+    "note": "The only supplied instruction is “Make and enjoy”. A full cooking method is not provided.",
+    "evidence": [{ "sheet": "Instructions", "row": 149, "column": "D" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53262-image-credit-distinction",
+    "recipeId": "53262",
+    "kind": "source_gap",
+    "note": "The supplied photo carries a © CHILI TO CHOC mark. The workbook links the recipe to BBC Good Food. These are separate image and recipe attribution details; the supplied photo and mark are preserved.",
+    "evidence": [
+      { "sheet": "Recipes", "row": 6, "column": "F" },
+      { "sheet": "Recipes", "row": 6, "column": "I" },
+      { "sheet": "Recipes", "row": 6, "column": "J" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53138-missing-measure-7",
+    "recipeId": "53138",
+    "kind": "missing_measure",
+    "note": "No measure is supplied for Dulce de leche. The missing measure is not zero.",
+    "evidence": [{ "sheet": "Ingredients", "row": 22, "column": "E" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53064-missing-measure-6",
+    "recipeId": "53064",
+    "kind": "missing_measure",
+    "note": "No measure is supplied for Black Pepper. The missing measure is not zero.",
+    "evidence": [{ "sheet": "Ingredients", "row": 512, "column": "E" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52957-missing-measure-4",
+    "recipeId": "52957",
+    "kind": "missing_measure",
+    "note": "No measure is supplied for Flour. The missing measure is not zero.",
+    "evidence": [{ "sheet": "Ingredients", "row": 565, "column": "E" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52957-missing-measure-6",
+    "recipeId": "52957",
+    "kind": "missing_measure",
+    "note": "No measure is supplied for Strawberries. The missing measure is not zero.",
+    "evidence": [{ "sheet": "Ingredients", "row": 567, "column": "E" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52957-missing-measure-7",
+    "recipeId": "52957",
+    "kind": "missing_measure",
+    "note": "No measure is supplied for Raspberries. The missing measure is not zero.",
+    "evidence": [{ "sheet": "Ingredients", "row": 568, "column": "E" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52957-missing-measure-8",
+    "recipeId": "52957",
+    "kind": "missing_measure",
+    "note": "No measure is supplied for Blackberries. The missing measure is not zero.",
+    "evidence": [{ "sheet": "Ingredients", "row": 569, "column": "E" }],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53230-photo-uncertainty",
+    "recipeId": "53230",
+    "kind": "source_gap",
+    "note": "The supplied photo may not match this recipe. It shows unbattered-looking broccoli with a sliced garnish, while the method describes battering and frying. The original photo is retained; use the supplied text for the recipe and do not infer ingredients from the image.",
+    "evidence": [
+      { "sheet": "Recipes", "row": 82, "column": "I" },
+      { "sheet": "Instructions", "row": 499, "column": "D" },
+      { "sheet": "Instructions", "row": 501, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53208-photo-uncertainty",
+    "recipeId": "53208",
+    "kind": "source_gap",
+    "note": "The supplied photo may not match this vegetable-broth recipe. It shows prawn-like forms that are absent from the ingredient list. The original photo and source category are retained; neither the image nor the category establishes dietary safety, and no ingredient has been added from the photo.",
+    "evidence": [
+      { "sheet": "Recipes", "row": 99, "column": "I" },
+      { "sheet": "Recipes", "row": 99, "column": "C" },
+      { "sheet": "Ingredients", "row": 892, "column": "D" },
+      { "sheet": "Ingredients", "row": 893, "column": "D" },
+      { "sheet": "Ingredients", "row": 894, "column": "D" },
+      { "sheet": "Ingredients", "row": 895, "column": "D" },
+      { "sheet": "Ingredients", "row": 896, "column": "D" },
+      { "sheet": "Ingredients", "row": 897, "column": "D" },
+      { "sheet": "Ingredients", "row": 898, "column": "D" },
+      { "sheet": "Ingredients", "row": 899, "column": "D" },
+      { "sheet": "Ingredients", "row": 900, "column": "D" },
+      { "sheet": "Ingredients", "row": 901, "column": "D" },
+      { "sheet": "Ingredients", "row": 902, "column": "D" },
+      { "sheet": "Ingredients", "row": 903, "column": "D" },
+      { "sheet": "Ingredients", "row": 904, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53230-instruction-only-salt",
+    "recipeId": "53230",
+    "kind": "instruction_only_ingredient",
+    "note": "The batter instructions call for a large pinch of salt, but salt has no ingredient row. Review this additional ingredient when shopping; an exact quantity has not been inferred from the phrase.",
+    "evidence": [
+      { "sheet": "Instructions", "row": 499, "column": "D" },
+      { "sheet": "Ingredients", "row": 725, "column": "D" },
+      { "sheet": "Ingredients", "row": 726, "column": "D" },
+      { "sheet": "Ingredients", "row": 727, "column": "D" },
+      { "sheet": "Ingredients", "row": 728, "column": "D" },
+      { "sheet": "Ingredients", "row": 729, "column": "D" },
+      { "sheet": "Ingredients", "row": 730, "column": "D" },
+      { "sheet": "Ingredients", "row": 731, "column": "D" },
+      { "sheet": "Ingredients", "row": 732, "column": "D" },
+      { "sheet": "Ingredients", "row": 733, "column": "D" },
+      { "sheet": "Ingredients", "row": 734, "column": "D" }
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+
+  {
+    "annotationId": "53389-photo-uncertainty",
+    "recipeId": "53389",
+    "kind": "source_gap",
+    "note": "The supplied photo may show a different preparation. It shows a browned layered dish, while the supplied instructions describe boiled apple-potato mash and separately pan-fried accompaniments. The text may also contain gaps; neither the photo nor this note verifies the recipe's completeness. No ingredients or steps have been inferred from the image.",
+    "evidence": [
+      {"sheet":"Recipes","row":12,"column":"F"},
+      {"sheet":"Recipes","row":12,"column":"I"},
+      {"sheet":"Instructions","row":43,"column":"D"},
+      {"sheet":"Instructions","row":44,"column":"D"},
+      {"sheet":"Instructions","row":48,"column":"D"},
+      {"sheet":"Instructions","row":49,"column":"D"}
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53318-photo-uncertainty",
+    "recipeId": "53318",
+    "kind": "source_gap",
+    "note": "The supplied photo may show a different preparation. It shows a crimped, seed-topped shell and repeated filling layers, while the supplied instructions use a pourable batter around ham and cheese. The exact pictured variant and the recipe's completeness are unverified. No ingredients or steps have been inferred from the image.",
+    "evidence": [
+      {"sheet":"Recipes","row":101,"column":"F"},
+      {"sheet":"Recipes","row":101,"column":"I"},
+      {"sheet":"Ingredients","row":914,"column":"D"},
+      {"sheet":"Ingredients","row":915,"column":"D"},
+      {"sheet":"Ingredients","row":916,"column":"D"},
+      {"sheet":"Ingredients","row":917,"column":"D"},
+      {"sheet":"Ingredients","row":918,"column":"D"},
+      {"sheet":"Ingredients","row":919,"column":"D"},
+      {"sheet":"Ingredients","row":920,"column":"D"},
+      {"sheet":"Ingredients","row":921,"column":"D"},
+      {"sheet":"Ingredients","row":922,"column":"D"},
+      {"sheet":"Instructions","row":667,"column":"D"},
+      {"sheet":"Instructions","row":673,"column":"D"}
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52982-ingredient-method-conflict",
+    "recipeId": "52982",
+    "kind": "source_gap",
+    "note": "The ingredient list and method conflict: the list gives 320g spaghetti, 6 egg yolks and 150g bacon; the method gives 350g spaghetti, 3 whole eggs and 100g pancetta, and also uses parmesan, garlic and butter absent from the list. Review the source before cooking or relying on the shopping list; neither version has been silently selected or verified as complete.",
+    "evidence": [
+      {"sheet":"Ingredients","row":799,"column":"D"},
+      {"sheet":"Ingredients","row":799,"column":"E"},
+      {"sheet":"Ingredients","row":800,"column":"D"},
+      {"sheet":"Ingredients","row":800,"column":"E"},
+      {"sheet":"Ingredients","row":801,"column":"D"},
+      {"sheet":"Ingredients","row":801,"column":"E"},
+      {"sheet":"Ingredients","row":802,"column":"D"},
+      {"sheet":"Ingredients","row":802,"column":"E"},
+      {"sheet":"Ingredients","row":803,"column":"D"},
+      {"sheet":"Ingredients","row":803,"column":"E"},
+      {"sheet":"Ingredients","row":804,"column":"D"},
+      {"sheet":"Ingredients","row":804,"column":"E"},
+      {"sheet":"Instructions","row":566,"column":"D"},
+      {"sheet":"Instructions","row":568,"column":"D"},
+      {"sheet":"Instructions","row":570,"column":"D"},
+      {"sheet":"Instructions","row":572,"column":"D"},
+      {"sheet":"Instructions","row":574,"column":"D"}
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  }
+]

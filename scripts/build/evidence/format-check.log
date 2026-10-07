@@ -1,0 +1,6 @@
+
+> cookmate-workspace@0.1.0 format:check
+> prettier --check package.json tsconfig.base.json packages/contracts/schema/*.mjs packages/contracts/src/*.ts packages/contracts/test/*.ts scripts/build/*.mjs scripts/build/*.ts apps/mobile/app apps/mobile/src/foundation apps/mobile/*.json apps/mobile/*.cjs apps/gateway/*.json
+
+Checking formatting...
+All matched files use Prettier code style!

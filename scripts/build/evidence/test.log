@@ -1,0 +1,62 @@
+
+> cookmate-workspace@0.1.0 test
+> npm run test:contracts && npm run test:gateway && npm run test:probes
+
+
+> cookmate-workspace@0.1.0 test:contracts
+> node --import tsx --test packages/contracts/test/*.test.ts
+
+✔ same strict envelope works for both mobile and gateway (8.5023ms)
+✔ reject consequential unknown fields at every nesting level without modifying input (1.1974ms)
+✔ no coercion, consequential default insertion or unsafe integer revisions (0.3004ms)
+✔ only the three supported AI proposals are accepted (0.7768ms)
+✔ version and unknown source identities fail; actual dates require semantic validation (0.442ms)
+✔ Gregorian dates, leap years and UTC audit timestamps do not normalize invalid values (1.0302ms)
+✔ Unicode message limit counts code points and never truncates (1.093ms)
+✔ ordered recipe references survive validation without fresh ranking (0.4918ms)
+✔ every response scope counter participates in obsolete-response rejection (0.2222ms)
+✔ UI commands need no conversation; occupied replacement and move require distinct guards (2.0508ms)
+✔ frozen payload canonicalization and operation identity expose changed retry arguments (0.7107ms)
+✔ cancel after dispatch reconciles; settled and cancelled intents cannot auto-replay (0.1374ms)
+✔ partial and uncertain outcomes cannot become unqualified success (1.9431ms)
+✔ batch summary rejects duplicate slots, mismatched intent and results outside frozen operations (0.8506ms)
+✔ model output cannot insert an operation receipt into a proposal (0.1853ms)
+✔ citation positions and annotations must belong to the cited recipe (1.1701ms)
+✔ v1 supports inclusive 1900–2100 dates and rejects dates outside that range (0.6097ms)
+✔ relative-date guards describe the exact frozen placement, never another command (0.6291ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 937.5214
+
+> cookmate-workspace@0.1.0 test:gateway
+> node --import tsx --test scripts/build/gateway-contract.test.ts
+
+✔ Fastify fixture and generated phone validator reject the same malformed boundary (2105.6492ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5747.0285
+
+> cookmate-workspace@0.1.0 test:probes
+> node --import tsx --test scripts/build/https-probe.test.ts
+
+✔ health probe decodes bounded split UTF-8 data (4.4853ms)
+✔ health probe cancels oversized stream before reading the remaining body (0.7133ms)
+✔ health probe rejects malformed JSON and invalid UTF-8 (0.3307ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 267.737

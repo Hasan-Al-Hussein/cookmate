@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "cookmate-source-amendment-addendum-v2",
+  "catalogueVersion": "cookmate-2026-09-28.v2",
+  "status": "approved_wording_staged_not_generated_or_published",
+  "baselinePhotoReviewSha256": "28605beb87682a0ca85e8cb7e88947f080d48aa6792a0ae5ce3ce51e1ebfdab9",
+  "addedAnnotations": [
+    {
+      "annotationId": "53389-photo-uncertainty",
+      "recipeId": "53389",
+      "kind": "source_gap",
+      "note": "The supplied photo may show a different preparation. It shows a browned layered dish, while the supplied instructions describe boiled apple-potato mash and separately pan-fried accompaniments. The text may also contain gaps; neither the photo nor this note verifies the recipe's completeness. No ingredients or steps have been inferred from the image.",
+      "evidence": [
+        {
+          "sheet": "Recipes",
+          "row": 12,
+          "column": "F"
+        },
+        {
+          "sheet": "Recipes",
+          "row": 12,
+          "column": "I"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 43,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 44,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 48,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 49,
+          "column": "D"
+        }
+      ],
+      "ruleVersion": "reviewed-source-gaps-v1"
+    },
+    {
+      "annotationId": "53318-photo-uncertainty",
+      "recipeId": "53318",
+      "kind": "source_gap",
+      "note": "The supplied photo may show a different preparation. It shows a crimped, seed-topped shell and repeated filling layers, while the supplied instructions use a pourable batter around ham and cheese. The exact pictured variant and the recipe's completeness are unverified. No ingredients or steps have been inferred from the image.",
+      "evidence": [
+        {
+          "sheet": "Recipes",
+          "row": 101,
+          "column": "F"
+        },
+        {
+          "sheet": "Recipes",
+          "row": 101,
+          "column": "I"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 914,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 915,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 916,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 917,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 918,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 919,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 920,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 921,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 922,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 667,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 673,
+          "column": "D"
+        }
+      ],
+      "ruleVersion": "reviewed-source-gaps-v1"
+    },
+    {
+      "annotationId": "52982-ingredient-method-conflict",
+      "recipeId": "52982",
+      "kind": "source_gap",
+      "note": "The ingredient list and method conflict: the list gives 320g spaghetti, 6 egg yolks and 150g bacon; the method gives 350g spaghetti, 3 whole eggs and 100g pancetta, and also uses parmesan, garlic and butter absent from the list. Review the source before cooking or relying on the shopping list; neither version has been silently selected or verified as complete.",
+      "evidence": [
+        {
+          "sheet": "Ingredients",
+          "row": 799,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 799,
+          "column": "E"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 800,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 800,
+          "column": "E"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 801,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 801,
+          "column": "E"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 802,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 802,
+          "column": "E"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 803,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 803,
+          "column": "E"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 804,
+          "column": "D"
+        },
+        {
+          "sheet": "Ingredients",
+          "row": 804,
+          "column": "E"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 566,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 568,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 570,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 572,
+          "column": "D"
+        },
+        {
+          "sheet": "Instructions",
+          "row": 574,
+          "column": "D"
+        }
+      ],
+      "ruleVersion": "reviewed-source-gaps-v1"
+    }
+  ],
+  "addedPhotoExceptions": [
+    {
+      "recipeId": "53389",
+      "preserveFullFrame": true,
+      "warningAnnotationId": "53389-photo-uncertainty",
+      "creditAnnotationId": null
+    },
+    {
+      "recipeId": "53318",
+      "preserveFullFrame": true,
+      "warningAnnotationId": "53318-photo-uncertainty",
+      "creditAnnotationId": null
+    }
+  ],
+  "photoDispositions": [
+    {
+      "recipeId": "53389",
+      "photoSha256": "f524acd1a8bccbc7695548c14e4f5cc34096f4b247ee435646a4c3108680782d",
+      "previousSemanticMatch": {
+        "status": "broadly_consistent",
+        "observation": "A rectangular red baking dish holds a browned ridged pale topping over a darker lower layer, with a portion removed.",
+        "limits": "Compatible baked mash/casserole presentation; apple and exact recipe identity are not visible enough to establish."
+      },
+      "semanticMatch": {
+        "status": "uncertain_photo_text_match",
+        "observation": "The supplied photo may show a different preparation. It shows a browned layered dish, while the supplied instructions describe boiled apple-potato mash and separately pan-fried accompaniments. The text may also contain gaps; neither the photo nor this note verifies the recipe's completeness. No ingredients or steps have been inferred from the image.",
+        "limits": "Exact pictured variant, recipe completeness, hidden ingredients and rights remain unverified. No new photo inspection occurred during this staging task."
+      },
+      "recommendedTreatment": "preserve_full_frame_with_visible_source_uncertainty",
+      "basis": "Later source-triage comparison supersedes only this historical semantic disposition; historical inspection fields are unchanged."
+    },
+    {
+      "recipeId": "53318",
+      "photoSha256": "4f202172c69d889985e94d90b24782fa82b01f9913b6285f1678429452e75cb8",
+      "previousSemanticMatch": {
+        "status": "broadly_consistent",
+        "observation": "A tall golden pastry pie with a seeded top has a wedge removed, exposing repeated pale and pink layers.",
+        "limits": "Broad layered savory-pie form is consistent; meat and cheese identities are unverified."
+      },
+      "semanticMatch": {
+        "status": "uncertain_photo_text_match",
+        "observation": "The supplied photo may show a different preparation. It shows a crimped, seed-topped shell and repeated filling layers, while the supplied instructions use a pourable batter around ham and cheese. The exact pictured variant and the recipe's completeness are unverified. No ingredients or steps have been inferred from the image.",
+        "limits": "Exact pictured variant, recipe completeness, hidden ingredients and rights remain unverified. No new photo inspection occurred during this staging task."
+      },
+      "recommendedTreatment": "preserve_full_frame_with_visible_source_uncertainty",
+      "basis": "Later source-triage comparison supersedes only this historical semantic disposition; historical inspection fields are unchanged."
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "path": "preserved-v1/docsRoot/implementation/data/source-triage-20260928/amendment-checklist.md",
+      "sha256": "c7b5f99e5f2ebbd649e4db04b99d34d7b1872f5b077972e01291db7147a3abae",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/data/source-triage-20260928/README.md",
+      "sha256": "c14ad1b9a8837264aa7d6a0e7846e040766d6f12661d859bbcdf7081d4341935",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/data/source-triage-20260928/source-records.json",
+      "sha256": "0a68b125f14fe7697aea3f9a6bfccb244df00a5ad9578ce1c97365ecc7495214",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/data/source-triage-20260928/helper-triage.md",
+      "sha256": "67119201e6923461b60c3a85f6e0c8336b9eda8a597075525d466fa294f186a1",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/data/source-triage-20260928/helper-source-evidence.json",
+      "sha256": "af77906b1b1ace1c872cc51f04c5ad82cab9f2e0898edfaa2b4cfa2e27f04b50",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/studio/photo-semantic-review-20260928/README.md",
+      "sha256": "3bfd1b76108b063cadd3551f9d0657f32926456cdaebdad9837843b1131a8f49",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/studio/photo-semantic-review-20260928/lead-observations.json",
+      "sha256": "4f6d24350561bf55b307d89d891fbb31f4f986fd6864698c8272a5780f45307b",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    },
+    {
+      "path": "preserved-v1/docsRoot/implementation/studio/photo-semantic-review-20260928/helper-observations.json",
+      "sha256": "3c965aa9e0ba7f3effb279b32491a1f074530a5ada89a5ee20a0c5ca5f0a8f1f",
+      "basis": "Historical source inspection or approved wording; no new inspection performed for v2 staging."
+    }
+  ],
+  "preserved": "Original 17 notes/order, previous two photo warnings and credit, all raw recipe/ingredient/passage fields and 100 photos remain unchanged.",
+  "limits": [
+    "No new all-100 or full-size photo review in this amendment staging task.",
+    "Historical 100-frame contact-sheet and 17-original coverage remains attributed to the v1 review.",
+    "Later six-ID triage and Studio findings remain separately attributed; dispositions are not culinary, dietary, completeness or rights verification.",
+    "New catalogue fingerprint, reproducibility, database, shopping, native display and gateway coherence remain NOT_RUN."
+  ]
+}

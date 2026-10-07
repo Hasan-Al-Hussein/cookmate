@@ -1,0 +1,164 @@
+{
+  "freeze": "cookmate-shared-memory-v2",
+  "recordedAtUtc": "2026-09-28 04:13:56 UTC",
+  "schemaSha256": "af10dd470af0c2f68e02713d88dd2b21b655673dfedccde610e255a70c36d569",
+  "versions": {
+    "api": "2",
+    "contract": 2,
+    "localCommand": 2,
+    "database": 2,
+    "operationReceipt": 1,
+    "acceptanceNormalization": 1,
+    "catalogue": "unchanged"
+  },
+  "generated": {
+    "validators": 19,
+    "bytes": 445786,
+    "gzipBytes": 34641,
+    "runtimeImports": [
+      "../unicode.js",
+      "fast-deep-equal"
+    ]
+  },
+  "tests": {
+    "passed": 44,
+    "failed": 0,
+    "breakdown": {
+      "baselineContracts": 18,
+      "memoryContracts": 17,
+      "acceptanceCanonicalization": 8,
+      "fastifyBoundary": 1
+    }
+  },
+  "checks": [
+    {
+      "name": "contracts-drift",
+      "command": "npm run contracts:check",
+      "exitCode": 0,
+      "log": "memory-v2-contracts-drift.log"
+    },
+    {
+      "name": "contracts-typecheck",
+      "command": "npm run typecheck --workspace @cookmate/contracts",
+      "exitCode": 0,
+      "log": "memory-v2-contracts-typecheck.log"
+    },
+    {
+      "name": "contracts-tests",
+      "command": "node --import tsx --test --test-concurrency=1 packages/contracts/test/*.test.ts scripts/build/gateway-contract.test.ts",
+      "exitCode": 0,
+      "log": "memory-v2-contracts-tests.log"
+    },
+    {
+      "name": "contracts-format",
+      "command": "npx --no-install prettier --check packages/contracts/schema/contract.schema.mjs packages/contracts/schema/contract.schema.d.mts packages/contracts/src/index.ts packages/contracts/src/constants.ts packages/contracts/src/memory.ts packages/contracts/src/acceptance.ts packages/contracts/src/semantics.ts packages/contracts/test/*.ts packages/contracts/README.md scripts/build/generate-contracts.mjs scripts/build/gateway-contract.test.ts",
+      "exitCode": 0,
+      "log": "memory-v2-contracts-format.log"
+    }
+  ],
+  "review": {
+    "agent": "/root/contract_review",
+    "mode": "independent read-only source/fixture review",
+    "remainingMaterialFindings": 0,
+    "fixes": [
+      "Reject local narrowing as a sendable request",
+      "Match live/removed preference links to frozen snapshot",
+      "Clarify fully expanded carry groups",
+      "Match null-boundary pending totals",
+      "Enforce withdrawal global revision after original source revision"
+    ],
+    "runtimeChecksByReviewer": false
+  },
+  "ownership": [
+    "packages/contracts",
+    "scripts/build/generate-contracts.mjs",
+    "scripts/build/gateway-contract.test.ts",
+    "scripts/build/evidence/memory-v2-*"
+  ],
+  "excludedProof": [
+    "Retained same-generation USER provenance",
+    "SQLite persistence/transaction atomicity/CAS/immutable replay acknowledgment",
+    "Complete applicability/relation-group selection",
+    "Provider request count/semantic interpretation",
+    "Mobile consumer integration",
+    "iPhone runtime/lifecycle/native bundle"
+  ],
+  "fileSha256": [
+    {
+      "path": "packages/contracts/schema/contract.schema.mjs",
+      "sha256": "dce2f96eab824e4238a2391edca1c94ba165fcfa82e51daf4dbf15d602ca4cce"
+    },
+    {
+      "path": "packages/contracts/schema/contract.schema.d.mts",
+      "sha256": "37166065de67f47addead802372279f9f0153f8a5ec279b7f3df3d5f4fa93897"
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "sha256": "a4d324c8934917464077f9a64bd41ce6702d3a5828d1b5e0d07b8b7800406908"
+    },
+    {
+      "path": "packages/contracts/src/constants.ts",
+      "sha256": "58518d85bcad71706623cbfcb96faf30ccf3cbe696548cf4fce2a79a3e7e9944"
+    },
+    {
+      "path": "packages/contracts/src/memory.ts",
+      "sha256": "a59d5fd73e5591e13fe7561ba33ab8e9c408f72b76347c8f134728fa5a7aca26"
+    },
+    {
+      "path": "packages/contracts/src/acceptance.ts",
+      "sha256": "f178662a42209d76e54073e53ad9979c806e3f69f9da554c09e14a5148104bbe"
+    },
+    {
+      "path": "packages/contracts/src/semantics.ts",
+      "sha256": "e060a2d7309031263b86fddea3ef9b1a79b097cc54692bc9bdd48593b5f7ade1"
+    },
+    {
+      "path": "packages/contracts/src/generated/contract.schema.json",
+      "sha256": "bd2c8ee0b625cf10e3df21e7c3b781554771034b2d95d59123908de22b6ffd07"
+    },
+    {
+      "path": "packages/contracts/src/generated/types.ts",
+      "sha256": "514e625a9ea89b712e61ff76d3b7f279459380406ee91b7ab69cf5691b8d7231"
+    },
+    {
+      "path": "packages/contracts/src/generated/validators.js",
+      "sha256": "7851d0f0a029eaff0dfdfa40fd11b69a4c14cef3792595cbbf4563dbcc8fad15"
+    },
+    {
+      "path": "packages/contracts/src/generated/validators.d.ts",
+      "sha256": "9660aa1ab6951d80381435030ac18ff9c1b0c7dcc3a3ff3a7555d8855591898b"
+    },
+    {
+      "path": "packages/contracts/src/generated/manifest.json",
+      "sha256": "65e0a5484d71abc7951bc8eba11fc7ac34ffbba6e1b666019f2ce445cbc58782"
+    },
+    {
+      "path": "packages/contracts/test/fixtures.ts",
+      "sha256": "5f371c0da9887721e858e2163671d8b090249d836e05ac523d7532dc6eb8d671"
+    },
+    {
+      "path": "packages/contracts/test/contracts.test.ts",
+      "sha256": "ed55c2b187399e668dd22e73de9ead54ca459fb4f3a3a0d559b4d582d2e690b4"
+    },
+    {
+      "path": "packages/contracts/test/memory.test.ts",
+      "sha256": "0090ee43f29895134aed2755fba78ddd39cf80e1a696106aa3ffa3df6e698e03"
+    },
+    {
+      "path": "packages/contracts/test/acceptance.test.ts",
+      "sha256": "10574e926249c15ca81764876b7b003c549e94901643391bf1b4a5d55b86cc08"
+    },
+    {
+      "path": "packages/contracts/README.md",
+      "sha256": "2f5a737152e0215304bd292d11059dab62ccdb1f780f5fcbfc4fee21bd980fe7"
+    },
+    {
+      "path": "scripts/build/generate-contracts.mjs",
+      "sha256": "f5ffd6b0f93907d127dabb2f87c96115e0e8cc987abbaa03e1dd0097c2abbf3c"
+    },
+    {
+      "path": "scripts/build/gateway-contract.test.ts",
+      "sha256": "2b83466e95ad316eac437a1be1ede2923c2c58ca316a9f95c566810d4c6c9f45"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+
+> cookmate-workspace@0.1.0 test:probes
+> node --import tsx --test scripts/build/https-probe.test.ts
+
+✔ health probe decodes bounded split UTF-8 data (4.3403ms)
+✔ health probe cancels oversized stream before reading the remaining body (0.7051ms)
+✔ health probe rejects malformed JSON and invalid UTF-8 (0.3355ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 252.5017

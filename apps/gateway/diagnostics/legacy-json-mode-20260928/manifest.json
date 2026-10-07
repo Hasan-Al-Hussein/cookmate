@@ -1,0 +1,674 @@
+{
+  "manifestVersion": 1,
+  "createdAt": "2026-09-28T06:33:40.583648Z",
+  "sourceRoot": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app",
+  "snapshotRoot": "apps/gateway/diagnostics/legacy-json-mode-20260928",
+  "runtime": {
+    "node": "v24.13.0",
+    "sdkPackage": "@google/genai",
+    "sdkVersion": "2.24.0"
+  },
+  "canonicalCheckpointDocuments": [
+    {
+      "path": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "sha256": "E8223D1ED82E11A403B1F5A8DE80DCA844AD373AABE69857135264EF74804D29"
+    },
+    {
+      "path": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_JSON_MODE_PROOF_01.md",
+      "sha256": "5134E10844998EDFF160060531AC56D6BB66D0426EFCCF3A0AC7E19A66D77C25"
+    },
+    {
+      "path": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_JSON_MODE_TEXT_DIAGNOSTIC_01.md",
+      "sha256": "D20C118F20E8D984EDBA3E5C475BCCC327F4884B72E0B4123FFE3C92A7F5BF17"
+    }
+  ],
+  "checkpointCount": 27,
+  "checkpoints": [
+    {
+      "source": "apps/gateway/src/provider-grammar.ts",
+      "expectedSha256": "6B4DDD7CA176E5ECEE6402336F0E4A8B77BB5A2DDF2880A21AE99D4ADCFBD82B",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-grammar.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/provider-schema.ts",
+      "expectedSha256": "C2D2D83A58E384FC0F74B2786E775DB7EAD99F91D99E9159A1E3FF5DD78C2F8C",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-schema.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/model-validation.ts",
+      "expectedSha256": "6094E95A50559086CF9B0B8F202EF4CD00B1B7858B8AF80FF985FFDBE3C34167",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/model-validation.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/orchestrator.ts",
+      "expectedSha256": "6154E4CBD15FD0C3984C81E8954FB1585C856D4D5FC9F5BF966903B84429C207",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/orchestrator.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/memory-smoke.ts",
+      "expectedSha256": "DB64D05ECC7D9D3A5E972500D20699DE53DE89016333E15B893B3EE0F4E856E6",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/memory-smoke.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/synthetic-output.ts",
+      "expectedSha256": "E2E091B24705B3E4E44FF821C71B3B2190B0FFCEBC313C3AE3DFE37B29C579A6",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/synthetic-output.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/provider-grammar.test.ts",
+      "expectedSha256": "1A8534E1A09C3099DF7558B1C3C73D8C1C030C83D4826E782DEB88276844A03E",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-grammar.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/provider-schema.test.ts",
+      "expectedSha256": "76DC537CE30E7F0253AE8E52BDC23BE3C4E726244F092E32B6D2F1477AD59A93",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-schema.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/model-validation.test.ts",
+      "expectedSha256": "63405EAE53E2F905B2E57CC5351FE2D38E9356CADBE53BCFBC7E45D173A91BF5",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/model-validation.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/orchestrator.test.ts",
+      "expectedSha256": "CBC90EBE631C3E0C31B8019689DC15EF3F9C20C12A82C09CD64EC60ADBC71C8D",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/orchestrator.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/package.json",
+      "expectedSha256": "0B62241DFD12A02502D1695025CA49E96D2BA5F185EDE467F5406BF724A3ECE4",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/dependency-context/gateway-package.json",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "package-lock.json",
+      "expectedSha256": "4D402A7CD6732A487BCC30888CAED3BF7C1E4230F4BA5E7BE30793B856982B05",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/dependency-context/package-lock.json",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/gemini.ts",
+      "expectedSha256": "C44BD731D54323D9CD9BEBA8A171E488913C83F2860ECD4C0A3A5EE1F4CB7106",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/gemini.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/provider-text.ts",
+      "expectedSha256": "04DABB06679AE5B54F437214B1D2F5AABC556F5C2D06438795F5E1AF9378E259",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-text.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/provider-contract.ts",
+      "expectedSha256": "6C2980748351096BEC088EC6053509E266117E18BF39466FC0706F3C37ADAF91",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-contract.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/memory.ts",
+      "expectedSha256": "F7074F017C3FA62310DD95A4686AF124717F2D4721C7411D29EB7B5EDF626459",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/memory.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/provider-diagnostics.ts",
+      "expectedSha256": "9F31CEBB460B2802624279A25722D828A0D905F1520EF1E251C5C4B16C1AD01F",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-diagnostics.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/synthetic-shape-diagnostic.ts",
+      "expectedSha256": "DA70722060E4B9F2373CD5143B75DD03B166A22B2A874470100FDD8B83A1EA4E",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/synthetic-shape-diagnostic.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/synthetic-shape-diagnostic.test.ts",
+      "expectedSha256": "80364EA1C3747C67D81BB82CF834AC35021598280D401B25A12BF2819C809746",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/synthetic-shape-diagnostic.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/synthetic-output.test.ts",
+      "expectedSha256": "595D51013B637FBABB00DDD30590082A3A5EBF0A26BEBB53EEC339D37AB76410",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/synthetic-output.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/memory-smoke.test.ts",
+      "expectedSha256": "CF84034DE952B7C19FB21CA1837E6D5B07ADACBB46434E50DF04D103B27B3699",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/memory-smoke.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/provider.test.ts",
+      "expectedSha256": "8DA8C95F645A4CE6869B87445A6905D72476FB78C42E51AC0902C5B6D2374208",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/provider-text.test.ts",
+      "expectedSha256": "7C22D78FCCCDDD8F2EC868FBF776F12D29E2C22FFBA4414B9ACF49AA51DB1A13",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_GRAMMAR_SUPERSET_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-text.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/json-mode-proof.ts",
+      "expectedSha256": "95F604E0C98188392D0D0FB4EF62E3D93D688492EED146637AE0EE5273BB03BE",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_JSON_MODE_PROOF_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/json-mode-proof.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/json-mode-proof.test.ts",
+      "expectedSha256": "3237345F87024B93DD6647A99F073195802DF2132E67ABA029D30B1075C6FAAD",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_JSON_MODE_PROOF_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/json-mode-proof.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/src/json-mode-text-diagnostic.ts",
+      "expectedSha256": "ADFF6CB08EDDF15E15B7A90E2436AD098BD43159738EF75177BD546C4B82EB52",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_JSON_MODE_TEXT_DIAGNOSTIC_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/json-mode-text-diagnostic.ts",
+      "snapshotVerifiedAfterCopy": true
+    },
+    {
+      "source": "apps/gateway/test/json-mode-text-diagnostic.test.ts",
+      "expectedSha256": "5E27EA5A0B82EFF94861253E51A398BCAF8D56FE095350926AD46EC6911335D3",
+      "document": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\implementation\\ai-gateway\\MEMORY_V2_JSON_MODE_TEXT_DIAGNOSTIC_01.md",
+      "originalVerifiedBeforeCopy": true,
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/json-mode-text-diagnostic.test.ts",
+      "snapshotVerifiedAfterCopy": true
+    }
+  ],
+  "copiedFileCount": 47,
+  "files": [
+    {
+      "source": "apps/gateway/src/admission.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/admission.ts",
+      "sha256": "32E340449180D262B9665B39B5BA57707C37294257D2AF0B4F9DA1B72CA6A53B",
+      "bytes": 2975,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/configuration.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/configuration.ts",
+      "sha256": "5C073C95D020ACB698A4081EC53CE1A1573CAFC727345EDC838B614D81C29EC4",
+      "bytes": 1573,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/errors.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/errors.ts",
+      "sha256": "AD4E161F7AA4C0ACF6389E6240F9CA97EDCA021FD1B77C03314DABCAAEC25634",
+      "bytes": 1033,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/evidence.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/evidence.ts",
+      "sha256": "DF446EFB8DA22F9A04ADB6BCA5846D9437557BF8E06408866E70E7C8FADB02DA",
+      "bytes": 4782,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/gemini.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/gemini.ts",
+      "sha256": "C44BD731D54323D9CD9BEBA8A171E488913C83F2860ECD4C0A3A5EE1F4CB7106",
+      "bytes": 13871,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/json-mode-proof.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/json-mode-proof.ts",
+      "sha256": "95F604E0C98188392D0D0FB4EF62E3D93D688492EED146637AE0EE5273BB03BE",
+      "bytes": 7953,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/json-mode-text-diagnostic.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/json-mode-text-diagnostic.ts",
+      "sha256": "ADFF6CB08EDDF15E15B7A90E2436AD098BD43159738EF75177BD546C4B82EB52",
+      "bytes": 9413,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/launcher.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/launcher.ts",
+      "sha256": "4588D7D6AED8AD1662EB67C5C2BAFD4B77CA212FFF9B973A7D6CA90E2C3292A4",
+      "bytes": 1816,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/limits.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/limits.ts",
+      "sha256": "BC89A5A33031AB69451F179B0C089C4032392A9684F03069EB4AE08CDB17DF92",
+      "bytes": 489,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/main.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/main.ts",
+      "sha256": "5A767AED6FB42FF05B2A24C3178C6106DD23B678416D0EA6464E4DE05C2E9932",
+      "bytes": 2453,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/memory-smoke.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/memory-smoke.ts",
+      "sha256": "DB64D05ECC7D9D3A5E972500D20699DE53DE89016333E15B893B3EE0F4E856E6",
+      "bytes": 10644,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/memory.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/memory.ts",
+      "sha256": "F7074F017C3FA62310DD95A4686AF124717F2D4721C7411D29EB7B5EDF626459",
+      "bytes": 1606,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/model-validation.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/model-validation.ts",
+      "sha256": "6094E95A50559086CF9B0B8F202EF4CD00B1B7858B8AF80FF985FFDBE3C34167",
+      "bytes": 543,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/orchestrator.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/orchestrator.ts",
+      "sha256": "6154E4CBD15FD0C3984C81E8954FB1585C856D4D5FC9F5BF966903B84429C207",
+      "bytes": 15493,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/pairing.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/pairing.ts",
+      "sha256": "2E8C1667CA54D3A01C703A1E38DAEB39B31CDD0966BED118FC4B01F8031D70D2",
+      "bytes": 1900,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/provider-contract.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-contract.ts",
+      "sha256": "6C2980748351096BEC088EC6053509E266117E18BF39466FC0706F3C37ADAF91",
+      "bytes": 6417,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/provider-diagnostics.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-diagnostics.ts",
+      "sha256": "9F31CEBB460B2802624279A25722D828A0D905F1520EF1E251C5C4B16C1AD01F",
+      "bytes": 6096,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/provider-grammar.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-grammar.ts",
+      "sha256": "6B4DDD7CA176E5ECEE6402336F0E4A8B77BB5A2DDF2880A21AE99D4ADCFBD82B",
+      "bytes": 11925,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/provider-schema.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-schema.ts",
+      "sha256": "C2D2D83A58E384FC0F74B2786E775DB7EAD99F91D99E9159A1E3FF5DD78C2F8C",
+      "bytes": 5001,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/provider-text.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/provider-text.ts",
+      "sha256": "04DABB06679AE5B54F437214B1D2F5AABC556F5C2D06438795F5E1AF9378E259",
+      "bytes": 2207,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/registry.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/registry.ts",
+      "sha256": "B73EA73C4CAFBF4E6E20AF192CAB8AD61DC622CE6C3B9B35C55518237FA08987",
+      "bytes": 9752,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/schema-control.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/schema-control.ts",
+      "sha256": "8535C61BBB2089277BD661F63A54892CC94F64EC61E375B7CAEEF7E5B116A045",
+      "bytes": 12757,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/server.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/server.ts",
+      "sha256": "66320D486D0C99508E74E5F70686BF4C5821C4E0DF31D7339EAF2634BFA083FC",
+      "bytes": 7120,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/src/synthetic-output.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/synthetic-output.ts",
+      "sha256": "E2E091B24705B3E4E44FF821C71B3B2190B0FFCEBC313C3AE3DFE37B29C579A6",
+      "bytes": 10814,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/src/synthetic-shape-diagnostic.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/src/synthetic-shape-diagnostic.ts",
+      "sha256": "DA70722060E4B9F2373CD5143B75DD03B166A22B2A874470100FDD8B83A1EA4E",
+      "bytes": 3299,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/boundary.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/boundary.test.ts",
+      "sha256": "60AD30AF175E7F09B757D65AA385E9FA03BC14EC79CCA4A95CCA1E05D1F72A2A",
+      "bytes": 10108,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/configuration.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/configuration.test.ts",
+      "sha256": "8EBF2C1E340CA70054C5E54627FCAAE615AC8C090730F62D67AE84379117C86B",
+      "bytes": 5998,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/coordinator-persistence.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/coordinator-persistence.test.ts",
+      "sha256": "C6AB819B6538560CE5B6CF8199B0E9DD6183BCD112F79970E79E75BC9866BADA",
+      "bytes": 25873,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/helpers.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/helpers.ts",
+      "sha256": "8DF0BC7ECE98161F6C2FC15FA6D1513CE60334863463B3687EC62F4818C91C59",
+      "bytes": 3526,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/integration.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/integration.test.ts",
+      "sha256": "73A87DD7BFF6AE88957B4196B0AD9855616EA6DBEFBB8EDC474E4C8A07ECD7D2",
+      "bytes": 3477,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/json-mode-proof.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/json-mode-proof.test.ts",
+      "sha256": "3237345F87024B93DD6647A99F073195802DF2132E67ABA029D30B1075C6FAAD",
+      "bytes": 10549,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/json-mode-text-diagnostic.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/json-mode-text-diagnostic.test.ts",
+      "sha256": "5E27EA5A0B82EFF94861253E51A398BCAF8D56FE095350926AD46EC6911335D3",
+      "bytes": 20330,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/memory-smoke.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/memory-smoke.test.ts",
+      "sha256": "CF84034DE952B7C19FB21CA1837E6D5B07ADACBB46434E50DF04D103B27B3699",
+      "bytes": 9130,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/memory.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/memory.test.ts",
+      "sha256": "C9AD106AF9501D0B32E09CDF7039A68CF8CC98B77698F85E509E96FFFC3DB360",
+      "bytes": 12002,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/model-validation.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/model-validation.test.ts",
+      "sha256": "63405EAE53E2F905B2E57CC5351FE2D38E9356CADBE53BCFBC7E45D173A91BF5",
+      "bytes": 5184,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/orchestrator.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/orchestrator.test.ts",
+      "sha256": "CBC90EBE631C3E0C31B8019689DC15EF3F9C20C12A82C09CD64EC60ADBC71C8D",
+      "bytes": 10958,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/persistence-integration.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/persistence-integration.test.ts",
+      "sha256": "80563D09993B9E2A4FB6F8F04E26223317B11EC905BAEED65005ECFEED0C2E0F",
+      "bytes": 8099,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/provider-diagnostics.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-diagnostics.test.ts",
+      "sha256": "8EE3AE9650C7E6C1368876EEEAE30B82D21F1BF1BA32D30E2EA4F590F6BCA6AF",
+      "bytes": 14134,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/provider-grammar.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-grammar.test.ts",
+      "sha256": "1A8534E1A09C3099DF7558B1C3C73D8C1C030C83D4826E782DEB88276844A03E",
+      "bytes": 14516,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/provider-schema.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-schema.test.ts",
+      "sha256": "76DC537CE30E7F0253AE8E52BDC23BE3C4E726244F092E32B6D2F1477AD59A93",
+      "bytes": 14784,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/provider-text.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-text.test.ts",
+      "sha256": "7C22D78FCCCDDD8F2EC868FBF776F12D29E2C22FFBA4414B9ACF49AA51DB1A13",
+      "bytes": 8320,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/provider.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider.test.ts",
+      "sha256": "8DA8C95F645A4CE6869B87445A6905D72476FB78C42E51AC0902C5B6D2374208",
+      "bytes": 10364,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/schema-control.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/schema-control.test.ts",
+      "sha256": "BB419A90750EA0FA4EF3CE92319D62C589FC0AA6674903C96DB8126E94769B08",
+      "bytes": 10966,
+      "role": "context"
+    },
+    {
+      "source": "apps/gateway/test/synthetic-output.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/synthetic-output.test.ts",
+      "sha256": "595D51013B637FBABB00DDD30590082A3A5EBF0A26BEBB53EEC339D37AB76410",
+      "bytes": 11624,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/test/synthetic-shape-diagnostic.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/synthetic-shape-diagnostic.test.ts",
+      "sha256": "80364EA1C3747C67D81BB82CF834AC35021598280D401B25A12BF2819C809746",
+      "bytes": 8086,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "apps/gateway/package.json",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/dependency-context/gateway-package.json",
+      "sha256": "0B62241DFD12A02502D1695025CA49E96D2BA5F185EDE467F5406BF724A3ECE4",
+      "bytes": 464,
+      "role": "live_checkpoint"
+    },
+    {
+      "source": "package-lock.json",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/dependency-context/package-lock.json",
+      "sha256": "4D402A7CD6732A487BCC30888CAED3BF7C1E4230F4BA5E7BE30793B856982B05",
+      "bytes": 496960,
+      "role": "live_checkpoint"
+    }
+  ],
+  "verification": {
+    "allOriginalCheckpointsMatchedBeforeCopy": true,
+    "allCopiedFilesMatchedAfterCopy": true,
+    "allOriginalFilesUnchangedDuringCopy": true
+  },
+  "policy": "src/, test/ and dependency-context/ are immutable byte-exact historical copies. Verification adapters are separate and are not snapshot originals.",
+  "verificationAdapters": [
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-grammar.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/provider-grammar.test.ts",
+      "originalSha256": "1A8534E1A09C3099DF7558B1C3C73D8C1C030C83D4826E782DEB88276844A03E",
+      "sha256": "1A8534E1A09C3099DF7558B1C3C73D8C1C030C83D4826E782DEB88276844A03E",
+      "changes": []
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/schema-control.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/schema-control.test.ts",
+      "originalSha256": "BB419A90750EA0FA4EF3CE92319D62C589FC0AA6674903C96DB8126E94769B08",
+      "sha256": "BB419A90750EA0FA4EF3CE92319D62C589FC0AA6674903C96DB8126E94769B08",
+      "changes": []
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/memory-smoke.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/memory-smoke.test.ts",
+      "originalSha256": "CF84034DE952B7C19FB21CA1837E6D5B07ADACBB46434E50DF04D103B27B3699",
+      "sha256": "CF84034DE952B7C19FB21CA1837E6D5B07ADACBB46434E50DF04D103B27B3699",
+      "changes": []
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/synthetic-output.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/synthetic-output.test.ts",
+      "originalSha256": "595D51013B637FBABB00DDD30590082A3A5EBF0A26BEBB53EEC339D37AB76410",
+      "sha256": "595D51013B637FBABB00DDD30590082A3A5EBF0A26BEBB53EEC339D37AB76410",
+      "changes": []
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/synthetic-shape-diagnostic.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/synthetic-shape-diagnostic.test.ts",
+      "originalSha256": "80364EA1C3747C67D81BB82CF834AC35021598280D401B25A12BF2819C809746",
+      "sha256": "80364EA1C3747C67D81BB82CF834AC35021598280D401B25A12BF2819C809746",
+      "changes": []
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/json-mode-proof.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/json-mode-proof.test.ts",
+      "originalSha256": "3237345F87024B93DD6647A99F073195802DF2132E67ABA029D30B1075C6FAAD",
+      "sha256": "15E79E78C054CD9D7AD1DAB4844DD805BD8194FB260CCB017B69FF41FE4DCFD2",
+      "changes": [
+        "Child CLI path relocated to immutable historical src/",
+        "Child cwd URL adjusted from ../../../ to ../../../../../ to retain repository root"
+      ]
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/json-mode-text-diagnostic.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/json-mode-text-diagnostic.test.ts",
+      "originalSha256": "5E27EA5A0B82EFF94861253E51A398BCAF8D56FE095350926AD46EC6911335D3",
+      "sha256": "7FCC12CE374BAEA905AE6B5AF46F43225D5241C18F2B77994A22E8DB650ED089",
+      "changes": [
+        "Child CLI path relocated to immutable historical src/",
+        "Child cwd URL adjusted from ../../../ to ../../../../../ to retain repository root"
+      ]
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/provider-schema.test.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/provider-schema.test.ts",
+      "originalSha256": "76DC537CE30E7F0253AE8E52BDC23BE3C4E726244F092E32B6D2F1477AD59A93",
+      "sha256": "76DC537CE30E7F0253AE8E52BDC23BE3C4E726244F092E32B6D2F1477AD59A93",
+      "changes": []
+    },
+    {
+      "archivedSource": "apps/gateway/diagnostics/legacy-json-mode-20260928/test/helpers.ts",
+      "destination": "apps/gateway/diagnostics/legacy-json-mode-20260928/verification/helpers.ts",
+      "originalSha256": "8DF0BC7ECE98161F6C2FC15FA6D1513CE60334863463B3687EC62F4818C91C59",
+      "sha256": "8DF0BC7ECE98161F6C2FC15FA6D1513CE60334863463B3687EC62F4818C91C59",
+      "changes": []
+    }
+  ],
+  "retiredActiveTests": [
+    "apps/gateway/test/provider-grammar.test.ts",
+    "apps/gateway/test/schema-control.test.ts",
+    "apps/gateway/test/memory-smoke.test.ts",
+    "apps/gateway/test/synthetic-output.test.ts",
+    "apps/gateway/test/synthetic-shape-diagnostic.test.ts",
+    "apps/gateway/test/json-mode-proof.test.ts",
+    "apps/gateway/test/json-mode-text-diagnostic.test.ts"
+  ],
+  "retirement": {
+    "verifiedAt": "2026-09-28T06:35:42.6774733Z",
+    "immutableCopiedFilesReverified": 47,
+    "adaptersMatchedOnlyDeclaredTransformations": true,
+    "retiredTestsVerifiedUnchangedBeforeRemoval": true,
+    "offlineAdaptersExecutedDuringPreparation": false,
+    "activeModelValidationAndProviderSchemaTestsEditedByThisLane": false
+  },
+  "readme": {
+    "path": "apps/gateway/diagnostics/legacy-json-mode-20260928/README.md",
+    "sha256": "89D69D4D34A35706E0DECDD8EC9C3D6EBB69068FCE20E6CA1443320330527E4A"
+  }
+}

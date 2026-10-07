@@ -1,0 +1,10 @@
+
+> cookmate-workspace@0.1.0 mobile:check
+> npm run check:dependencies --workspace @cookmate/mobile
+
+
+> @cookmate/mobile@0.1.0 check:dependencies
+> expo install --check
+
+Dependency validation is unreliable in offline-mode
+Dependencies are up to date

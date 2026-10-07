@@ -1,0 +1,552 @@
+{
+  "schemaVersion": "cookmate-annotation-audit-v1",
+  "generatedAtUtc": "2026-09-28T03:03:33.822556+00:00",
+  "reviewedArtifact": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\packages\\catalogue\\reviewed-annotations.json",
+  "reviewedArtifactSha256": "D99D76E95E74CB13D84B4A0EA7C3213B95CEA0FC5AB928B1445364C3ACC49635",
+  "annotationCount": 17,
+  "sourceWorkbookSha256": "C30B9AD983A0CDE05F3263A088D0B9A640AFCC5ACFF9B1FCA8515A1E8FAFFE65",
+  "result": "17 annotation texts and their supplied cell locators supported by the bounded source/visual review; no material textual correction identified",
+  "annotations": [
+    {
+      "annotationId": "53262-instruction-only-salt",
+      "recipeId": "53262",
+      "noteReviewed": "The instructions call for 1½ tsp flaky sea salt, but salt has no ingredient row. Review this additional ingredient when shopping; the structured list has not been changed.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Salt is positively instructed with an explicit prose quantity, but none of the five structured ingredient rows names salt.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D7",
+          "sourceValue": "Finely chop the peppers in a food processor, then tip them in a sieve and press into the sieve so that the peppers release all of their juices. Tip into a bowl along with the mince, red pepper paste, pul biber, 1½ tsp flaky sea salt, and 2 tbsp of the oil. Mix together, kneading well for at least 2-3 mins. If you need to, wet your hands with cold water to prevent the mixture from sticking. The mixture should be sticky when ready. Cover and chill for at least 2 hrs, or up to 12 hrs."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D6",
+          "sourceValue": "Romano Pepper"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D7",
+          "sourceValue": "Lamb Mince"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D8",
+          "sourceValue": "Red Pepper Paste"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D9",
+          "sourceValue": "Pul Biber"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D10",
+          "sourceValue": "Sunflower Oil"
+        }
+      ]
+    },
+    {
+      "annotationId": "53150-instruction-only-salt",
+      "recipeId": "53150",
+      "noteReviewed": "The instructions call for some sea salt, but salt has no ingredient row. No exact amount is supplied. Review this additional ingredient when shopping.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Salt is positively instructed but absent from both structured rows. The prose amount is nonspecific.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D466",
+          "sourceValue": "Transfer the peppers to a serving plate and season with some sea salt. Serve with dips or as part of a tapas spread, if you like."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D678",
+          "sourceValue": "Olive Oil"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D679",
+          "sourceValue": "Padron peppers"
+        }
+      ]
+    },
+    {
+      "annotationId": "53064-instruction-only-salt",
+      "recipeId": "53064",
+      "noteReviewed": "The instructions use salt for the pasta water and seasoning, but salt has no ingredient row. No exact amount is supplied. Review this additional ingredient when shopping.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Salt is used in pasta water and seasoning in the sole method passage, but absent from all six structured rows. No exact salt amount appears there.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D327",
+          "sourceValue": "Cook pasta according to package instructions in a large pot of boiling water and salt. Add heavy cream and butter to a large skillet over medium heat until the cream bubbles and the butter melts. Whisk in parmesan and add seasoning (salt and black pepper). Let the sauce thicken slightly and then add the pasta and toss until coated in sauce. Garnish with parsley, and it's ready."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D507",
+          "sourceValue": "Fettuccine"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D508",
+          "sourceValue": "Heavy Cream"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D509",
+          "sourceValue": "Butter"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D510",
+          "sourceValue": "Parmesan"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D511",
+          "sourceValue": "Parsley"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D512",
+          "sourceValue": "Black Pepper"
+        }
+      ]
+    },
+    {
+      "annotationId": "52835-instruction-only-salt",
+      "recipeId": "52835",
+      "noteReviewed": "The instructions call for 2 tsp salt in the pasta water, but salt has no ingredient row. Review this additional ingredient when shopping; the earlier instruction says not to add salt at that stage.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Salt is instructed for pasta water with an explicit prose quantity but absent from all seven structured rows. The earlier D329 prohibition applies only at that earlier stage.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D329",
+          "sourceValue": "Meanwhile, put the cheese and nutmeg in a small bowl and add a good grinding of black pepper, then stir everything together (don’t add any salt at this stage)."
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D330",
+          "sourceValue": "Put the pasta in another pan with 2 tsp salt, pour over some boiling water and cook following pack instructions (usually 3-4 mins). When cooked, scoop some of the cooking water into a heatproof jug or mug and drain the pasta, but not too thoroughly."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D513",
+          "sourceValue": "Clotted Cream"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D514",
+          "sourceValue": "Butter"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D515",
+          "sourceValue": "Corn Flour"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D516",
+          "sourceValue": "Parmesan Cheese"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D517",
+          "sourceValue": "Nutmeg"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D518",
+          "sourceValue": "Fettuccine"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D519",
+          "sourceValue": "Parsley"
+        }
+      ]
+    },
+    {
+      "annotationId": "52835-instruction-only-black-pepper",
+      "recipeId": "52835",
+      "noteReviewed": "The instructions call for a good grinding of black pepper, but black pepper has no ingredient row. No exact amount is supplied. Review this additional ingredient when shopping.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Black pepper is positively instructed but absent from all seven structured rows. The prose amount is nonspecific.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D329",
+          "sourceValue": "Meanwhile, put the cheese and nutmeg in a small bowl and add a good grinding of black pepper, then stir everything together (don’t add any salt at this stage)."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D513",
+          "sourceValue": "Clotted Cream"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D514",
+          "sourceValue": "Butter"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D515",
+          "sourceValue": "Corn Flour"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D516",
+          "sourceValue": "Parmesan Cheese"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D517",
+          "sourceValue": "Nutmeg"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D518",
+          "sourceValue": "Fettuccine"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D519",
+          "sourceValue": "Parsley"
+        }
+      ]
+    },
+    {
+      "annotationId": "52835-alternative-garnish",
+      "recipeId": "52835",
+      "noteReviewed": "The instructions offer chives or parsley as alternatives for the garnish. Parsley is listed; chives is not. This does not require buying both.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Parsley is present. Chives is an offered alternative, not an instruction to buy both garnishes.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D331",
+          "sourceValue": "Add the pasta to the pan with the clotted cream mixture, then sprinkle over the cheese and gently fold everything together over a low heat using a rubber spatula. When combined, splash in 3 tbsp of the cooking water. At first, the pasta will look wet and sloppy: keep stirring until the water is absorbed and the sauce is glossy. Check the seasoning before transferring to heated bowls. Sprinkle over some chives or parsley, then serve immediately."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D519",
+          "sourceValue": "Parsley"
+        }
+      ]
+    },
+    {
+      "annotationId": "53076-limited-instructions",
+      "recipeId": "53076",
+      "noteReviewed": "The only supplied instruction is “Make and enjoy”. A full cooking method is not provided.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "The sole supplied instruction is Make and enjoy; it does not supply a usable cooking method. The photo cannot fill this gap.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D149",
+          "sourceValue": "Make and enjoy"
+        }
+      ]
+    },
+    {
+      "annotationId": "53262-image-credit-distinction",
+      "recipeId": "53262",
+      "noteReviewed": "The supplied photo carries a © CHILI TO CHOC mark. The workbook links the recipe to BBC Good Food. These are separate image and recipe attribution details; the supplied photo and mark are preserved.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Original photo visibly bears © CHILI TO CHOC at lower right; recipe publisher link is BBC Good Food. Retain both facts. This does not establish licensing or resolve authorship.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Recipes",
+          "cell": "F6",
+          "sourceValue": "photos/53262.jpg"
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "I6",
+          "sourceValue": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg"
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "J6",
+          "sourceValue": "https://www.bbcgoodfood.com/recipes/adana-kebab"
+        }
+      ]
+    },
+    {
+      "annotationId": "53138-missing-measure-7",
+      "recipeId": "53138",
+      "noteReviewed": "No measure is supplied for Dulce de leche. The missing measure is not zero.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Independent XML read found D22 = 'Dulce de leche', with E22 blank; note preserves missing rather than zero.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Ingredients",
+          "cell": "E22",
+          "sourceValue": null
+        }
+      ]
+    },
+    {
+      "annotationId": "53064-missing-measure-6",
+      "recipeId": "53064",
+      "noteReviewed": "No measure is supplied for Black Pepper. The missing measure is not zero.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Independent XML read found D512 = 'Black Pepper', with E512 blank; note preserves missing rather than zero.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Ingredients",
+          "cell": "E512",
+          "sourceValue": null
+        }
+      ]
+    },
+    {
+      "annotationId": "52957-missing-measure-4",
+      "recipeId": "52957",
+      "noteReviewed": "No measure is supplied for Flour. The missing measure is not zero.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Independent XML read found D565 = 'Flour', with E565 blank; note preserves missing rather than zero.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Ingredients",
+          "cell": "E565",
+          "sourceValue": null
+        }
+      ]
+    },
+    {
+      "annotationId": "52957-missing-measure-6",
+      "recipeId": "52957",
+      "noteReviewed": "No measure is supplied for Strawberries. The missing measure is not zero.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Independent XML read found D567 = 'Strawberries', with E567 blank; note preserves missing rather than zero.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Ingredients",
+          "cell": "E567",
+          "sourceValue": null
+        }
+      ]
+    },
+    {
+      "annotationId": "52957-missing-measure-7",
+      "recipeId": "52957",
+      "noteReviewed": "No measure is supplied for Raspberries. The missing measure is not zero.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Independent XML read found D568 = 'Raspberries', with E568 blank; note preserves missing rather than zero.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Ingredients",
+          "cell": "E568",
+          "sourceValue": null
+        }
+      ]
+    },
+    {
+      "annotationId": "52957-missing-measure-8",
+      "recipeId": "52957",
+      "noteReviewed": "No measure is supplied for Blackberries. The missing measure is not zero.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Independent XML read found D569 = 'Blackberries', with E569 blank; note preserves missing rather than zero.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Ingredients",
+          "cell": "E569",
+          "sourceValue": null
+        }
+      ]
+    },
+    {
+      "annotationId": "53230-photo-uncertainty",
+      "recipeId": "53230",
+      "noteReviewed": "The supplied photo may not match this recipe. It shows unbattered-looking broccoli with a sliced garnish, while the method describes battering and frying. The original photo is retained; use the supplied text for the recipe and do not infer ingredients from the image.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "The image shows unbattered-looking green broccoli with sliced garnish. The supplied method describes battering and frying, so association remains uncertain. Do not replace the image or infer garnish ingredients.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Recipes",
+          "cell": "I82",
+          "sourceValue": "https://www.themealdb.com/images/media/meals/xnv4wf1763756529.jpg"
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D499",
+          "sourceValue": "Whisk the cornflour, plain flour, sesame seeds (if using) and a large pinch of salt together. Fill a large, deep pan no more than a third full with the vegetable oil and heat until it reaches 180C or a cube of bread dropped in browns in 20 seconds."
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D501",
+          "sourceValue": "Quickly whisk the soda water into the flour mixture, being careful not to overmix, then dunk in the broccoli using tongs. Carefully lower into the hot oil and cook for 2-3 mins until crisp. Drain on kitchen paper, then serve with the nuoc cham on the side for dipping."
+        }
+      ]
+    },
+    {
+      "annotationId": "53208-photo-uncertainty",
+      "recipeId": "53208",
+      "noteReviewed": "The supplied photo may not match this vegetable-broth recipe. It shows prawn-like forms that are absent from the ingredient list. The original photo and source category are retained; neither the image nor the category establishes dietary safety, and no ingredient has been added from the photo.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "The image has curled segmented orange prawn-like forms. The recipe is titled Thai coconut & veg broth and categorized Vegetarian, and none of its 13 structured ingredients names prawns/shrimp. This is an association concern, not an ingredient addition or a dietary judgment.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Recipes",
+          "cell": "I99",
+          "sourceValue": "https://www.themealdb.com/images/media/meals/4k8nzy1763583384.jpg"
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "C99",
+          "sourceValue": "Vegetarian"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D892",
+          "sourceValue": "Thai Red Curry Paste"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D893",
+          "sourceValue": "Vegetable Oil"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D894",
+          "sourceValue": "Vegetable Stock"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D895",
+          "sourceValue": "Coconut Milk"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D896",
+          "sourceValue": "Brown Sugar"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D897",
+          "sourceValue": "Egg Noodles"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D898",
+          "sourceValue": "Carrots"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D899",
+          "sourceValue": "Chinese Leaf"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D900",
+          "sourceValue": "Bean Sprouts"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D901",
+          "sourceValue": "Cherry Tomatoes"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D902",
+          "sourceValue": "Lime"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D903",
+          "sourceValue": "Spring Onions"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D904",
+          "sourceValue": "Coriander"
+        }
+      ]
+    },
+    {
+      "annotationId": "53230-instruction-only-salt",
+      "recipeId": "53230",
+      "noteReviewed": "The batter instructions call for a large pinch of salt, but salt has no ingredient row. Review this additional ingredient when shopping; an exact quantity has not been inferred from the phrase.",
+      "conclusion": "supported_with_stated_limits",
+      "reason": "Salt is positively instructed in the batter but absent from all ten structured rows. Do not convert the phrase to a numeric amount.",
+      "evidenceCellsChecked": [
+        {
+          "sheet": "Instructions",
+          "cell": "D499",
+          "sourceValue": "Whisk the cornflour, plain flour, sesame seeds (if using) and a large pinch of salt together. Fill a large, deep pan no more than a third full with the vegetable oil and heat until it reaches 180C or a cube of bread dropped in browns in 20 seconds."
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D725",
+          "sourceValue": "Corn Flour"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D726",
+          "sourceValue": "Plain Flour"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D727",
+          "sourceValue": "Sesame Seed"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D728",
+          "sourceValue": "Vegetable Oil"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D729",
+          "sourceValue": "Soda Water"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D730",
+          "sourceValue": "Purple Sprouting Broccoli"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D731",
+          "sourceValue": "Fish Sauce"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D732",
+          "sourceValue": "Lime"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D733",
+          "sourceValue": "Birds-eye Chillies"
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D734",
+          "sourceValue": "Sugar"
+        }
+      ]
+    }
+  ],
+  "photoTreatment": {
+    "path": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\packages\\catalogue\\reviewed-photo-treatment.json",
+    "sha256": "EE4B85A2F57F85023E82B41EA0657918EBBB755D4B7CC0576630364CA0A4E182",
+    "exceptionsChecked": [
+      "53262",
+      "53230",
+      "53208"
+    ],
+    "conclusion": "Declared full-frame exceptions align with findings; actual native rendering untested."
+  },
+  "limits": [
+    "Visual review supports broad photo/title consistency only, not culinary authenticity, hidden ingredients, species, dietary safety, quantities, servings, taste, cooking correctness or source authorship.",
+    "100 full frames were inspected through 25 labeled 2x2 contact sheets with 700px panels. Contact sheets are JPEG inspection derivatives, not delivery assets; 17 selected original files were also opened directly with view_image at original detail.",
+    "No other photo-credit watermark was observed beyond 53262; faint or embedded marks could be missed. Visible background/product print is separately recorded. No rights clearance was performed.",
+    "Crop comments are visual/geometry recommendations. No app/native image layout, iPhone crop, accessibility or playback was tested.",
+    "Workbook checks cover the assigned/added candidates and six known missing measures; this is not an exhaustive all-recipe ingredient-versus-method audit.",
+    "Original source files were not edited. Similar titles, IDs, repetitions and original measures remain source facts; review notices are separate recommendations or audited lead-owned annotations."
+  ]
+}

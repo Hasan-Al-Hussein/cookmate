@@ -1,0 +1,238 @@
+TAP version 13
+# (node:79036) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: duplicate first preference no-op advances only actual receipt authority; later slot uses actual revision and retained IDs
+ok 1 - duplicate first preference no-op advances only actual receipt authority; later slot uses actual revision and retained IDs
+  ---
+  duration_ms: 278.3676
+  type: 'test'
+  ...
+# Subtest: plan freezing rejects extra, reordered, altered and colliding proposal identities; stored corruption fails as storage failure
+ok 2 - plan freezing rejects extra, reordered, altered and colliding proposal identities; stored corruption fails as storage failure
+  ---
+  duration_ms: 67.9773
+  type: 'test'
+  ...
+# Subtest: unrelated preference or runtime changes invalidate dispatch even through the general executor; retries do not renew guards
+ok 3 - unrelated preference or runtime changes invalidate dispatch even through the general executor; retries do not renew guards
+  ---
+  duration_ms: 306.668
+  type: 'test'
+  ...
+# Subtest: receipt, journal, cursor and real authority revisions roll back together if a hook write fails
+ok 4 - receipt, journal, cursor and real authority revisions roll back together if a hook write fails
+  ---
+  duration_ms: 288.2807
+  type: 'test'
+  ...
+# Subtest: cancellation and interrupted reopen preserve receipts but cannot dispatch remaining reserved slots
+ok 5 - cancellation and interrupted reopen preserve receipts but cannot dispatch remaining reserved slots
+  ---
+  duration_ms: 229.0421
+  type: 'test'
+  ...
+# Subtest: uncertain prefix cannot silently advance, retry dispatch or finalize a later action
+ok 6 - uncertain prefix cannot silently advance, retry dispatch or finalize a later action
+  ---
+  duration_ms: 121.0396
+  type: 'test'
+  ...
+# Subtest: lost freeze or finalize acknowledgement preserves exact reserved identities and operation-specific notification proof
+ok 7 - lost freeze or finalize acknowledgement preserves exact reserved identities and operation-specific notification proof
+  ---
+  duration_ms: 348.3166
+  type: 'test'
+  ...
+# Subtest: draft typing preserves authority but a subsequent semantic conversation turn invalidates remaining actions
+ok 8 - draft typing preserves authority but a subsequent semantic conversation turn invalidates remaining actions
+  ---
+  duration_ms: 305.5993
+  type: 'test'
+  ...
+# Subtest: runtime change after receipt and guard writes rolls back the transaction at the final executor hook
+ok 9 - runtime change after receipt and guard writes rolls back the transaction at the final executor hook
+  ---
+  duration_ms: 219.6853
+  type: 'test'
+  ...
+# Subtest: undispatched cancellation and missing assistant context never become direct-command authority
+ok 10 - undispatched cancellation and missing assistant context never become direct-command authority
+  ---
+  duration_ms: 432.6156
+  type: 'test'
+  ...
+# Subtest: legacy fully frozen intent remains immutable and executes its complete command prefix in proposal order
+ok 11 - legacy fully frozen intent remains immutable and executes its complete command prefix in proposal order
+  ---
+  duration_ms: 240.305
+  type: 'test'
+  ...
+# Subtest: relative add-plan keeps its source date and occurrence identity while receipt authority permits the next plan slot
+ok 12 - relative add-plan keeps its source date and occurrence identity while receipt authority permits the next plan slot
+  ---
+  duration_ms: 265.9296
+  type: 'test'
+  ...
+# Subtest: selected occupied replacement binds exact target and shopping consequences, then advances from actual scope revision
+ok 13 - selected occupied replacement binds exact target and shopping consequences, then advances from actual scope revision
+  ---
+  duration_ms: 586.3623
+  type: 'test'
+  ...
+# (node:78556) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt
+ok 14 - saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt
+  ---
+  duration_ms: 129.7485
+  type: 'test'
+  ...
+# Subtest: public restore queries preserve installation identity and discover interrupted and historical intents across reopen and clear
+ok 15 - public restore queries preserve installation identity and discover interrupted and historical intents across reopen and clear
+  ---
+  duration_ms: 199.5517
+  type: 'test'
+  ...
+# Subtest: direct recovery verifies frozen command fingerprints before describing or dismissing notices
+ok 16 - direct recovery verifies frozen command fingerprints before describing or dismissing notices
+  ---
+  duration_ms: 76.8308
+  type: 'test'
+  ...
+# Subtest: core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen
+ok 17 - core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen
+  ---
+  duration_ms: 82.6121
+  type: 'test'
+  ...
+# Subtest: direct review resolves destination identity and selection consequences; intervening changes reject guarded edit
+ok 18 - direct review resolves destination identity and selection consequences; intervening changes reject guarded edit
+  ---
+  duration_ms: 113.4425
+  type: 'test'
+  ...
+# Subtest: factory rejects incompatible persisted database without clearing it and closes failed-start ownership
+ok 19 - factory rejects incompatible persisted database without clearing it and closes failed-start ownership
+  ---
+  duration_ms: 77.513
+  type: 'test'
+  ...
+# Subtest: close waits for an in-flight command before releasing either connection
+ok 20 - close waits for an in-flight command before releasing either connection
+  ---
+  duration_ms: 60.3583
+  type: 'test'
+  ...
+# Subtest: full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical
+ok 21 - full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical
+  ---
+  duration_ms: 372.918
+  type: 'test'
+  ...
+# Subtest: subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected
+ok 22 - subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected
+  ---
+  duration_ms: 48.9499
+  type: 'test'
+  ...
+# Subtest: direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay
+ok 23 - direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay
+  ---
+  duration_ms: 97.2324
+  type: 'test'
+  ...
+# Subtest: recovery waits behind live writer and never turns unavailable storage into empty or not-executed success
+ok 24 - recovery waits behind live writer and never turns unavailable storage into empty or not-executed success
+  ---
+  duration_ms: 52.1631
+  type: 'test'
+  ...
+# Subtest: full assistant binds one live runtime to the same store and honors close without exposing native handles
+ok 25 - full assistant binds one live runtime to the same store and honors close without exposing native handles
+  ---
+  duration_ms: 49.8031
+  type: 'test'
+  ...
+# (node:95560) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: scope change owns its caller input and proves a lost commit acknowledgement before notifying
+ok 26 - scope change owns its caller input and proves a lost commit acknowledgement before notifying
+  ---
+  duration_ms: 208.3225
+  type: 'test'
+  ...
+# Subtest: immutable acknowledgement rejects corrupted output metadata without rewriting history
+ok 27 - immutable acknowledgement rejects corrupted output metadata without rewriting history
+  ---
+  duration_ms: 174.1326
+  type: 'test'
+  ...
+# Subtest: scope rollback followed by exact retry publishes one notification while the earlier reader was unavailable
+ok 28 - scope rollback followed by exact retry publishes one notification while the earlier reader was unavailable
+  ---
+  duration_ms: 66.9629
+  type: 'test'
+  ...
+# Subtest: full USER evidence, NUL and correction survive more than 25 turns beyond history window
+ok 29 - full USER evidence, NUL and correction survive more than 25 turns beyond history window
+  ---
+  duration_ms: 767.5884
+  type: 'test'
+  ...
+# Subtest: atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch
+ok 30 - atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch
+  ---
+  duration_ms: 78.7944
+  type: 'test'
+  ...
+# Subtest: acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict
+ok 31 - acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict
+  ---
+  duration_ms: 100.05
+  type: 'test'
+  ...
+# Subtest: oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel
+ok 32 - oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel
+  ---
+  duration_ms: 850.391
+  type: 'test'
+  ...
+# Subtest: fault at acceptance record rolls back reply, memory, review state, projection and context together
+ok 33 - fault at acceptance record rolls back reply, memory, review state, projection and context together
+  ---
+  duration_ms: 80.6422
+  type: 'test'
+  ...
+# Subtest: explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change
+ok 34 - explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change
+  ---
+  duration_ms: 222.8435
+  type: 'test'
+  ...
+# Subtest: disk reopen preserves full evidence, explicit scope and immutable acceptance envelope
+ok 35 - disk reopen preserves full evidence, explicit scope and immutable acceptance envelope
+  ---
+  duration_ms: 164.7129
+  type: 'test'
+  ...
+# Subtest: pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally
+ok 36 - pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally
+  ---
+  duration_ms: 302.5211
+  type: 'test'
+  ...
+# Subtest: a 33-entry linked group cannot be silently severed by explicit carry selection
+ok 37 - a 33-entry linked group cannot be silently severed by explicit carry selection
+  ---
+  duration_ms: 1201.2695
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12394.0357

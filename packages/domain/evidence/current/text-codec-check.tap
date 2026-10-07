@@ -1,0 +1,60 @@
+(node:46336) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen (200.2781ms)
+✔ direct review resolves destination identity and selection consequences; intervening changes reject guarded edit (270.5058ms)
+✔ factory rejects incompatible persisted database without clearing it and closes failed-start ownership (126.1688ms)
+✔ close waits for an in-flight command before releasing either connection (113.3993ms)
+✔ full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical (788.4069ms)
+✔ subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected (84.5107ms)
+✔ direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay (169.2418ms)
+✔ recovery waits behind live writer and never turns unavailable storage into empty or not-executed success (110.2053ms)
+✔ full assistant binds one live runtime to the same store and honors close without exposing native handles (138.3486ms)
+(node:99840) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ duplicate save links the retained USER to the actual saved ID and row version, not the requested ID or global revision (52.4414ms)
+✖ replacement, removal, re-addition and clear withdraw exact versions and advance only actual-removal watermark (56.8333ms)
+✔ withdrawal of a preference saved outside conversation still advances the watermark without inventing links (26.1452ms)
+✔ clear conversation removes provenance and accepted memory but retains preferences, watermark and historical receipt replay (38.1916ms)
+✔ receipt failure rolls back every preference/provenance/watermark or chat-clear write and exact command can retry (151.9763ms)
+✔ public preference reads and duplicate provenance comparisons preserve NUL exactly (27.2845ms)
+(node:88392) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ fresh genesis is database version two and initializes memory state once (34.3066ms)
+✔ version one, unknown versions and unversioned state reject without deletion or reseed (14.9506ms)
+✔ incomplete, altered and extra version-two layouts preserve saved state on rejection (215.1277ms)
+✔ working memory state enforces owner, revisions, boundary and bounded carry JSON (27.144ms)
+✔ source context, review, entries and relations enforce foreign keys, uniqueness and bounded JSON (18.3821ms)
+✔ preference source links preserve exact values with a byte envelope and shared code-point validation (23.7049ms)
+✔ link and successful receipt may be inserted in either order but missing receipt rolls back (18.7161ms)
+✔ immutable acceptance is independently versioned, bounded and owned by a retained intent (42.3043ms)
+✔ chat deletion cascades memory, links and acceptance while preferences, watermark and receipts survive (32.4217ms)
+✔ assistant context has bounded versioned lifecycle and cascades independently of receipts (28.9919ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 24
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5560.2994
+
+✖ failing tests:
+
+test at packages\domain\test\preferenceProvenance.test.ts:3:3132
+✖ replacement, removal, re-addition and clear withdraw exact versions and advance only actual-removal watermark (56.8333ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + '"Remember Italian; no peanuts tonight"'
+  - 'Remember Italian; no peanuts tonight'
+  
+      at TestContext.<anonymous> (C:\Users\hp\OneDrive - ku.ac.ae\Documents\ChatGPT\App Development\cookmate-app\packages\domain\test\preferenceProvenance.test.ts:413:12)
+      at async Test.run (node:internal/test_runner/test:1113:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '"Remember Italian; no peanuts tonight"',
+    expected: 'Remember Italian; no peanuts tonight',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

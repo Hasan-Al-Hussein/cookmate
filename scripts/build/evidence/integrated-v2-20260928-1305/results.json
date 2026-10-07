@@ -1,0 +1,13 @@
+{
+  "name": "gateway-types",
+  "arguments": [
+    "run",
+    "typecheck",
+    "--workspace",
+    "@cookmate/gateway"
+  ],
+  "start": "2026-09-28T13:04:45.7661716Z",
+  "end": "2026-09-28T13:04:49.3801520Z",
+  "exitCode": 2,
+  "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1305\\gateway-types.log"
+}

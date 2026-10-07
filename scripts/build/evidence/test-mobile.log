@@ -1,0 +1,16 @@
+
+> cookmate-workspace@0.1.0 test:mobile
+> npm run test --workspace @cookmate/mobile
+
+
+> @cookmate/mobile@0.1.0 test
+> jest --runInBand
+
+PASS src/foundation/FoundationProbeScreen.test.tsx (13.049 s)
+  √ probe screen begins untested, prevents duplicate dispatch and shows the actual result (4005 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        17.655 s
+Ran all test suites.

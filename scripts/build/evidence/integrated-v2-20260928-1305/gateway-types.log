@@ -1,0 +1,13 @@
+
+> @cookmate/gateway@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+test/memory.test.ts(233,5): error TS2322: Type '{ sourceMessageId: string; disposition: "unresolved"; }[]' is not assignable to type '[ReviewDisposition, ...ReviewDisposition[]]'.
+  Source provides no match for required element at position 0 in target.
+npm error Lifecycle script `typecheck` failed with error:
+npm error code 2
+npm error path C:\Users\hp\OneDrive - ku.ac.ae\Documents\ChatGPT\App Development\cookmate-app\apps\gateway
+npm error workspace @cookmate/gateway@0.1.0
+npm error location C:\Users\hp\OneDrive - ku.ac.ae\Documents\ChatGPT\App Development\cookmate-app\apps\gateway
+npm error command failed
+npm error command C:\WINDOWS\system32\cmd.exe /d /s /c tsc -p tsconfig.json

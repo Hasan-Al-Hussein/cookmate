@@ -1,0 +1,28 @@
+
+> cookmate-workspace@0.1.0 typecheck
+> npm run typecheck --workspaces --if-present && npm run typecheck:node-tests --workspace @cookmate/mobile && tsc -p tsconfig.tools.json
+
+
+> @cookmate/gateway@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @cookmate/mobile@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @cookmate/catalogue@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @cookmate/contracts@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @cookmate/domain@0.1.0 typecheck
+> tsc -p tsconfig.json
+
+
+> @cookmate/mobile@0.1.0 typecheck:node-tests
+> tsc -p tsconfig.node-tests.json
+

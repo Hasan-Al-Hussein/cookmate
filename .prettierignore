@@ -1,0 +1,8 @@
+node_modules
+dist
+package-lock.json
+packages/contracts/src/generated
+packages/domain/src/generated
+packages/catalogue/src/photo-assets.ts
+scripts/build/evidence
+packages/domain/test/fixtures/source-amendment-v1.json

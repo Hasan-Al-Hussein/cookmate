@@ -1,0 +1,5 @@
+.temp/
+.branches/
+functions/cookmate-account/handler.js
+functions/cookmate-account-deletion-status/handler.js
+.env*

@@ -1,0 +1,439 @@
+{
+  "formatVersion": 1,
+  "createdAtUtc": "2026-09-28T05:06:50.4279332Z",
+  "scope": "CookMate Data and Domain source, tests, generated catalogue and content scripts; checkpoint only, no native acceptance",
+  "apiVersion": "2",
+  "localCommandSchemaVersion": 2,
+  "databaseSchemaVersion": 2,
+  "operationReceiptSchemaVersion": 1,
+  "contractSchemaFingerprint": "af10dd470af0c2f68e02713d88dd2b21b655673dfedccde610e255a70c36d569",
+  "catalogueVersion": "cookmate-2026-09-27.v1",
+  "catalogueFingerprint": "1c564aed197f0ff13e0c8a81c95d775960f8c7f021cd3e948f116ae471b5e1ef",
+  "checks": [
+    {
+      "command": "node --import tsx --test --test-concurrency=1 --test-reporter=tap packages/domain/test/*.test.ts packages/catalogue/test/*.test.ts",
+      "result": "147 passed, 0 failed",
+      "durationMs": 20434.0219,
+      "evidence": "packages/domain/evidence/current/frozen-data-suite.tap"
+    },
+    {
+      "command": "node_modules/.bin/tsc.cmd --noEmit -p packages/domain/tsconfig.json",
+      "result": "passed, 0 diagnostics"
+    },
+    {
+      "command": "$dataSourceFiles = @(rg --files apps/mobile/src/data -g '*.ts'); & node_modules\\.bin\\tsc.cmd --noEmit --strict --target ES2022 --module Preserve --moduleResolution Bundler --skipLibCheck --types node @dataSourceFiles",
+      "result": "passed, 0 diagnostics"
+    },
+    {
+      "command": "node_modules\\.bin\\prettier.cmd --check apps/mobile/src/data/storedText.ts apps/mobile/src/data/schema.ts apps/mobile/src/data/initialize.ts apps/mobile/src/data/preferenceCommands.ts apps/mobile/src/data/preferenceProvenance.ts apps/mobile/src/data/clearConversationCommand.ts apps/mobile/src/data/assistantTurnRepository.ts apps/mobile/src/data/conversationRecords.ts apps/mobile/src/data/stateRepositories.ts apps/mobile/src/data/memoryRecords.ts apps/mobile/src/data/assistantContextRepository.ts apps/mobile/src/data/acceptanceRecords.ts apps/mobile/src/data/directRecoveryRepository.ts apps/mobile/src/data/localStore.ts apps/mobile/src/data/conversationRepository.ts apps/mobile/src/data/actionPlanRecords.ts apps/mobile/src/data/assistantActionRepository.ts packages/domain/src/services.ts packages/domain/src/conversationPorts.ts packages/domain/src/index.ts packages/domain/test/localStore.test.ts packages/domain/test/memoryPersistence.test.ts packages/domain/test/assistantActions.test.ts; node_modules\\.bin\\prettier.cmd --check apps/mobile/src/data/commandExecutor.ts packages/domain/test/assistantActions.test.ts",
+      "result": "passed"
+    }
+  ],
+  "files": [
+    {
+      "path": "apps/mobile/src/data/acceptanceRecords.ts",
+      "bytes": 5085,
+      "sha256": "2fc8d50ee013870adc0444a986dd044d959a90fd76c3a8d306c2142d96541939"
+    },
+    {
+      "path": "apps/mobile/src/data/actionPlanRecords.ts",
+      "bytes": 12369,
+      "sha256": "3e8e991f3b1e4b18fd771f61212b099ea98622bf61352c66315a4dfd173b23d5"
+    },
+    {
+      "path": "apps/mobile/src/data/assistantActionRepository.ts",
+      "bytes": 30526,
+      "sha256": "fcabce7cb44a83258bfb3e3d03ab48f9333e450d6e4c407d363a476e7123bc6c"
+    },
+    {
+      "path": "apps/mobile/src/data/assistantContextRepository.ts",
+      "bytes": 19012,
+      "sha256": "41889bcad82323cb64f89bfd47bbd73d2c4c7b28c67e9c727b8c11ba8e89054f"
+    },
+    {
+      "path": "apps/mobile/src/data/assistantIntentRecords.ts",
+      "bytes": 8856,
+      "sha256": "99665c7866c586b7982d360fe944e96b3259a411112e9d514d25730bf274aa1b"
+    },
+    {
+      "path": "apps/mobile/src/data/assistantRecordValidation.ts",
+      "bytes": 2800,
+      "sha256": "5a7b6248759921f8132ce3635108ff6c6cf257f883a9c671b3a350a3e72713c3"
+    },
+    {
+      "path": "apps/mobile/src/data/assistantRecovery.ts",
+      "bytes": 2811,
+      "sha256": "a70a7ec9bc054d70c7258c96326675566a75ac78f5b2a3e0e9772764e07b8304"
+    },
+    {
+      "path": "apps/mobile/src/data/assistantTurnRepository.ts",
+      "bytes": 30346,
+      "sha256": "a65da4170f6cc5ffe8e57703037950074ee41bde4cd79800a78e9036ba1d8b0a"
+    },
+    {
+      "path": "apps/mobile/src/data/catalogueRepository.ts",
+      "bytes": 3901,
+      "sha256": "3b85aaaade25a41b814321db72d544f659ed4ae27745fc60e3fb36f25a3b9e21"
+    },
+    {
+      "path": "apps/mobile/src/data/clearConversationCommand.ts",
+      "bytes": 2586,
+      "sha256": "64564eb129fba9392ab9cb7c8ee0998db666dee11c7706dcc4fc5b36134e1bba"
+    },
+    {
+      "path": "apps/mobile/src/data/commandExecutor.ts",
+      "bytes": 20322,
+      "sha256": "ce9693b81529b7895e6621a09b92987c0c72f28360dcae51f4b293f9c932406b"
+    },
+    {
+      "path": "apps/mobile/src/data/conversationRecords.ts",
+      "bytes": 5644,
+      "sha256": "883598329155a31c176807c7502a1c006f0629fc82688f8a4c1e81fc00a737d2"
+    },
+    {
+      "path": "apps/mobile/src/data/conversationRepository.ts",
+      "bytes": 5941,
+      "sha256": "a4fdfe9559550a29790856254867445e4e603035db5bab72f7e60813c41874cc"
+    },
+    {
+      "path": "apps/mobile/src/data/directActionReview.ts",
+      "bytes": 10909,
+      "sha256": "725081030c591fb80bca0f8fcd82c23ead6daa948b0642c0d7568f45ccdcf209"
+    },
+    {
+      "path": "apps/mobile/src/data/directRecoveryRepository.ts",
+      "bytes": 5954,
+      "sha256": "c23ecd3037216d6986c779177d0d6b984a8a7a953d15b3b9073005d00a3403da"
+    },
+    {
+      "path": "apps/mobile/src/data/favouriteCommands.ts",
+      "bytes": 2003,
+      "sha256": "abf1417ac32a0a7e602d98c8cbceab13f4bd74e92df9eb1ef4f9964df80cb371"
+    },
+    {
+      "path": "apps/mobile/src/data/initialize.ts",
+      "bytes": 9984,
+      "sha256": "c5bdb0e13b443dc40d55252d40fd51f95282c001d0d78f7003624dba3805da53"
+    },
+    {
+      "path": "apps/mobile/src/data/localStore.ts",
+      "bytes": 13624,
+      "sha256": "b0ec1460fc65a159111da5f90942845f67e52c0442c12854c2bb11d0945dca41"
+    },
+    {
+      "path": "apps/mobile/src/data/memoryAcceptance.ts",
+      "bytes": 4818,
+      "sha256": "db8c6e3b447b7c8714df84a021132a00a94840714f492fb6dd9d8d912ddd6488"
+    },
+    {
+      "path": "apps/mobile/src/data/memoryRecords.ts",
+      "bytes": 11602,
+      "sha256": "e13a2bd34e1e9d78ba6e75b21df1b10c62985e2a449479dc1c1c0240ee60d39a"
+    },
+    {
+      "path": "apps/mobile/src/data/nativeAdapter.ts",
+      "bytes": 1469,
+      "sha256": "492337b44b7d4b8e332f7aeb6b82fa5b74a8fc513de3a72ff1163590579e4b91"
+    },
+    {
+      "path": "apps/mobile/src/data/nativeConnection.ts",
+      "bytes": 776,
+      "sha256": "a5316ffa650da4888f33462d36325e4423e7e5c9332bbab8e9af3d9651aaf6ef"
+    },
+    {
+      "path": "apps/mobile/src/data/nativeStore.ts",
+      "bytes": 635,
+      "sha256": "039c7099b84719dc85c3a6fa5c2fc3b2f4cc50fa577b94b60a36de22cf8450a5"
+    },
+    {
+      "path": "apps/mobile/src/data/planCommands.ts",
+      "bytes": 11437,
+      "sha256": "d24873bd955db2cae9f6c66622267598be631567539f98b8e1208e4234e2fe54"
+    },
+    {
+      "path": "apps/mobile/src/data/preferenceCommands.ts",
+      "bytes": 4409,
+      "sha256": "0210615c0630a893e5217f190d762a817adb4f045377db9c7cc5616b6fdd6a5d"
+    },
+    {
+      "path": "apps/mobile/src/data/preferenceProvenance.ts",
+      "bytes": 3024,
+      "sha256": "e9be23e89d05e7cf2247383670d051941978aca422cf47836068ea3fb7b45a1f"
+    },
+    {
+      "path": "apps/mobile/src/data/query.ts",
+      "bytes": 1463,
+      "sha256": "87a838fc61820f1a6f333483ef1c21bce6843a44663504ab9a5bec07dd3081dc"
+    },
+    {
+      "path": "apps/mobile/src/data/schema.ts",
+      "bytes": 15499,
+      "sha256": "9bf45abc61f1cca2b77cbbbf2a0ea02dbd867883939c89148cb82e5666b0e72a"
+    },
+    {
+      "path": "apps/mobile/src/data/schemaCompatibility.ts",
+      "bytes": 1302,
+      "sha256": "39a0652fd2509508b87662633af54feb685c9ab7845226a2e09d923487569d7b"
+    },
+    {
+      "path": "apps/mobile/src/data/shoppingCommands.ts",
+      "bytes": 3788,
+      "sha256": "0c73253f13659c937761795dafc207892b3dcf8f4998055a57b532b11925f677"
+    },
+    {
+      "path": "apps/mobile/src/data/shoppingRepository.ts",
+      "bytes": 11941,
+      "sha256": "8e130cab7a6b3089dacb98a0bd3bb4a83acdac5638c11d3d66cf22b21e8459d4"
+    },
+    {
+      "path": "apps/mobile/src/data/sql.ts",
+      "bytes": 6723,
+      "sha256": "b76b59f4d539f5ab64e5b0d97266458a49ad1f099cb0abd47520ee6bab660fcf"
+    },
+    {
+      "path": "apps/mobile/src/data/stateRepositories.ts",
+      "bytes": 6564,
+      "sha256": "39f33fe6969045632ae8166bac1908db98f49f143b35f178bc94f2d794acd60d"
+    },
+    {
+      "path": "apps/mobile/src/data/storedText.ts",
+      "bytes": 543,
+      "sha256": "dd4a570737846353f4628adae66890f414c8f389fcbd374d440092a2d1ff14d3"
+    },
+    {
+      "path": "apps/mobile/src/domain/commandPlatform.ts",
+      "bytes": 388,
+      "sha256": "1511b28b53a77bbe4816e723f87fa3752b8fe6a3fa5d938e748140dd4ab55b46"
+    },
+    {
+      "path": "packages/catalogue/generated/catalogue.json",
+      "bytes": 354525,
+      "sha256": "f153eb9e31928233602109a2cbae5d7598475d7dc5f641d9b47074fac8062193"
+    },
+    {
+      "path": "packages/catalogue/generated/provenance.json",
+      "bytes": 40298,
+      "sha256": "342914858b0ec601732e65360c9f48fbca96541d8c1b857bf6c7796975786e6d"
+    },
+    {
+      "path": "packages/catalogue/reviewed-annotations.json",
+      "bytes": 10335,
+      "sha256": "d99d76e95e74cb13d84b4a0ea7c3213b95cea0fc5ab928b1445364c3acc49635"
+    },
+    {
+      "path": "packages/catalogue/reviewed-photo-treatment.json",
+      "bytes": 557,
+      "sha256": "ee4b85a2f57f85023e82b41ea0657918ebbb755d4b7cc0576630364ca0a4e182"
+    },
+    {
+      "path": "packages/catalogue/src/catalogue.ts",
+      "bytes": 5319,
+      "sha256": "68d476e632a11d7e4b3ecb6228be400b8957e7f7fed426beeeebd724f8a67b90"
+    },
+    {
+      "path": "packages/catalogue/src/index.ts",
+      "bytes": 591,
+      "sha256": "04de7c2900a0e354016a04fc45718e4c6292e6977d26c9bc1179d3e1a5553cf9"
+    },
+    {
+      "path": "packages/catalogue/src/photo-assets.ts",
+      "bytes": 6173,
+      "sha256": "dcce0b002d29f7f26579b76efbd4c6e507cd9eef9cebc7ab532cd7de35f3134c"
+    },
+    {
+      "path": "packages/catalogue/src/provenance.ts",
+      "bytes": 1962,
+      "sha256": "1c5df2d9acf785ca8cbc7f6b9e051cfc36f98a54e3dd2cadc23fe857be9bdf81"
+    },
+    {
+      "path": "packages/domain/src/conversationPorts.ts",
+      "bytes": 9580,
+      "sha256": "4c2a680c384f07c8541a18e8088a54cba2ea873ea0d4105e903f65296b826f8a"
+    },
+    {
+      "path": "packages/domain/src/dates.ts",
+      "bytes": 3426,
+      "sha256": "8796b92f6f17e360444adaab16d7e85d92928ccdfc7fa88942adea2e5a3d844b"
+    },
+    {
+      "path": "packages/domain/src/directActions.ts",
+      "bytes": 2513,
+      "sha256": "d76bc38600a76e285acab875de9600de94ebf67c24e442a6919fe246e1d902e1"
+    },
+    {
+      "path": "packages/domain/src/generated/search-identity.json",
+      "bytes": 121,
+      "sha256": "88d0a509adde2c561ee0c41ed19e037137d02bad3916e3ff01b6e7611caaf081"
+    },
+    {
+      "path": "packages/domain/src/index.ts",
+      "bytes": 2092,
+      "sha256": "5e1f7b565249d5b089e215064024a1ecaa9a683f123d453e6ea864e95366b488"
+    },
+    {
+      "path": "packages/domain/src/prepareCommand.ts",
+      "bytes": 2801,
+      "sha256": "cfc471e7d279806d3541a814ecf2580593f7c14bc89bde0849af7f052884652d"
+    },
+    {
+      "path": "packages/domain/src/quantities.ts",
+      "bytes": 5606,
+      "sha256": "1ebd8c09d72cd4de9564d23656d0447d7b5034083ff2825ee4a6b3032e676a95"
+    },
+    {
+      "path": "packages/domain/src/receipts.ts",
+      "bytes": 834,
+      "sha256": "0b7537da18a5b157e4955e68ee59ca7ffd0b6ec03b37439280140d2dff4beeb6"
+    },
+    {
+      "path": "packages/domain/src/search.ts",
+      "bytes": 10521,
+      "sha256": "cb51b70b1412cc091b2dc3402132aaeff3233f7f504c68b8e772e53fe3e39450"
+    },
+    {
+      "path": "packages/domain/src/services.ts",
+      "bytes": 4981,
+      "sha256": "3ac31069c639c63788568fbc53549247d14104b061ff600d89163e2a9b50c4a0"
+    },
+    {
+      "path": "packages/domain/src/shoppingProjection.ts",
+      "bytes": 7931,
+      "sha256": "9b47ca35546cb86df0955d539a0bb02c9893c61b2c23cfa0ccc5c3ea56685180"
+    },
+    {
+      "path": "packages/domain/test/assistantActions.test.ts",
+      "bytes": 36639,
+      "sha256": "3926d8be42f0e7ff1d945def144ddc45bcfb1393b5d56b8eb40d2f14aa8ff653"
+    },
+    {
+      "path": "packages/domain/test/clearConversation.test.ts",
+      "bytes": 10851,
+      "sha256": "c73d4713c0d57fe5c9af94bdbea260b394367ec71bca01d8ee878b871185a840"
+    },
+    {
+      "path": "packages/domain/test/combinedEdit.test.ts",
+      "bytes": 16259,
+      "sha256": "76fbeb7d800aff9730aad48664a42c08c82c99f89571f4b32a7e5e08ed74277b"
+    },
+    {
+      "path": "packages/domain/test/commands.test.ts",
+      "bytes": 17630,
+      "sha256": "fde7de92b9314bb58ef1456bfd6db8708fec05eac3d832856bd3549c09f79e7a"
+    },
+    {
+      "path": "packages/domain/test/conversation.test.ts",
+      "bytes": 27343,
+      "sha256": "e7a3339f3ac8a0fe048a1df5f4ed58adca8d1c1bfa5ce86d6b2256ef500b16c7"
+    },
+    {
+      "path": "packages/domain/test/database.test.ts",
+      "bytes": 24923,
+      "sha256": "a71315f5ba72d831cd342d4dece124cd8a652109ae74fbb8b6611050c7743119"
+    },
+    {
+      "path": "packages/domain/test/dates.test.ts",
+      "bytes": 3158,
+      "sha256": "4b34e43cdae7a0364631fe3298d7b715ca77d505cd30af52d51d1ca7d5766fa5"
+    },
+    {
+      "path": "packages/domain/test/helpers/sqlite.ts",
+      "bytes": 1732,
+      "sha256": "658b42fc7516277d06b64df8552c80c5fbb06a0cd3fdc8449122c7c4cc683e95"
+    },
+    {
+      "path": "packages/domain/test/localStore.test.ts",
+      "bytes": 29014,
+      "sha256": "8163ee55c98be4c49c881e60bf47f70dab88906734c2ed267e3b332bb00b6978"
+    },
+    {
+      "path": "packages/domain/test/memoryPersistence.test.ts",
+      "bytes": 29893,
+      "sha256": "45e840fedf6cfe8fe8330915a76dd715eab5778d793602defe8ff53956324eda"
+    },
+    {
+      "path": "packages/domain/test/nativeAdapter.test.ts",
+      "bytes": 3061,
+      "sha256": "1b1a636ce1c3944434d24dd124562a5c5800fd488ecac1ade6c6cfb7f303463a"
+    },
+    {
+      "path": "packages/domain/test/planningShopping.test.ts",
+      "bytes": 24239,
+      "sha256": "381bc57546813e30c06ffd86a11ef37f1d3b41eaf2a074f995be1da7785c27ad"
+    },
+    {
+      "path": "packages/domain/test/preferenceProvenance.test.ts",
+      "bytes": 21887,
+      "sha256": "ebcf8bb126703936ee007ff7b575eff8f4c099d0786ce4b5e2f91e3c824c11e9"
+    },
+    {
+      "path": "packages/domain/test/preferences.test.ts",
+      "bytes": 9938,
+      "sha256": "d8dd4de6833feceeb884416881624b1428ddf0b7c33036eb54e9805142dc5845"
+    },
+    {
+      "path": "packages/domain/test/prepareCommand.test.ts",
+      "bytes": 3890,
+      "sha256": "29ab475df39aa7b16123170701c8d6bd57e962582f3fcd0bbd428928b9d5cd3e"
+    },
+    {
+      "path": "packages/domain/test/quantities.test.ts",
+      "bytes": 4339,
+      "sha256": "c5c227fe85494bed9849b333016cd0944502b0720eab764331ac54fd5b9c2cc2"
+    },
+    {
+      "path": "packages/domain/test/schemaCompatibility.test.ts",
+      "bytes": 23961,
+      "sha256": "3ae5a238540ca810426ca84ce1585f0e543657316e642866afa97a32189efd89"
+    },
+    {
+      "path": "packages/domain/test/search.test.ts",
+      "bytes": 4579,
+      "sha256": "9fe198a590eb1671885450d327cae55e4ea0f691b0504ab741f81cdced559af4"
+    },
+    {
+      "path": "packages/domain/test/shoppingProjection.test.ts",
+      "bytes": 6808,
+      "sha256": "69dfe42438d92bf465133253f84d95b082692d19ef7e404df7d1681a9945e4eb"
+    },
+    {
+      "path": "scripts/content/fingerprint_search.py",
+      "bytes": 620,
+      "sha256": "ed65fb61685fc404fa46916fe95568d5663c88c01fe2cb6eba50f473a7707d64"
+    },
+    {
+      "path": "scripts/content/prepare_catalogue.py",
+      "bytes": 12658,
+      "sha256": "cb9df3f91e4c78e6c6392c84108159b585448da9690cea9dd67567e30c7b34d4"
+    },
+    {
+      "path": "scripts/content/publish_photo_evidence.py",
+      "bytes": 4557,
+      "sha256": "7e9fb10444c619b89e2eea4b175528d13c9c8a8537ad740a36d898017fba0c79"
+    },
+    {
+      "path": "scripts/content/record_annotation_evidence.py",
+      "bytes": 2349,
+      "sha256": "0ab3bfb9476be2ade4ee3c533fc85e7a71e2a10904de6b3358444b8a8a2c9eda"
+    },
+    {
+      "path": "scripts/content/review/build_review.py",
+      "bytes": 15735,
+      "sha256": "0bbe4a49a4c6a1003155110991aa4e641a7efe51baf4d6315f65c5e48a186aac"
+    },
+    {
+      "path": "scripts/content/review/inspect_sources.py",
+      "bytes": 5487,
+      "sha256": "55f69ed3274c3f0d5687d9dd5c91a63de092d63b91a6cb67781243fd68608ada"
+    },
+    {
+      "path": "scripts/content/verify_catalogue.py",
+      "bytes": 5216,
+      "sha256": "f4da4c0de1dca5de031faa7ff0dd5e8291dbf0475c3d1a32d399cf545366fecc"
+    },
+    {
+      "path": "scripts/content/workbook_source.py",
+      "bytes": 3400,
+      "sha256": "2a1bec787890e794ce6e5110eeeb55ac67a65b092164cbeb7f10024250c1975f"
+    }
+  ]
+}

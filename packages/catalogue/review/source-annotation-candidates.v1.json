@@ -1,0 +1,853 @@
+{
+  "schemaVersion": "cookmate-source-candidates-v1",
+  "generatedAtUtc": "2026-09-28T03:03:33.822556+00:00",
+  "sourceWorkbook": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Desktop\\CookMate\\sources\\CookMate-Dataset.xlsx",
+  "sourceWorkbookSha256": "C30B9AD983A0CDE05F3263A088D0B9A640AFCC5ACFF9B1FCA8515A1E8FAFFE65",
+  "status": "source_checked_candidates; publication_owned_by_lead",
+  "findings": [
+    {
+      "candidateId": "53262-instruction-only-salt",
+      "recipeId": "53262",
+      "title": "Adana kebab",
+      "kind": "instruction_only_ingredient",
+      "description": "Salt is positively instructed with an explicit prose quantity, but none of the five structured ingredient rows names salt.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D7",
+          "value": "1½ tsp flaky sea salt",
+          "isExcerpt": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D6",
+          "ingredient": "Romano Pepper",
+          "measureCell": "E6",
+          "measure": "2 large"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D7",
+          "ingredient": "Lamb Mince",
+          "measureCell": "E7",
+          "measure": "800g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D8",
+          "ingredient": "Red Pepper Paste",
+          "measureCell": "E8",
+          "measure": "3  tablespoons"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D9",
+          "ingredient": "Pul Biber",
+          "measureCell": "E9",
+          "measure": "1 tablespoon"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D10",
+          "ingredient": "Sunflower Oil",
+          "measureCell": "E10",
+          "measure": "3  tablespoons"
+        }
+      ],
+      "sourceAmountText": "1½ tsp flaky sea salt",
+      "recommendedDisposition": "review_notice_and_unquantified_review_demand_per_DEC10; preserve_exact_prose_amount",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53150-instruction-only-salt",
+      "recipeId": "53150",
+      "title": "Padron peppers",
+      "kind": "instruction_only_ingredient",
+      "description": "Salt is positively instructed but absent from both structured rows. The prose amount is nonspecific.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D466",
+          "value": "season with some sea salt",
+          "isExcerpt": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D678",
+          "ingredient": "Olive Oil",
+          "measureCell": "E678",
+          "measure": "1 tablespoon"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D679",
+          "ingredient": "Padron peppers",
+          "measureCell": "E679",
+          "measure": "500g"
+        }
+      ],
+      "sourceAmountText": "some sea salt",
+      "recommendedDisposition": "review_notice_and_unquantified_review_demand_per_DEC10; preserve_exact_prose_amount",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53064-instruction-only-salt",
+      "recipeId": "53064",
+      "title": "Fettuccine Alfredo",
+      "kind": "instruction_only_ingredient",
+      "description": "Salt is used in pasta water and seasoning in the sole method passage, but absent from all six structured rows. No exact salt amount appears there.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D327",
+          "value": "seasoning (salt and black pepper)",
+          "isExcerpt": true
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D327",
+          "value": "boiling water and salt",
+          "isExcerpt": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D507",
+          "ingredient": "Fettuccine",
+          "measureCell": "E507",
+          "measure": "1 lb"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D508",
+          "ingredient": "Heavy Cream",
+          "measureCell": "E508",
+          "measure": "1/2 cup"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D509",
+          "ingredient": "Butter",
+          "measureCell": "E509",
+          "measure": "1/2 cup"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D510",
+          "ingredient": "Parmesan",
+          "measureCell": "E510",
+          "measure": "1/2 cup"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D511",
+          "ingredient": "Parsley",
+          "measureCell": "E511",
+          "measure": "2 tbsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D512",
+          "ingredient": "Black Pepper",
+          "measureCell": "E512",
+          "measure": null
+        }
+      ],
+      "sourceAmountText": null,
+      "recommendedDisposition": "review_notice_and_unquantified_review_demand_per_DEC10; preserve_exact_prose_amount",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "52835-instruction-only-salt",
+      "recipeId": "52835",
+      "title": "Fettucine alfredo",
+      "kind": "instruction_only_ingredient",
+      "description": "Salt is instructed for pasta water with an explicit prose quantity but absent from all seven structured rows. The earlier D329 prohibition applies only at that earlier stage.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D330",
+          "value": "2 tsp salt",
+          "isExcerpt": true
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D329",
+          "value": "don’t add any salt at this stage",
+          "isExcerpt": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D513",
+          "ingredient": "Clotted Cream",
+          "measureCell": "E513",
+          "measure": "227g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D514",
+          "ingredient": "Butter",
+          "measureCell": "E514",
+          "measure": "25g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D515",
+          "ingredient": "Corn Flour",
+          "measureCell": "E515",
+          "measure": "1 tsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D516",
+          "ingredient": "Parmesan Cheese",
+          "measureCell": "E516",
+          "measure": "100g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D517",
+          "ingredient": "Nutmeg",
+          "measureCell": "E517",
+          "measure": "Grated"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D518",
+          "ingredient": "Fettuccine",
+          "measureCell": "E518",
+          "measure": "250g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D519",
+          "ingredient": "Parsley",
+          "measureCell": "E519",
+          "measure": "Chopped"
+        }
+      ],
+      "sourceAmountText": "2 tsp salt",
+      "recommendedDisposition": "review_notice_and_unquantified_review_demand_per_DEC10; preserve_exact_prose_amount",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "52835-instruction-only-black-pepper",
+      "recipeId": "52835",
+      "title": "Fettucine alfredo",
+      "kind": "instruction_only_ingredient",
+      "description": "Black pepper is positively instructed but absent from all seven structured rows. The prose amount is nonspecific.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D329",
+          "value": "a good grinding of black pepper",
+          "isExcerpt": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D513",
+          "ingredient": "Clotted Cream",
+          "measureCell": "E513",
+          "measure": "227g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D514",
+          "ingredient": "Butter",
+          "measureCell": "E514",
+          "measure": "25g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D515",
+          "ingredient": "Corn Flour",
+          "measureCell": "E515",
+          "measure": "1 tsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D516",
+          "ingredient": "Parmesan Cheese",
+          "measureCell": "E516",
+          "measure": "100g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D517",
+          "ingredient": "Nutmeg",
+          "measureCell": "E517",
+          "measure": "Grated"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D518",
+          "ingredient": "Fettuccine",
+          "measureCell": "E518",
+          "measure": "250g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D519",
+          "ingredient": "Parsley",
+          "measureCell": "E519",
+          "measure": "Chopped"
+        }
+      ],
+      "sourceAmountText": "a good grinding",
+      "recommendedDisposition": "review_notice_and_unquantified_review_demand_per_DEC10; preserve_exact_prose_amount",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53230-instruction-only-salt",
+      "recipeId": "53230",
+      "title": "Purple sprouting broccoli tempura with nuoc cham",
+      "kind": "instruction_only_ingredient",
+      "description": "Salt is positively instructed in the batter but absent from all ten structured rows. Do not convert the phrase to a numeric amount.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D499",
+          "value": "a large pinch of salt",
+          "isExcerpt": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D725",
+          "ingredient": "Corn Flour",
+          "measureCell": "E725",
+          "measure": "50g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D726",
+          "ingredient": "Plain Flour",
+          "measureCell": "E726",
+          "measure": "100g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D727",
+          "ingredient": "Sesame Seed",
+          "measureCell": "E727",
+          "measure": "1 tablespoon"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D728",
+          "ingredient": "Vegetable Oil",
+          "measureCell": "E728",
+          "measure": "For frying"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D729",
+          "ingredient": "Soda Water",
+          "measureCell": "E729",
+          "measure": "250ml"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D730",
+          "ingredient": "Purple Sprouting Broccoli",
+          "measureCell": "E730",
+          "measure": "200g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D731",
+          "ingredient": "Fish Sauce",
+          "measureCell": "E731",
+          "measure": "2 tablespoons"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D732",
+          "ingredient": "Lime",
+          "measureCell": "E732",
+          "measure": "Juice of 2"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D733",
+          "ingredient": "Birds-eye Chillies",
+          "measureCell": "E733",
+          "measure": "1 chopped"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D734",
+          "ingredient": "Sugar",
+          "measureCell": "E734",
+          "measure": "2 tablespoons"
+        }
+      ],
+      "sourceAmountText": "a large pinch",
+      "recommendedDisposition": "review_notice_and_unquantified_review_demand_per_DEC10; preserve_exact_prose_amount",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "52835-alternative-garnish",
+      "recipeId": "52835",
+      "title": "Fettucine alfredo",
+      "kind": "alternative_not_omission",
+      "description": "Parsley is present. Chives is an offered alternative, not an instruction to buy both garnishes.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D331",
+          "value": "Sprinkle over some chives or parsley",
+          "isExcerpt": true
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "D519",
+          "value": "Parsley",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Ingredients",
+          "cell": "E519",
+          "value": "Chopped",
+          "isExcerpt": false
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D513",
+          "ingredient": "Clotted Cream",
+          "measureCell": "E513",
+          "measure": "227g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D514",
+          "ingredient": "Butter",
+          "measureCell": "E514",
+          "measure": "25g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D515",
+          "ingredient": "Corn Flour",
+          "measureCell": "E515",
+          "measure": "1 tsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D516",
+          "ingredient": "Parmesan Cheese",
+          "measureCell": "E516",
+          "measure": "100g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D517",
+          "ingredient": "Nutmeg",
+          "measureCell": "E517",
+          "measure": "Grated"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D518",
+          "ingredient": "Fettuccine",
+          "measureCell": "E518",
+          "measure": "250g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D519",
+          "ingredient": "Parsley",
+          "measureCell": "E519",
+          "measure": "Chopped"
+        }
+      ],
+      "sourceAmountText": "some chives or parsley",
+      "recommendedDisposition": "optional_alternative_notice; no_mandatory_chives_or_extra_parsley_demand",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53076-limited-instructions",
+      "recipeId": "53076",
+      "title": "Bread omelette",
+      "kind": "limited_instructions",
+      "description": "The sole supplied instruction is Make and enjoy; it does not supply a usable cooking method. The photo cannot fill this gap.",
+      "evidence": [
+        {
+          "sheet": "Instructions",
+          "cell": "D149",
+          "value": "Make and enjoy",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "J27",
+          "value": null,
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "K27",
+          "value": null,
+          "isExcerpt": false
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D212",
+          "ingredient": "Bread",
+          "measureCell": "E212",
+          "measure": "2"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D213",
+          "ingredient": "Egg",
+          "measureCell": "E213",
+          "measure": "2"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D214",
+          "ingredient": "Salt",
+          "measureCell": "E214",
+          "measure": "0.5"
+        }
+      ],
+      "sourceAmountText": null,
+      "recommendedDisposition": "review_notice_only_preserve_source",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53262-image-credit-distinction",
+      "recipeId": "53262",
+      "title": "Adana kebab",
+      "kind": "photo_provenance_uncertainty",
+      "description": "Original photo visibly bears © CHILI TO CHOC at lower right; recipe publisher link is BBC Good Food. Retain both facts. This does not establish licensing or resolve authorship.",
+      "evidence": [
+        {
+          "sheet": "Recipes",
+          "cell": "F6",
+          "value": "photos/53262.jpg",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "I6",
+          "value": "https://www.themealdb.com/images/media/meals/04axct1763793018.jpg",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "J6",
+          "value": "https://www.bbcgoodfood.com/recipes/adana-kebab",
+          "isExcerpt": false
+        },
+        {
+          "sourcePhoto": "photos/53262.jpg",
+          "visualObservation": "© CHILI TO CHOC at lower right",
+          "originalViewed": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D6",
+          "ingredient": "Romano Pepper",
+          "measureCell": "E6",
+          "measure": "2 large"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D7",
+          "ingredient": "Lamb Mince",
+          "measureCell": "E7",
+          "measure": "800g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D8",
+          "ingredient": "Red Pepper Paste",
+          "measureCell": "E8",
+          "measure": "3  tablespoons"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D9",
+          "ingredient": "Pul Biber",
+          "measureCell": "E9",
+          "measure": "1 tablespoon"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D10",
+          "ingredient": "Sunflower Oil",
+          "measureCell": "E10",
+          "measure": "3  tablespoons"
+        }
+      ],
+      "sourceAmountText": null,
+      "recommendedDisposition": "preserve_full_frame_credit_and_separate_attribution; rights_unresolved",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53230-photo-uncertainty",
+      "recipeId": "53230",
+      "title": "Purple sprouting broccoli tempura with nuoc cham",
+      "kind": "photo_text_uncertainty",
+      "description": "The image shows unbattered-looking green broccoli with sliced garnish. The supplied method describes battering and frying, so association remains uncertain. Do not replace the image or infer garnish ingredients.",
+      "evidence": [
+        {
+          "sheet": "Recipes",
+          "cell": "F82",
+          "value": "photos/53230.jpg",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "I82",
+          "value": "https://www.themealdb.com/images/media/meals/xnv4wf1763756529.jpg",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D499",
+          "value": "Whisk the cornflour, plain flour, sesame seeds (if using) and a large pinch of salt together. Fill a large, deep pan no more than a third full with the vegetable oil and heat until it reaches 180C or a cube of bread dropped in browns in 20 seconds.",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Instructions",
+          "cell": "D501",
+          "value": "Quickly whisk the soda water into the flour mixture, being careful not to overmix, then dunk in the broccoli using tongs. Carefully lower into the hot oil and cook for 2-3 mins until crisp. Drain on kitchen paper, then serve with the nuoc cham on the side for dipping.",
+          "isExcerpt": false
+        },
+        {
+          "sourcePhoto": "photos/53230.jpg",
+          "originalViewed": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D725",
+          "ingredient": "Corn Flour",
+          "measureCell": "E725",
+          "measure": "50g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D726",
+          "ingredient": "Plain Flour",
+          "measureCell": "E726",
+          "measure": "100g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D727",
+          "ingredient": "Sesame Seed",
+          "measureCell": "E727",
+          "measure": "1 tablespoon"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D728",
+          "ingredient": "Vegetable Oil",
+          "measureCell": "E728",
+          "measure": "For frying"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D729",
+          "ingredient": "Soda Water",
+          "measureCell": "E729",
+          "measure": "250ml"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D730",
+          "ingredient": "Purple Sprouting Broccoli",
+          "measureCell": "E730",
+          "measure": "200g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D731",
+          "ingredient": "Fish Sauce",
+          "measureCell": "E731",
+          "measure": "2 tablespoons"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D732",
+          "ingredient": "Lime",
+          "measureCell": "E732",
+          "measure": "Juice of 2"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D733",
+          "ingredient": "Birds-eye Chillies",
+          "measureCell": "E733",
+          "measure": "1 chopped"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D734",
+          "ingredient": "Sugar",
+          "measureCell": "E734",
+          "measure": "2 tablespoons"
+        }
+      ],
+      "sourceAmountText": null,
+      "recommendedDisposition": "preserve_full_frame_with_uncertainty_notice; no_photo_inferred_ingredients",
+      "changesToOriginal": false
+    },
+    {
+      "candidateId": "53208-photo-uncertainty",
+      "recipeId": "53208",
+      "title": "Thai coconut & veg broth",
+      "kind": "photo_text_uncertainty",
+      "description": "The image has curled segmented orange prawn-like forms. The recipe is titled Thai coconut & veg broth and categorized Vegetarian, and none of its 13 structured ingredients names prawns/shrimp. This is an association concern, not an ingredient addition or a dietary judgment.",
+      "evidence": [
+        {
+          "sheet": "Recipes",
+          "cell": "B99",
+          "value": "Thai coconut & veg broth",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "C99",
+          "value": "Vegetarian",
+          "isExcerpt": false
+        },
+        {
+          "sheet": "Recipes",
+          "cell": "I99",
+          "value": "https://www.themealdb.com/images/media/meals/4k8nzy1763583384.jpg",
+          "isExcerpt": false
+        },
+        {
+          "sourcePhoto": "photos/53208.jpg",
+          "originalViewed": true
+        }
+      ],
+      "structuredIngredients": [
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D892",
+          "ingredient": "Thai Red Curry Paste",
+          "measureCell": "E892",
+          "measure": "1 ½ tbsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D893",
+          "ingredient": "Vegetable Oil",
+          "measureCell": "E893",
+          "measure": "1 tsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D894",
+          "ingredient": "Vegetable Stock",
+          "measureCell": "E894",
+          "measure": "1 L"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D895",
+          "ingredient": "Coconut Milk",
+          "measureCell": "E895",
+          "measure": "400ml"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D896",
+          "ingredient": "Brown Sugar",
+          "measureCell": "E896",
+          "measure": "2 tsp"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D897",
+          "ingredient": "Egg Noodles",
+          "measureCell": "E897",
+          "measure": "175g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D898",
+          "ingredient": "Carrots",
+          "measureCell": "E898",
+          "measure": "2"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D899",
+          "ingredient": "Chinese Leaf",
+          "measureCell": "E899",
+          "measure": "1/2"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D900",
+          "ingredient": "Bean Sprouts",
+          "measureCell": "E900",
+          "measure": "150g"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D901",
+          "ingredient": "Cherry Tomatoes",
+          "measureCell": "E901",
+          "measure": "6"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D902",
+          "ingredient": "Lime",
+          "measureCell": "E902",
+          "measure": "Juice of 1"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D903",
+          "ingredient": "Spring Onions",
+          "measureCell": "E903",
+          "measure": "3 sliced thinly"
+        },
+        {
+          "sheet": "Ingredients",
+          "ingredientCell": "D904",
+          "ingredient": "Coriander",
+          "measureCell": "E904",
+          "measure": "Handful"
+        }
+      ],
+      "sourceAmountText": null,
+      "recommendedDisposition": "preserve_full_frame_with_uncertainty_notice; no_photo_inferred_ingredients",
+      "changesToOriginal": false
+    }
+  ],
+  "limits": [
+    "Visual review supports broad photo/title consistency only, not culinary authenticity, hidden ingredients, species, dietary safety, quantities, servings, taste, cooking correctness or source authorship.",
+    "100 full frames were inspected through 25 labeled 2x2 contact sheets with 700px panels. Contact sheets are JPEG inspection derivatives, not delivery assets; 17 selected original files were also opened directly with view_image at original detail.",
+    "No other photo-credit watermark was observed beyond 53262; faint or embedded marks could be missed. Visible background/product print is separately recorded. No rights clearance was performed.",
+    "Crop comments are visual/geometry recommendations. No app/native image layout, iPhone crop, accessibility or playback was tested.",
+    "Workbook checks cover the assigned/added candidates and six known missing measures; this is not an exhaustive all-recipe ingredient-versus-method audit.",
+    "Original source files were not edited. Similar titles, IDs, repetitions and original measures remain source facts; review notices are separate recommendations or audited lead-owned annotations."
+  ]
+}

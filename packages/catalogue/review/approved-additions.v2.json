@@ -1,0 +1,65 @@
+[
+  {
+    "annotationId": "53389-photo-uncertainty",
+    "recipeId": "53389",
+    "kind": "source_gap",
+    "note": "The supplied photo may show a different preparation. It shows a browned layered dish, while the supplied instructions describe boiled apple-potato mash and separately pan-fried accompaniments. The text may also contain gaps; neither the photo nor this note verifies the recipe's completeness. No ingredients or steps have been inferred from the image.",
+    "evidence": [
+      {"sheet":"Recipes","row":12,"column":"F"},
+      {"sheet":"Recipes","row":12,"column":"I"},
+      {"sheet":"Instructions","row":43,"column":"D"},
+      {"sheet":"Instructions","row":44,"column":"D"},
+      {"sheet":"Instructions","row":48,"column":"D"},
+      {"sheet":"Instructions","row":49,"column":"D"}
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "53318-photo-uncertainty",
+    "recipeId": "53318",
+    "kind": "source_gap",
+    "note": "The supplied photo may show a different preparation. It shows a crimped, seed-topped shell and repeated filling layers, while the supplied instructions use a pourable batter around ham and cheese. The exact pictured variant and the recipe's completeness are unverified. No ingredients or steps have been inferred from the image.",
+    "evidence": [
+      {"sheet":"Recipes","row":101,"column":"F"},
+      {"sheet":"Recipes","row":101,"column":"I"},
+      {"sheet":"Ingredients","row":914,"column":"D"},
+      {"sheet":"Ingredients","row":915,"column":"D"},
+      {"sheet":"Ingredients","row":916,"column":"D"},
+      {"sheet":"Ingredients","row":917,"column":"D"},
+      {"sheet":"Ingredients","row":918,"column":"D"},
+      {"sheet":"Ingredients","row":919,"column":"D"},
+      {"sheet":"Ingredients","row":920,"column":"D"},
+      {"sheet":"Ingredients","row":921,"column":"D"},
+      {"sheet":"Ingredients","row":922,"column":"D"},
+      {"sheet":"Instructions","row":667,"column":"D"},
+      {"sheet":"Instructions","row":673,"column":"D"}
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  },
+  {
+    "annotationId": "52982-ingredient-method-conflict",
+    "recipeId": "52982",
+    "kind": "source_gap",
+    "note": "The ingredient list and method conflict: the list gives 320g spaghetti, 6 egg yolks and 150g bacon; the method gives 350g spaghetti, 3 whole eggs and 100g pancetta, and also uses parmesan, garlic and butter absent from the list. Review the source before cooking or relying on the shopping list; neither version has been silently selected or verified as complete.",
+    "evidence": [
+      {"sheet":"Ingredients","row":799,"column":"D"},
+      {"sheet":"Ingredients","row":799,"column":"E"},
+      {"sheet":"Ingredients","row":800,"column":"D"},
+      {"sheet":"Ingredients","row":800,"column":"E"},
+      {"sheet":"Ingredients","row":801,"column":"D"},
+      {"sheet":"Ingredients","row":801,"column":"E"},
+      {"sheet":"Ingredients","row":802,"column":"D"},
+      {"sheet":"Ingredients","row":802,"column":"E"},
+      {"sheet":"Ingredients","row":803,"column":"D"},
+      {"sheet":"Ingredients","row":803,"column":"E"},
+      {"sheet":"Ingredients","row":804,"column":"D"},
+      {"sheet":"Ingredients","row":804,"column":"E"},
+      {"sheet":"Instructions","row":566,"column":"D"},
+      {"sheet":"Instructions","row":568,"column":"D"},
+      {"sheet":"Instructions","row":570,"column":"D"},
+      {"sheet":"Instructions","row":572,"column":"D"},
+      {"sheet":"Instructions","row":574,"column":"D"}
+    ],
+    "ruleVersion": "reviewed-source-gaps-v1"
+  }
+]

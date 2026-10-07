@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "schemaSha256": "d5a32e5ecf65dbcae16a9f219e00531f42650241f489b5fc0ff76a28aafa26ff",
+  "validatorBytes": 446926,
+  "validatorGzipBytes": 34748,
+  "runtimeImports": [
+    "../unicode.js",
+    "fast-deep-equal"
+  ],
+  "validators": [
+    "AssistantTurnRequest",
+    "AssistantTurnResponse",
+    "MemoryUpdate",
+    "ModelMemoryUpdate",
+    "WorkingContextSelection",
+    "AssistantAcceptanceInput",
+    "AiProposal",
+    "LocalCommand",
+    "OperationReceipt",
+    "CommandResult",
+    "MultiActionResult",
+    "PendingIntent",
+    "Recipe",
+    "PlanOccurrence",
+    "ShoppingScope",
+    "PreferenceSnapshot",
+    "PairRequest",
+    "PairResponse",
+    "HealthResponse"
+  ]
+}

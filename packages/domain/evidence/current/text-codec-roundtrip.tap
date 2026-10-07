@@ -1,0 +1,166 @@
+TAP version 13
+# (node:98200) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt
+ok 1 - saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt
+  ---
+  duration_ms: 234.171
+  type: 'test'
+  ...
+# Subtest: core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen
+ok 2 - core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen
+  ---
+  duration_ms: 113.9975
+  type: 'test'
+  ...
+# Subtest: direct review resolves destination identity and selection consequences; intervening changes reject guarded edit
+ok 3 - direct review resolves destination identity and selection consequences; intervening changes reject guarded edit
+  ---
+  duration_ms: 184.2313
+  type: 'test'
+  ...
+# Subtest: factory rejects incompatible persisted database without clearing it and closes failed-start ownership
+ok 4 - factory rejects incompatible persisted database without clearing it and closes failed-start ownership
+  ---
+  duration_ms: 123.9507
+  type: 'test'
+  ...
+# Subtest: close waits for an in-flight command before releasing either connection
+ok 5 - close waits for an in-flight command before releasing either connection
+  ---
+  duration_ms: 94.638
+  type: 'test'
+  ...
+# Subtest: full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical
+ok 6 - full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical
+  ---
+  duration_ms: 741.3256
+  type: 'test'
+  ...
+# Subtest: subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected
+ok 7 - subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected
+  ---
+  duration_ms: 110.7377
+  type: 'test'
+  ...
+# Subtest: direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay
+ok 8 - direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay
+  ---
+  duration_ms: 219.5213
+  type: 'test'
+  ...
+# Subtest: recovery waits behind live writer and never turns unavailable storage into empty or not-executed success
+ok 9 - recovery waits behind live writer and never turns unavailable storage into empty or not-executed success
+  ---
+  duration_ms: 200.9877
+  type: 'test'
+  ...
+# Subtest: full assistant binds one live runtime to the same store and honors close without exposing native handles
+ok 10 - full assistant binds one live runtime to the same store and honors close without exposing native handles
+  ---
+  duration_ms: 208.0317
+  type: 'test'
+  ...
+# (node:99888) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: full USER evidence, NUL and correction survive more than 25 turns beyond history window
+ok 11 - full USER evidence, NUL and correction survive more than 25 turns beyond history window
+  ---
+  duration_ms: 757.1316
+  type: 'test'
+  ...
+# Subtest: atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch
+ok 12 - atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch
+  ---
+  duration_ms: 83.2361
+  type: 'test'
+  ...
+# Subtest: acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict
+ok 13 - acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict
+  ---
+  duration_ms: 90.1438
+  type: 'test'
+  ...
+# Subtest: oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel
+ok 14 - oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel
+  ---
+  duration_ms: 1185.9927
+  type: 'test'
+  ...
+# Subtest: fault at acceptance record rolls back reply, memory, review state, projection and context together
+ok 15 - fault at acceptance record rolls back reply, memory, review state, projection and context together
+  ---
+  duration_ms: 58.6227
+  type: 'test'
+  ...
+# Subtest: explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change
+ok 16 - explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change
+  ---
+  duration_ms: 430.2281
+  type: 'test'
+  ...
+# Subtest: disk reopen preserves full evidence, explicit scope and immutable acceptance envelope
+ok 17 - disk reopen preserves full evidence, explicit scope and immutable acceptance envelope
+  ---
+  duration_ms: 183.039
+  type: 'test'
+  ...
+# Subtest: pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally
+ok 18 - pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally
+  ---
+  duration_ms: 591.7967
+  type: 'test'
+  ...
+# Subtest: a 33-entry linked group cannot be silently severed by explicit carry selection
+ok 19 - a 33-entry linked group cannot be silently severed by explicit carry selection
+  ---
+  duration_ms: 1907.3799
+  type: 'test'
+  ...
+# (node:84688) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: duplicate save links the retained USER to the actual saved ID and row version, not the requested ID or global revision
+ok 20 - duplicate save links the retained USER to the actual saved ID and row version, not the requested ID or global revision
+  ---
+  duration_ms: 101.0466
+  type: 'test'
+  ...
+# Subtest: replacement, removal, re-addition and clear withdraw exact versions and advance only actual-removal watermark
+ok 21 - replacement, removal, re-addition and clear withdraw exact versions and advance only actual-removal watermark
+  ---
+  duration_ms: 68.7263
+  type: 'test'
+  ...
+# Subtest: withdrawal of a preference saved outside conversation still advances the watermark without inventing links
+ok 22 - withdrawal of a preference saved outside conversation still advances the watermark without inventing links
+  ---
+  duration_ms: 42.1277
+  type: 'test'
+  ...
+# Subtest: clear conversation removes provenance and accepted memory but retains preferences, watermark and historical receipt replay
+ok 23 - clear conversation removes provenance and accepted memory but retains preferences, watermark and historical receipt replay
+  ---
+  duration_ms: 52.2747
+  type: 'test'
+  ...
+# Subtest: receipt failure rolls back every preference/provenance/watermark or chat-clear write and exact command can retry
+ok 24 - receipt failure rolls back every preference/provenance/watermark or chat-clear write and exact command can retry
+  ---
+  duration_ms: 194.3144
+  type: 'test'
+  ...
+# Subtest: public preference reads and duplicate provenance comparisons preserve exact UTF-16 text
+ok 25 - public preference reads and duplicate provenance comparisons preserve exact UTF-16 text
+  ---
+  duration_ms: 71.4162
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11937.2307

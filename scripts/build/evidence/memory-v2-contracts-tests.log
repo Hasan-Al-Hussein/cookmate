@@ -1,0 +1,53 @@
+✔ canonical fingerprint includes the entire versioned input without mutation or object-key order sensitivity (20.0373ms)
+✔ changes throughout frozen request, response, provenance, scope and envelope change the fingerprint (64.5329ms)
+✔ every populated array retains its order in the frozen fingerprint (10.8536ms)
+✔ exact strings preserve Unicode, whitespace and quoted instruction text as data (4.1461ms)
+✔ unknown fields at envelope, request and response nesting are rejected instead of omitted (10.9429ms)
+✔ non-JSON values are rejected before coercion, omitted properties or user code can run (8.479ms)
+✔ normal answers and clarification are accepted; provider errors and missing expanded sidecars are rejected (5.6114ms)
+✔ canonicalization does not apply first-acceptance correlation or current-state policy (0.8901ms)
+✔ same strict envelope works for both mobile and gateway (7.2819ms)
+✔ reject consequential unknown fields at every nesting level without modifying input (2.2803ms)
+✔ no coercion, consequential default insertion or unsafe integer revisions (0.5226ms)
+✔ only the three supported AI proposals are accepted (2.3559ms)
+✔ version and unknown source identities fail; actual dates require semantic validation (1.9396ms)
+✔ Gregorian dates, leap years and UTC audit timestamps do not normalize invalid values (2.2356ms)
+✔ Unicode message limit counts code points and never truncates (1.676ms)
+✔ ordered recipe references survive validation without fresh ranking (1.8217ms)
+✔ every response scope counter participates in obsolete-response rejection (0.8086ms)
+✔ UI commands need no conversation; occupied replacement and move require distinct guards (4.9072ms)
+✔ frozen payload canonicalization and operation identity expose changed retry arguments (2.1089ms)
+✔ cancel after dispatch reconciles; settled and cancelled intents cannot auto-replay (0.8473ms)
+✔ partial and uncertain outcomes cannot become unqualified success (3.6946ms)
+✔ batch summary rejects duplicate slots, mismatched intent and results outside frozen operations (2.0152ms)
+✔ model output cannot insert an operation receipt into a proposal (0.5457ms)
+✔ citation positions and annotations must belong to the cited recipe (3.5924ms)
+✔ v2 supports inclusive 1900–2100 dates and rejects dates outside that range (1.4782ms)
+✔ relative-date guards describe the exact frozen placement, never another command (1.1242ms)
+✔ API2 is explicit across assistant, pairing and health; command2 and receipt1 are independent (8.8271ms)
+✔ atomic edit keeps recipe/date/meal and requires the shopping-scope guard (5.4192ms)
+✔ normal responses require expanded quotes; errors reject sidecars; model variant rejects quotes/provenance (9.9213ms)
+✔ same-batch correction retains the full original constraint and exact reviews (10.8676ms)
+✔ unresolved review permits only a clarification and no retained entry for that source (0.956ms)
+✔ quotes reject whitespace/Unicode alteration, and only declared USER sources can be retained (3.3452ms)
+✔ relations reject unknown/self/newer/cyclic sources and stale/unknown selected memory (3.2265ms)
+✔ required provenance agrees across channels, with original dates preserved (3.7842ms)
+✔ preference links preserve removal markers without a count cap or model authority (6.8071ms)
+✔ working boundary excludes every supplied old source unless explicitly carried (1.2062ms)
+✔ carry IDs include the complete expanded relation group, not only chosen roots (0.4404ms)
+✔ live and removed source links agree with the complete frozen preference snapshot (1.1531ms)
+✔ coverage is internally consistent and unresolved pending evidence cannot appear within budget (0.5508ms)
+✔ an unbounded working context cannot hide pending sources behind a smaller scoped count (0.2134ms)
+✔ a source-linked withdrawal is later than its original global preference revision (0.2711ms)
+✔ standalone and runtime Ajv agree on exact memory caps, code points and strict nested shapes (295.5086ms)
+✔ expanded request and response byte limits are independent of per-quote code-point limits (19.9616ms)
+✔ Fastify fixture and generated phone validator reject the same malformed boundary (606.7348ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4210.5695
+

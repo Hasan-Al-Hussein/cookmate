@@ -1,0 +1,510 @@
+
+> cookmate-workspace@0.1.0 test
+> npm run test:contracts && npm run test:catalogue && npm run test:domain && npm run test:gateway && npm run test:probes && npm run test:assistant && npm run test:mobile
+
+
+> cookmate-workspace@0.1.0 test:contracts
+> node --import tsx --test packages/contracts/test/*.test.ts
+
+✔ canonical fingerprint includes the entire versioned input without mutation or object-key order sensitivity (22.128ms)
+✔ changes throughout frozen request, response, provenance, scope and envelope change the fingerprint (72.7716ms)
+✔ every populated array retains its order in the frozen fingerprint (15.2917ms)
+✔ exact strings preserve Unicode, whitespace and quoted instruction text as data (3.8314ms)
+✔ unknown fields at envelope, request and response nesting are rejected instead of omitted (12.121ms)
+✔ non-JSON values are rejected before coercion, omitted properties or user code can run (11.9052ms)
+✔ normal answers and clarification are accepted; provider errors and missing expanded sidecars are rejected (9.776ms)
+✔ canonicalization does not apply first-acceptance correlation or current-state policy (1.8225ms)
+✔ same strict envelope works for both mobile and gateway (16.2226ms)
+✔ reject consequential unknown fields at every nesting level without modifying input (1.9465ms)
+✔ no coercion, consequential default insertion or unsafe integer revisions (0.379ms)
+✔ only the three supported AI proposals are accepted (0.953ms)
+✔ version and unknown source identities fail; actual dates require semantic validation (3.3166ms)
+✔ Gregorian dates, leap years and UTC audit timestamps do not normalize invalid values (2.0112ms)
+✔ Unicode message limit counts code points and never truncates (1.3823ms)
+✔ ordered recipe references survive validation without fresh ranking (0.8974ms)
+✔ every response scope counter participates in obsolete-response rejection (0.3347ms)
+✔ UI commands need no conversation; occupied replacement and move require distinct guards (3.4143ms)
+✔ frozen payload canonicalization and operation identity expose changed retry arguments (1.0182ms)
+✔ cancel after dispatch reconciles; settled and cancelled intents cannot auto-replay (0.1798ms)
+✔ partial and uncertain outcomes cannot become unqualified success (1.9464ms)
+✔ batch summary rejects duplicate slots, mismatched intent and results outside frozen operations (2.5431ms)
+✔ model output cannot insert an operation receipt into a proposal (0.362ms)
+✔ citation positions and annotations must belong to the cited recipe (2.4717ms)
+✔ v2 supports inclusive 1900–2100 dates and rejects dates outside that range (1.241ms)
+✔ relative-date guards describe the exact frozen placement, never another command (1.1978ms)
+✔ API2 is explicit across assistant, pairing and health; command2 and receipt1 are independent (9.2312ms)
+✔ atomic edit keeps recipe/date/meal and requires the shopping-scope guard (2.2514ms)
+✔ normal responses require expanded quotes; errors reject sidecars; model variant rejects quotes/provenance (2.1342ms)
+✔ same-batch correction retains the full original constraint and exact reviews (7.0997ms)
+✔ unresolved review permits only a clarification and no retained entry for that source (2.3423ms)
+✔ quotes reject whitespace/Unicode alteration, and only declared USER sources can be retained (3.2755ms)
+✔ relations reject unknown/self/newer/cyclic sources and stale/unknown selected memory (2.4744ms)
+✔ required provenance agrees across channels, with original dates preserved (1.9539ms)
+✔ preference links preserve removal markers without a count cap or model authority (4.5608ms)
+✔ working boundary excludes every supplied old source unless explicitly carried (0.9501ms)
+✔ carry IDs include the complete expanded relation group, not only chosen roots (0.6843ms)
+✔ live and removed source links agree with the complete frozen preference snapshot (1.5133ms)
+✔ coverage is internally consistent and unresolved pending evidence cannot appear within budget (0.7955ms)
+✔ an unbounded working context cannot hide pending sources behind a smaller scoped count (0.2967ms)
+✔ a source-linked withdrawal is later than its original global preference revision (0.4588ms)
+✔ standalone and runtime Ajv agree on exact memory caps, code points and strict nested shapes (195.2786ms)
+✔ expanded request and response byte limits are independent of per-quote code-point limits (14.7595ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1097.757
+
+> cookmate-workspace@0.1.0 test:catalogue
+> npm run test --workspace @cookmate/catalogue
+
+
+> @cookmate/catalogue@0.1.0 test
+> node --import tsx --test test/*.test.ts
+
+✔ all source records validate and preserve unknowns, repeats, headings and distinct Alfredo IDs (4.9995ms)
+✔ source membership is recipe-specific and rejects malformed discriminated citations (0.4447ms)
+✔ annotation IDs resolve only under their owning recipe (0.7753ms)
+✔ reviewed runtime notes preserve source amounts, missing measures and the alternative garnish (0.4504ms)
+✔ photo uncertainty has explicit source notes without image-inferred ingredient demand (0.412ms)
+✔ invalid joins, duplicate identities and reordered passages fail before publication (0.9642ms)
+✔ callers cannot change source data or boundary membership after construction (1.5119ms)
+✔ prepared identity covers source provenance and every runtime record (8.1461ms)
+✔ every packaged photo preserves original bytes and has a literal native asset mapping (83.1237ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 720.522
+
+> cookmate-workspace@0.1.0 test:domain
+> npm run test --workspace @cookmate/domain
+
+
+> @cookmate/domain@0.1.0 test
+> node --import tsx --test test/*.test.ts
+
+(node:16988) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ action recovery is read-only and active absent receipts remain unresolved without preventing explicit execution (1637.6301ms)
+✔ reopened action recovery proves cancelled absent effects for both finalized and unfinalized reservations (337.4463ms)
+✔ partial prefix and lost commit acknowledgement recover actual receipts and prove remaining slots absent after reopen (584.5518ms)
+✔ action recovery waits behind a pending writer and observes its atomic receipt after settlement (182.4717ms)
+✔ recovery cannot prove absence while execution hashes before enqueue; cancellation blocks the late writer (180.1133ms)
+✔ action recovery rejects unknown, corrupted and unavailable state without empty success or mutation (160.1341ms)
+✔ assistant receipt metadata publishes conversation once for committed and no-op effects without changing semantic authority (360.6103ms)
+✔ duplicate first preference no-op advances only actual receipt authority; later slot uses actual revision and retained IDs (412.3895ms)
+✔ plan freezing rejects extra, reordered, altered and colliding proposal identities; stored corruption fails as storage failure (304.2882ms)
+✔ unrelated preference or runtime changes invalidate dispatch even through the general executor; retries do not renew guards (924.5502ms)
+✔ receipt, journal, cursor and real authority revisions roll back together if a hook write fails (449.3154ms)
+✔ cancellation and interrupted reopen preserve receipts but cannot dispatch remaining reserved slots (340.413ms)
+✔ uncertain prefix cannot silently advance, retry dispatch or finalize a later action (211.9752ms)
+✔ lost freeze or finalize acknowledgement preserves exact reserved identities and operation-specific notification proof (495.4914ms)
+✔ draft typing preserves authority but a subsequent semantic conversation turn invalidates remaining actions (285.3328ms)
+✔ runtime change after receipt and guard writes rolls back the transaction at the final executor hook (141.2168ms)
+✔ undispatched cancellation and missing assistant context never become direct-command authority (258.2023ms)
+✔ legacy fully frozen intent remains immutable and executes its complete command prefix in proposal order (155.9072ms)
+✔ relative add-plan keeps its source date and occurrence identity while receipt authority permits the next plan slot (168.3882ms)
+✔ selected occupied replacement binds exact target and shopping consequences, then advances from actual scope revision (333.9871ms)
+(node:100000) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ real clear command removes transcript/reference/request/draft scope while preserving cooking state and receipts (865.3221ms)
+✔ clear stops pending reply acceptance and uncommitted chat commands; stale clear does not affect the new generation (418.2871ms)
+✔ clear receipt fault rolls back transcript deletion and generation before an exact successful retry (120.6585ms)
+(node:16352) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ combined recipe/date/meal edit preserves occurrence identity and updates selected demand in one operation (633.0151ms)
+✔ exact edit no-op preserves selected demand, purchase marks and revisions but requires the current scope guard (176.7368ms)
+✔ combined edits reject stale occurrence, stale selection and occupied target without partial recipe or placement changes (111.641ms)
+✔ combined edit failure after occurrence or projection writes rolls back all demand, purchases, revisions and receipt before retry (567.8846ms)
+(node:90492) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ registered direct favourite command commits once; duplicate delivery returns the durable receipt (246.0983ms)
+✔ changed payload, cancellation and changed intent revisions cannot mutate a registered operation (129.574ms)
+✔ receipt insertion failure rolls back mutation, revisions and intent phase, then same operation retries safely (104.0255ms)
+✔ lost COMMIT acknowledgement reconciles the actual receipt through the independent reader (80.1455ms)
+✔ lost acknowledgement with an unavailable reader remains uncertain until actual receipt recovery (99.2644ms)
+✔ chat origin and relative-date guards reject changed context before running a domain handler (129.3748ms)
+✔ executed favourite and its receipt survive file close and no-reseed reopen (277.1586ms)
+✔ cancelling a partially dispatched frozen batch keeps its committed receipt and stops remaining slots (129.6697ms)
+(node:94092) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ transcript pagination preserves display order and old references outside the current page (165.0006ms)
+✔ turn request precedes response durably; response references bind to the actual displayed message and guards (194.1606ms)
+✔ connection changes and a second active turn cannot accept or append a stale response (157.9781ms)
+✔ response reference insertion failure rolls back reply, guards and message status for exact retry (99.3539ms)
+✔ invalid transcript/reference records fail visibly; valid empty query is distinct (74.4397ms)
+✔ startup recovery stops unfinished authority, retains receipts and is idempotent (81.6038ms)
+✔ startup recovery rejects malformed nested turn metadata atomically without deleting it (75.6778ms)
+✔ begin, accept, failure and draft lost acknowledgements notify once only after durable entity proof (334.7036ms)
+✔ failed lifecycle/phase contradictions are rejected without concealing or rewriting corruption (85.5438ms)
+✔ an unrelated durable revision never proves a rolled-back turn notification (81.9619ms)
+✔ runtime day/connection changes during awaited begin or response writes roll back obsolete acceptance (301.306ms)
+(node:97748) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ desktop SQLite seeds faithful records, FK constraints and schema atomically (156.6807ms)
+✔ FK must be enabled on actual writer before BEGIN; queue recovers from rejected command (251.8424ms)
+✔ interrupted seed rolls back schema and marker, preserving a genuinely fresh database (32.9541ms)
+✔ reopen preserves existing state and rejects catalogue/version mismatch without reset (305.8065ms)
+✔ unversioned existing state is not overwritten during initialization (6.8648ms)
+✔ calendar and occupied-slot constraints reject invalid rows while allowing leap day and past dates (102.1108ms)
+✔ serialized callbacks retain exact handle; escaped handle cannot write after commit (67.6406ms)
+✔ receipt can outlive conversation clearing and direct UI requires no origin (82.5985ms)
+✔ catalogue repository hydrates every source record and serializes overlapping read snapshots (425.8804ms)
+✔ a failed rollback invalidates the connection instead of permitting another transaction (3.0923ms)
+✔ an accidentally unawaited in-scope statement settles before COMMIT and its failure rolls back (3.6456ms)
+✔ state repositories preserve empty states, stable ordering, cross-week selections and receipt data (137.3498ms)
+✔ a malformed saved collection fails visibly without overwriting it or hiding healthy collections (81.6068ms)
+✔ receipt hydration rejects impossible nested dates and unknown source IDs but preserves valid historical effects (42.1671ms)
+✔ transaction scope finalizes leaked prepared handles exactly once on success and failure (2.0812ms)
+✔ statement cleanup failure rolls back and prevents reuse of a damaged connection (1.9538ms)
+✔ Monday weeks retain exact calendar dates across month, year and leap-day boundaries (4.6598ms)
+✔ supported boundaries disable navigation and retain the final partial week (1.6996ms)
+✔ pending relative dates notice day/timezone changes without changing a resolved calendar date (0.4425ms)
+✔ calendar arithmetic round-trips every supported date against independent Gregorian UTC arithmetic (592.2573ms)
+(node:14368) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ acknowledged draft events carry immutable exact headers with constant nonempty-history work (3138.8645ms)
+ℹ {"retainedIntents":1,"drafts":20,"sql":480,"historicalBodies":0}
+ℹ {"retainedIntents":33,"drafts":20,"sql":480,"historicalBodies":0}
+✔ lost draft commit acknowledgement reconciles without a draft-only certificate (54.4874ms)
+✔ public action recovery discovers cancelled plans beyond thirty intents, tracks metadata revision drift and invalidates on clear (948.4373ms)
+✔ saved preferences retain exact UTF-16 through factory reopen, duplicate comparison and historical receipt (63.4101ms)
+✔ public restore queries preserve installation identity and discover interrupted and historical intents across reopen and clear (145.2256ms)
+✔ direct recovery verifies frozen command fingerprints before describing or dismissing notices (54.9156ms)
+✔ core factory uses two isolated connections, read-only review, frozen commands and receipt retry across reopen (52.6126ms)
+✔ direct review resolves destination identity and selection consequences; intervening changes reject guarded edit (73.4706ms)
+✔ factory rejects incompatible persisted database without clearing it and closes failed-start ownership (55.9353ms)
+✔ close waits for an in-flight command before releasing either connection (53.9357ms)
+✔ full selection review guards named meal edits through preparation and execution; exact receipt retry remains historical (308.5142ms)
+✔ subscriber mutation cannot corrupt other notifications and a supplied empty edit ID is rejected (56.598ms)
+✔ direct recovery persists identities before dispatch and proves receipts or cancelled no-effect after reopen without replay (74.9704ms)
+✔ recovery waits behind live writer and never turns unavailable storage into empty or not-executed success (41.8661ms)
+✔ full assistant binds one live runtime to the same store and honors close without exposing native handles (53.1052ms)
+(node:83564) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ scope change owns its caller input and proves a lost commit acknowledgement before notifying (330.1208ms)
+✔ immutable acknowledgement rejects corrupted output metadata without rewriting history (320.2134ms)
+✔ scope rollback followed by exact retry publishes one notification while the earlier reader was unavailable (159.3514ms)
+✔ full USER evidence, NUL and correction survive more than 25 turns beyond history window (1817.8596ms)
+✔ atomic memory validation rejects altered Unicode/omitted reviews and resolves backlog source links in one batch (179.1289ms)
+✔ acceptance envelope is durable and exact replay precedes changed runtime/current phase while mutations conflict (280.6404ms)
+✔ oversized retained context narrows, selected carry expands whole correction group, and fresh boundary excludes every old channel (2158.6478ms)
+✔ fault at acceptance record rolls back reply, memory, review state, projection and context together (89.8466ms)
+✔ explicit retry reuses frozen request/envelope after awaiting, recoverable failure or startup interruption, never after acceptance or later scope change (338.0076ms)
+✔ disk reopen preserves full evidence, explicit scope and immutable acceptance envelope (323.8616ms)
+✔ pending and expanded UTF-8 budgets narrow before append; explicit fresh brief retains excluded backlog locally (640.3699ms)
+✔ a 33-entry linked group cannot be silently severed by explicit carry selection (1715.3694ms)
+(node:79972) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ native-shaped read cleanup failure invalidates the queue at SELECT 1 AS value (11.479ms)
+✔ native-shaped read cleanup failure invalidates the queue at PRAGMA foreign_keys (1.7127ms)
+✔ ordinary native-shaped SQL read errors with successful cleanup permit later queued reads (2.7832ms)
+(node:95252) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ relative-date context changed during awaited SQL rolls back the whole command before commit (350.6173ms)
+✔ actual plan commands require explicit selection, preserve repeated occurrences and keep exact retry/no-op distinct (276.8707ms)
+✔ selected placement-only edit leaves every demand mark unchanged; recipe replacement retains ID and selection with reset demand (302.2775ms)
+✔ occupied move matrix preserves source occurrence identity/inclusion and never inherits destination selection or credit (1411.1374ms)
+✔ occurrence A/B and scope-only changes reject stale occupied confirmations without overwriting state (759.122ms)
+✔ projection and receipt faults roll back a real occupied move, selection, purchase state and revisions; same command retries (707.6519ms)
+✔ purchase revision and demand guards reject stale toggles; deselect/reselect and sole occurrence deletion cannot restore credit (503.7665ms)
+✔ purchase and selection commands serialized concurrently cannot mark changed demand (251.5164ms)
+✔ real shopping rows and receipts survive close/reopen, and persisted quantity corruption returns failure without reset (227.8281ms)
+✔ lost acknowledgement on an occupied move reconciles its durable receipt without duplicate moves or notifications (201.8899ms)
+(node:49420) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ duplicate save links the retained USER to the actual saved ID and row version, not the requested ID or global revision (263.5107ms)
+✔ replacement, removal, re-addition and clear withdraw exact versions and advance only actual-removal watermark (127.2392ms)
+✔ withdrawal of a preference saved outside conversation still advances the watermark without inventing links (95.6374ms)
+✔ clear conversation removes provenance and accepted memory but retains preferences, watermark and historical receipt replay (104.8279ms)
+✔ receipt failure rolls back every preference/provenance/watermark or chat-clear write and exact command can retry (628.6626ms)
+✔ public preference reads and duplicate provenance comparisons preserve exact UTF-16 text (174.0924ms)
+(node:89340) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ explicit preference create/update/deduplicate uses current collection authority and truthful receipts (136.9204ms)
+✔ preference removal/clear is scoped, with no-op behavior and no hidden transcript import (190.4219ms)
+✔ receipt insertion failure rolls back clearing multiple preferences and exact operation can retry (117.1019ms)
+✔ preference capacity and edit collisions cannot overwrite other saved preferences (125.1549ms)
+✔ app-owned identities distinguish deliberate new intents while one frozen command can be retried (18.3785ms)
+✔ caller mutation during asynchronous hashing cannot change the frozen action (4.2231ms)
+✔ invalid source identity, impossible dates and bad platform hashes fail before dispatch (4.9712ms)
+✔ explicit conversation origin and relative date guard are included in the fingerprint (3.2879ms)
+✔ supported source integer/decimal/fraction grammar produces reduced exact values (34.0572ms)
+✔ unknown, ranges, qualifiers and package sizes remain raw contributions instead of guessed totals (0.96ms)
+✔ compatible totals are exact and incompatible units never silently combine (3.0541ms)
+✔ ingredient grouping uses reviewed case equivalence only; all source rows and repeated components remain distinct inputs (13.2836ms)
+(node:97348) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ cold discovery rejects orphan recovery evidence after freshness invalidation without changing it (791.8889ms)
+✔ 32/100 settled plans use bounded cold audits and zero historical bodies or hashes on warm/draft checks (5666.0951ms)
+ℹ {"retainedSettled":32,"cold":{"sql":691,"writerSql":691,"readerSql":0,"hashes":32,"bodies":928,"bodyBytes":616022,"transactions":1,"ports":1},"warm":{"sql":17,"writerSql":17,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":1,"ports":1},"draftAndRefresh":{"sql":41,"writerSql":41,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":2,"ports":1},"journalAndRefresh":{"sql":55,"writerSql":55,"readerSql":0,"hashes":1,"bodies":24,"bodyBytes":19352,"transactions":2,"ports":1}}
+ℹ {"retainedSettled":100,"cold":{"sql":2173,"writerSql":2173,"readerSql":0,"hashes":100,"bodies":2900,"bodyBytes":2024580,"transactions":4,"ports":4},"warm":{"sql":17,"writerSql":17,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":1,"ports":1},"draftAndRefresh":{"sql":41,"writerSql":41,"readerSql":0,"hashes":0,"bodies":0,"bodyBytes":0,"transactions":2,"ports":1},"journalAndRefresh":{"sql":55,"writerSql":55,"readerSql":0,"hashes":1,"bodies":24,"bodyBytes":19408,"transactions":2,"ports":1}}
+✔ cold continuation survives drafts and does not omit a newly inserted intent before the keyset cursor (1138.0624ms)
+✔ partial receipt progress remains a candidate until cancellation proves the reserved remainder unexecuted (64.5259ms)
+✔ clear during cold progress replaces coverage generation and retains only independent direct intents (496.9538ms)
+✔ no-plan message corruption, missing plans and receipt deletion are detected after unexpected same-handle writes (148.3373ms)
+✔ external commits before BEGIN and after COMMIT never publish a stale reusable baseline (92.2882ms)
+✔ cold discovery rejects missing assistant context for active and no-plan intents after external deletion (94.272ms)
+✔ unknown impact invalidates before callback; rollback and lost acknowledgement never certify staged recovery (120.7126ms)
+✔ read-only mutation, invalid draft, schema change and unavailable fences fail closed (90.6903ms)
+✔ an oversized single receipt fails before decoding its body and a closed gate rejects old continuations (74.2563ms)
+✔ schema identity is verified at first use and retained across failed coverage audits (56.2789ms)
+(node:86608) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ fresh genesis is database version two and initializes memory state once (82.3277ms)
+✔ version one, unknown versions and unversioned state reject without deletion or reseed (39.1347ms)
+✔ incomplete, altered and extra version-two layouts preserve saved state on rejection (511.7383ms)
+✔ working memory state enforces owner, revisions, boundary and bounded carry JSON (51.1575ms)
+✔ source context, review, entries and relations enforce foreign keys, uniqueness and bounded JSON (62.7153ms)
+✔ preference source links preserve exact values with a byte envelope and shared code-point validation (53.4668ms)
+✔ link and successful receipt may be inserted in either order but missing receipt rolls back (60.3415ms)
+✔ immutable acceptance is independently versioned, bounded and owned by a retained intent (55.4803ms)
+✔ chat deletion cascades memory, links and acceptance while preferences, watermark and receipts survive (67.1275ms)
+✔ assistant context has bounded versioned lifecycle and cascades independently of receipts (44.4699ms)
+✔ source oracle preserves independent Alfredo identities and Unicode/fragment/case matching (9.7781ms)
+✔ filters combine with query using AND, including all selected exact source ingredients (1.7538ms)
+✔ country/demonym alias is explicit and preserves original source label (1.9676ms)
+✔ typos remain separate labelled suggestions and cannot relax explicit filters (15.411ms)
+✔ source-backed reasons resolve through the exact shared citation boundary (13.9046ms)
+✔ unsupported or malformed criteria are failures instead of silently ignored filters (1.8337ms)
+✔ repeat consumers preserve source/rule identity, stable order and caller isolation (20.2141ms)
+✔ search rule fingerprint matches the shipped source implementation (25.4694ms)
+✔ all source rows and exactly six reviewed instruction-only demands contribute once per selected occurrence (154.8137ms)
+✔ repeated component rows aggregate safely with traceability, while incompatible and unknown demand stay separate (3.9462ms)
+✔ demand identity ignores display/date order but detects a different contributing occurrence despite equal total (2.8686ms)
+✔ purchase progress preserves exact unchanged demand, but changed, removed/re-added and split/merged demand requires review (0.9451ms)
+✔ projection takes ownership before asynchronous hashes and rejects unknown or duplicate selected sources (4.2528ms)
+(node:93308) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ writer captures impact before queuing and does not release work before acknowledged observer publication (14.5559ms)
+✔ lost commit acknowledgement invalidates observer and never publishes its staged proof (2.6137ms)
+ℹ tests 161
+ℹ suites 0
+ℹ pass 161
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20063.9911
+
+> cookmate-workspace@0.1.0 test:gateway
+> node --import tsx --test --test-concurrency=1 scripts/build/gateway-contract.test.ts apps/gateway/test/*.test.ts
+
+✔ credentials survive reload as hashes; revocation and expiry remain distinct (4.0191ms)
+✔ corrupt registry and durable write failure fail closed, including existing tokens (0.5545ms)
+✔ pairing is operator-opened, expiring, attempt-limited and one use under concurrency (0.9981ms)
+✔ Fastify rejects authentication, coercion, version, catalogue, JSON and size errors before provider (254.0537ms)
+✔ health reveals only readiness and API version; pairing routes never expose credentials elsewhere (146.7474ms)
+✔ one turn per client and two global; no cross-client context or request identity reuse (102.7325ms)
+✔ revocation aborts in-flight work; deadline frees admission even for an uncooperative provider (209.4009ms)
+✔ raw provider exceptions and stale response identity never cross HTTP boundary (173.5663ms)
+✔ revocation after early authentication but before parsed-body dispatch makes zero provider calls (75.0623ms)
+✔ prepared smoke uses actual SDK/schema/normalization for two synthetic models with four fake requests (106.5143ms)
+✔ diagnostic metadata distinguishes HTTP, completion, usage, JSON, shape and normalization failures without raw content (80.279ms)
+✔ prepared smoke never retries a provider error or falls back to the next model (9.7757ms)
+✔ HTTP error classification observes the single bounded body without retaining injected secrets (8.6471ms)
+✔ launcher configuration requires explicit approved model, private local state and TLS paths (1.2203ms)
+✔ actual temporary file registry locks one writer, persists only hashes and reopens revoked state (1392.5932ms)
+✔ abrupt owned child exit leaves a lock; verified-dead-owner recovery preserves registry bytes and revocation (1531.4837ms)
+(node:85868) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ factory coordinator uses actual no-op preference revision, retains exact operation IDs and never repeats effects (174.2274ms)
+✔ factory answer memory and exact historical acceptance survive acknowledgement loss and reopen (65.0839ms)
+✔ cancelled proposal acceptance replay cannot restore confirmation or dispatch authority after reopen (64.0856ms)
+✔ factory retained-ID retry after begin acknowledgement loss and reopen keeps one USER and exact frozen request (62.0231ms)
+✔ factory retained-ID retry after failure acknowledgement loss and reopen keeps one USER and exact frozen request (76.4517ms)
+✔ unrelated direct preference commit after first receipt rejects second finalization without widening the approved plan (101.3888ms)
+✔ ready finalized and reserved slots remain uncertain until reopen proves durable cancellation and no effects (88.6725ms)
+✔ lost execution acknowledgement reconciles the real receipt and proves the remaining absence only after cancellation (96.6217ms)
+✔ paired HTTP boundary composes official SDK and source orchestration using only injected fictional transport (346.68ms)
+✔ same-call backlog correction expands exact whole USER quotes without changing source provenance (24.7797ms)
+✔ retained older constraint and correction evidence stays intact beyond the recent history window (8.8434ms)
+✔ model-injected quotes, extra identity, missing reviews and malformed same-batch targets fail closed (53.3197ms)
+✔ unresolved review permits clarification only, and local pre-provider clarification keeps all targets pending (19.799ms)
+✔ removed saved choice and unrelated temporary clause retain identical provenance across history and memory (15.121ms)
+✔ expanded reply size is bounded even when quote-free provider output and full input each fit (15.4735ms)
+✔ HTTP boundary rejects invalid normalized memory even when an injected turn bypasses orchestration (242.6066ms)
+✔ full contract admits structural witnesses covering all nine union locations and 27 branches (105.7554ms)
+✔ full validation never coerces, supplies missing fields or deletes extra and wrong-branch fields (1.215ms)
+✔ complete source packets retain Adana, Padron, Bread omelette warnings, unknown measures and locator order (2.5245ms)
+✔ valid reply receives original envelope and full reviewed source notes (29.1193ms)
+✔ rewritten retrieval uses domain search and a bounded second generation; no fabricated sources/actions pass (106.2466ms)
+✔ initial broad search carries exact count basis and a visible incomplete-evidence marker (9.0236ms)
+✔ direct reference IDs have separate provenance and cannot be mixed with search criteria (20.9617ms)
+✔ ambiguous older reference sets clarify before provider; unique older list resolves without newest substitution (18.039ms)
+✔ explicit recipe name or focused selection resolves ordinals across multiple older lists (18.3488ms)
+✔ ordinary cooking completion language is not treated as an app write receipt (9.5393ms)
+✔ proposal capabilities and expected occupied target must match; model prose never establishes success (18.3069ms)
+✔ source budget exhaustion returns a focused narrowing response instead of dropping evidence (5.8512ms)
+(node:96356) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ real file SQLite source state crosses v2 gateway and immutable acceptance, survives reopen and rejects changed replay (370.6687ms)
+✔ only allowlisted RPC status spellings enter the serialized summary (1.4304ms)
+✔ known keyword presence is case-insensitive, token-bounded and never itself a cause classification (0.2611ms)
+✔ exact known phrases produce only tentative fixed categories; competing or unfamiliar wording stays unknown (0.1915ms)
+✔ malformed JSON, plaintext and HTML remain entirely unknown without parsing their prose (0.6916ms)
+✔ valid JSON without a standard error object does not recursively scan content (0.2575ms)
+✔ ignored headers, details, credential keys and nested message/status values cannot trigger classification (0.1661ms)
+✔ malicious standard-message prose can emit only booleans and fixed allowlisted strings (0.1936ms)
+✔ parsed prototype-like fields are inert and separate calls do not retain observations (0.1789ms)
+✔ Interactions error.code accepts only the documented lowercase request-level allowlist (0.8542ms)
+✔ fixed field types distinguish absent, null, nonstring and string without exposing values (0.4167ms)
+✔ generic-invalid-request phrase flags recognize whole fixed messages only and never identify a cause (0.2462ms)
+✔ code is not inferred from prose, legacy RPC status, nested details or nonstandard top-level fields (0.1565ms)
+✔ hostile and dynamic unknown codes cannot inject arbitrary text into serialized summaries (0.6021ms)
+✔ production full schema and schema-bearing instruction match the proven frozen JSON-mode bytes (1.0571ms)
+✔ required typed envelope contains the unchanged full model contract (209.1769ms)
+✔ wrong-branch fields reach full validation unchanged and are rejected (139.8939ms)
+✔ wrapped retrieval and response preserve the real two-round evidence and memory path (13.5002ms)
+✔ MIME-only JSON still rejects forbidden lengths, patterns and duplicates locally (98.6303ms)
+✔ unknown fields, malformed nested actions and source provenance still fail locally (73.1563ms)
+✔ full Unicode answer boundary and valid source-linked memory still normalize through the candidate (29.4106ms)
+✔ adjacent text chunks and model steps concatenate in order without inserted separators (1.8463ms)
+✔ omitted whitespace-only prefix and suffix parts are permitted by the single final trim (0.265ms)
+✔ byte counts use the joined model text when a Unicode pair spans chunks (0.1191ms)
+✔ whitespace between non-whitespace parts is not silently removed or repaired (0.1322ms)
+✔ thought-separated earlier model prose cannot be omitted by SDK final-run text selection (0.1371ms)
+✔ literal empty object padded with whitespace retains distinct selected and trimmed byte counts (0.1045ms)
+✔ missing or malformed steps and model content fail without throwing (0.2508ms)
+✔ malformed parts do not hide later text counts or authorize an otherwise matching selection (0.0946ms)
+✔ missing or non-string selected output never falls back to a model text part (0.1462ms)
+✔ selected mismatch and reordered chunks fail without choosing any alternative text (0.1854ms)
+✔ non-model text and non-text content are ignored without affecting ordered model comparison (0.1184ms)
+✔ at least one model string text part is required even when selected text is empty (0.0951ms)
+✔ metadata exposes only the fixed numeric and boolean fields, never secret prose (0.2024ms)
+✔ official SDK counts the exact schema-bearing instruction once and sends MIME-only stateless JSON (80.4094ms)
+✔ missing or invalid thought usage is unknown and rejected without retry (103.9332ms)
+✔ explicit zero is accepted and combined output plus thought is capped at exactly 2000 (55.6054ms)
+✔ one explicit transient retry reuses count; SDK retries remain disabled across both rounds (267.084ms)
+✔ actual SDK preserves adjacent structured text and omitted earlier model text fails closed (38.925ms)
+✔ quota/auth/invalid payload/model/truncation failures do not retry or expose provider text (50.5971ms)
+✔ preflight failure blocks generation; counted schema/system/prompt plus framing reserve enforces cap (13.7117ms)
+✔ context admission failures survive orchestration as typed recovery without generation (13.4193ms)
+✔ oversized provider bodies are cancelled and abort never spends a generation after preflight (11.2834ms)
+✔ two abort-ignoring physical requests retain their leases after caller cancellation (18.4866ms)
+✔ Fastify fixture and generated phone validator reject the same malformed boundary (393.6115ms)
+ℹ tests 89
+ℹ suites 0
+ℹ pass 89
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17115.3839
+
+> cookmate-workspace@0.1.0 test:probes
+> node --import tsx --test scripts/build/https-probe.test.ts
+
+✔ health probe decodes bounded split UTF-8 data (4.0373ms)
+✔ health probe cancels oversized stream before reading the remaining body (0.7478ms)
+✔ health probe rejects malformed JSON and invalid UTF-8 (0.3466ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 276.2865
+
+> cookmate-workspace@0.1.0 test:assistant
+> node --import tsx --test --test-concurrency=1 apps/mobile/src/connection/*.test.node.ts apps/mobile/src/assistant-core/*.test.node.ts
+
+✔ old explicit ordinal uses persisted ordered reference metadata outside bounded history (7.8603ms)
+✔ ambiguous, missing and out-of-range old references require clarification, never latest-set substitution (1.3468ms)
+✔ current cleared preferences and corrections survive older conversation wording (1.3148ms)
+✔ context builder narrows over-budget essential evidence without deleting local history (0.2471ms)
+✔ byte and pending-evidence budgets narrow without editing Data coverage or provenance (6.1209ms)
+✔ current source identity, date and retained USER provenance are validated (3.2467ms)
+✔ multiple preference plans reserve identities without guessing future revisions (7.6033ms)
+✔ app preparer freezes exactly authorized save, plan and explicit preference into independent slots (6.5506ms)
+✔ provider text cannot authorize an action and unrequested additional work dispatches nothing (1.7248ms)
+✔ stale generation, preference, context and local-date guards reject before command creation (1.9918ms)
+✔ occupied plan action requires exact live occurrence and shopping consequences (1.9496ms)
+✔ relative dates and preference batches are not guessed into stale commands (0.9148ms)
+✔ coordinator persists user intent before network, stages proposal and never repeats provider success prose (11.9669ms)
+✔ returned references use the app-owned persisted assistant message identity (1.7814ms)
+✔ late response after invalidate is discarded without accepting or executing anything (0.646ms)
+✔ save success and plan failure report separate outcomes; second dispatch never replays completed save (10.5942ms)
+✔ uncertain effect stops later slots; restore and receipt reconciliation never execute (4.1374ms)
+✔ explicit reconciliation of active ready reservations remains uncertain without absence proof (1.5999ms)
+✔ explicit reconciliation of active dispatched reservations remains uncertain without absence proof (1.3737ms)
+✔ durable cancelled absence proof resolves earlier uncertainty and an unfinalized reservation without execution (1.8483ms)
+✔ durable reconciling absence proof resolves earlier uncertainty and an unfinalized reservation without execution (1.5466ms)
+✔ recovery preserves an exact historical receipt while proving the remaining reservation was not executed (2.4693ms)
+✔ null, malformed and mismatched recovery snapshots cannot fabricate successful or absent effects (5.0051ms)
+✔ active-phase absence, storage failure and phase drift reject recovery without a retry loop (1.7702ms)
+✔ receipt proof requires an exact frozen command, valid receipt semantics and matching operation fingerprint (3.2621ms)
+✔ recovery rejects a valid command and matching receipt whose operationId contradicts the reservation (1.766ms)
+✔ dispatch summary rejects a valid command and matching receipt whose operationId contradicts the reservation (1.4862ms)
+✔ recovery rejects a valid command and matching receipt whose userIntentId contradicts the reservation (1.4369ms)
+✔ dispatch summary rejects a valid command and matching receipt whose userIntentId contradicts the reservation (1.5759ms)
+✔ contradictory absence proof cannot turn a remembered receipt into not-dispatched (1.4941ms)
+✔ clear while the serialized recovery proof is pending discards the captured historical result (2.1173ms)
+✔ cancel after dispatch retains actual receipt and prevents next slot (1.7364ms)
+✔ foreign receipt or storage failure cannot become success (1.202ms)
+✔ narrowing happens before begin or network and exposes deliberate working-context recovery (0.3152ms)
+✔ lost acceptance acknowledgement retries the same envelope and returns historical acknowledgement after reopen (1.2346ms)
+✔ explicit provider retry keeps frozen IDs and context, while accepted replay performs no provider call (1.0077ms)
+✔ sequential preference commands use Data actual revision after each durable receipt, including no-op (2.3108ms)
+✔ Data rejecting deferred finalization stops remaining actions without guessing a revision (1.1089ms)
+✔ clear during retryTurn acknowledgement read cannot return the captured historical reply (0.5907ms)
+✔ clear during readAcceptance acknowledgement read cannot return the captured historical reply (0.4843ms)
+✔ valid provider ErrorResponse journals the exact error without acceptance or acceptance retry (0.4777ms)
+✔ context.token_limit returns narrowing from fresh authority after journaling, without resending the original turn (0.8154ms)
+✔ context.byte_limit returns narrowing from fresh authority after journaling, without resending the original turn (0.3212ms)
+✔ budget recovery preserves Data narrowing and derives retry selection only from frozen resolved fields (1.1525ms)
+✔ clear during the budget recovery read discards the captured next-brief context (0.6708ms)
+✔ budget journal failure does not preview an unrecorded next brief (0.7328ms)
+✔ HTTPS origins reject credential URLs, query strings, paths, HTTP and phone localhost (1.6674ms)
+✔ fresh-install marker mismatch clears surviving native credentials (1.6831ms)
+✔ pairing stores strict credential only; assistant uses bearer body and no redirects (34.336ms)
+✔ unversioned health discovers API 2 and rejects API 1 (1.7007ms)
+✔ API 1 and invalid memory provenance are rejected before acceptance (5.4504ms)
+✔ wrong correlations/catalogue and unknown recipe proposals are rejected (6.9471ms)
+✔ forget aborts late response and never restores pairing or retries (1.6537ms)
+✔ timeout is bounded even when fetch ignores abort and has no client retry (7.0503ms)
+✔ cancel invalidates the old epoch while retaining pairing for a deliberate later request (1.5044ms)
+✔ forget during a pending SecureStore write cannot resurrect the paired association (1.4275ms)
+✔ oversized streamed reply, redirect and unbounded request are rejected (2.9067ms)
+✔ HTTP auth errors erase pairing and do not relay raw server diagnostic text (1.5693ms)
+✔ transport preserves only allowlisted context recovery markers (2.8792ms)
+✔ self revoke has no request body and truthfully distinguishes local deletion from server failure (0.6903ms)
+✔ SecureStore adapter rejects additional provider key fields and malformed storage (1.0226ms)
+ℹ tests 61
+ℹ suites 0
+ℹ pass 61
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1345.8469
+
+> cookmate-workspace@0.1.0 test:mobile
+> npm run test --workspace @cookmate/mobile
+
+
+> @cookmate/mobile@0.1.0 test
+> jest --runInBand
+
+PASS src/foundation/FoundationProbeScreen.test.tsx (19.748 s)
+PASS src/features/workspace/recoveryFeedback.test.tsx (30.107 s)
+PASS src/features/assistant/assistantViews.test.tsx
+PASS src/features/assistant/assistantRuntime.test.ts
+PASS src/features/workspace/localIntegration.test.tsx
+PASS src/features/representative.test.tsx
+PASS src/features/photo-source-notice.test.tsx
+PASS src/features/assistant/assistantRecovery.test.ts
+
+Test Suites: 8 passed, 8 total
+Tests:       133 passed, 133 total
+Snapshots:   0 total
+Time:        73.469 s
+Ran all test suites.

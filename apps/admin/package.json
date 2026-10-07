@@ -1,0 +1,33 @@
+{
+  "name": "@cookmate/admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.13.0 <25"
+  },
+  "dependencies": {
+    "@cookmate/catalogue": "0.1.0",
+    "@cookmate/contracts": "0.1.0",
+    "@fastify/cookie": "11.1.2",
+    "@fastify/csrf-protection": "8.0.1",
+    "@fastify/multipart": "10.1.2",
+    "@fastify/rate-limit": "11.2.0",
+    "@fastify/session": "11.1.3",
+    "argon2": "0.45.1",
+    "fastify": "5.12.5",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "sharp": "0.35.5"
+  },
+  "devDependencies": {
+    "@types/react-test-renderer": "19.3.0",
+    "react-test-renderer": "19.2.3",
+    "@types/react-dom": "19.2.7",
+    "esbuild": "0.28.2"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test --test-concurrency=1 test/*.test.ts web/*.test.ts"
+  }
+}

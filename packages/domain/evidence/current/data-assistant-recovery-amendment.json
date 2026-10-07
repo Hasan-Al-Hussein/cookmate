@@ -1,0 +1,78 @@
+{
+  "formatVersion": 1,
+  "createdAtUtc": "2026-09-28T05:27:20.0809025Z",
+  "scope": "Brain-approved additive assistant recovery proof and inventory amendment; no native or full-UI acceptance",
+  "baselineManifest": "packages/domain/evidence/current/data-source-freeze.json",
+  "baselineManifestSha256": "cd54f2f1cd71e6e2b416ab0574ef8696539a08c03501dbe720f2c04416e19e74",
+  "baselineFileCount": 81,
+  "unchangedBaselineFiles": 74,
+  "apiVersion": "2",
+  "databaseSchemaVersion": 2,
+  "operationReceiptSchemaVersion": 1,
+  "catalogueFingerprint": "1c564aed197f0ff13e0c8a81c95d775960f8c7f021cd3e948f116ae471b5e1ef",
+  "checks": [
+    {
+      "command": "node --import tsx --test --test-concurrency=1 --test-reporter=tap packages/domain/test/*.test.ts packages/catalogue/test/*.test.ts",
+      "result": "154 passed, 0 failed",
+      "durationMs": 20280.5771,
+      "evidence": "packages/domain/evidence/current/assistant-recovery-suite.tap",
+      "evidenceSha256": "cd777192b905b7fd1b0ed5ff01345dc6ff2377bddb8be932db43077b9451bd20"
+    },
+    {
+      "command": "node_modules/.bin/tsc.cmd --noEmit -p packages/domain/tsconfig.json",
+      "result": "passed, 0 diagnostics"
+    },
+    {
+      "command": "$dataSourceFiles = @(rg --files apps/mobile/src/data -g '*.ts'); & node_modules\\.bin\\tsc.cmd --noEmit --strict --target ES2022 --module Preserve --moduleResolution Bundler --skipLibCheck --types node @dataSourceFiles",
+      "result": "passed, 0 diagnostics"
+    },
+    {
+      "command": "node_modules/.bin/prettier.cmd --check apps/mobile/src/data/assistantActionRepository.ts apps/mobile/src/data/assistantIntentRecords.ts apps/mobile/src/data/conversationRepository.ts packages/domain/src/conversationPorts.ts packages/domain/src/index.ts packages/domain/test/assistantActions.test.ts packages/domain/test/localStore.test.ts",
+      "result": "passed"
+    }
+  ],
+  "files": [
+    {
+      "path": "apps/mobile/src/data/assistantActionRepository.ts",
+      "baselineSha256": "fcabce7cb44a83258bfb3e3d03ab48f9333e450d6e4c407d363a476e7123bc6c",
+      "sha256": "d4f00e808d74f3e178970c4d41e0a4c8c1d20d2698564609e4eb26929846794f",
+      "bytes": 32336
+    },
+    {
+      "path": "apps/mobile/src/data/assistantIntentRecords.ts",
+      "baselineSha256": "99665c7866c586b7982d360fe944e96b3259a411112e9d514d25730bf274aa1b",
+      "sha256": "ec942cb09fbb0cf52732453801f03bd92bfb8afcbf0f8f1fe3ecc53e99f357fa",
+      "bytes": 9090
+    },
+    {
+      "path": "apps/mobile/src/data/conversationRepository.ts",
+      "baselineSha256": "a4fdfe9559550a29790856254867445e4e603035db5bab72f7e60813c41874cc",
+      "sha256": "70a3ce0ec952b37dcc35c6b5b7e1b47750d4081f93a5d87f75fe53123499b99b",
+      "bytes": 5995
+    },
+    {
+      "path": "packages/domain/src/conversationPorts.ts",
+      "baselineSha256": "4c2a680c384f07c8541a18e8088a54cba2ea873ea0d4105e903f65296b826f8a",
+      "sha256": "83207ef36bd3d5a9d058abbd16cec2ea4f3ee9a5f75dd4d958cc30799651c7f6",
+      "bytes": 10455
+    },
+    {
+      "path": "packages/domain/src/index.ts",
+      "baselineSha256": "5e1f7b565249d5b089e215064024a1ecaa9a683f123d453e6ea864e95366b488",
+      "sha256": "4dbb9cf7a130d75f5066cc1a28d25513c67560440bb8eecdce01593fefe8bcf6",
+      "bytes": 2119
+    },
+    {
+      "path": "packages/domain/test/assistantActions.test.ts",
+      "baselineSha256": "3926d8be42f0e7ff1d945def144ddc45bcfb1393b5d56b8eb40d2f14aa8ff653",
+      "sha256": "eb9f7f7eb3105af4a8bc9d3237d5ebba25b1e153207ccde38906b3d229743805",
+      "bytes": 47547
+    },
+    {
+      "path": "packages/domain/test/localStore.test.ts",
+      "baselineSha256": "8163ee55c98be4c49c881e60bf47f70dab88906734c2ed267e3b332bb00b6978",
+      "sha256": "a9280866ef05068281725ac28d90b7eddc552e6bb1f2e823fb71d42940a02444",
+      "bytes": 36377
+    }
+  ]
+}

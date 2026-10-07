@@ -1,0 +1,59 @@
+{
+  "name": "cookmate-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24.13.0 <25",
+    "npm": ">=11 <12"
+  },
+  "packageManager": "npm@11.20.0",
+  "overrides": {
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "xcode@3.0.1": {
+      "uuid": "11.1.1"
+    },
+    "query-string@7.1.3": {
+      "decode-uri-component": "$decode-uri-component"
+    }
+  },
+  "scripts": {
+    "admin:build": "node apps/admin/scripts/build.mjs",
+    "admin:bootstrap": "node --import tsx apps/admin/src/cli/bootstrap.ts",
+    "admin:start": "node --import tsx apps/admin/src/launcher.ts",
+    "verify:foundation": "node scripts/build/verify-foundation.mjs",
+    "contracts:generate": "node scripts/build/generate-contracts.mjs",
+    "contracts:check": "node scripts/build/generate-contracts.mjs --check",
+    "typecheck": "npm run typecheck --workspaces --if-present && npm run typecheck:node-tests --workspace @cookmate/mobile && tsc -p tsconfig.tools.json",
+    "test": "npm run test:contracts && npm run test:catalogue && npm run test:domain && npm run test:gateway && npm run test:probes && npm run test:assistant && npm run test:mobile && npm run test:admin && npm run test:accounts",
+    "test:accounts": "npm test --workspace @cookmate/account-sync && npm test --workspace @cookmate/account-service",
+    "test:admin": "npm test --workspace @cookmate/admin",
+    "test:contracts": "node --import tsx --test packages/contracts/test/*.test.ts",
+    "test:catalogue": "npm run test --workspace @cookmate/catalogue",
+    "test:domain": "npm run test --workspace @cookmate/domain",
+    "test:gateway": "node --import tsx --test --test-concurrency=1 scripts/build/gateway-contract.test.ts apps/gateway/test/*.test.ts",
+    "test:probes": "node --import tsx --test scripts/build/https-probe.test.ts",
+    "test:assistant": "node --import tsx --test --test-concurrency=1 apps/mobile/src/connection/*.test.node.ts apps/mobile/src/assistant-core/*.test.node.ts",
+    "test:mobile": "npm run test --workspace @cookmate/mobile",
+    "mobile:start": "npm run start --workspace @cookmate/mobile",
+    "mobile:check": "npm run check:dependencies --workspace @cookmate/mobile",
+    "mobile:bundle": "npm run export:native --workspace @cookmate/mobile",
+    "format:check": "prettier --check package.json tsconfig*.json packages/*/package.json packages/*/tsconfig.json packages/contracts/schema packages/contracts/src packages/contracts/test packages/catalogue/src packages/catalogue/test packages/domain/src packages/domain/test packages/account-sync/src packages/account-sync/test apps/account-service/src apps/account-service/test apps/account-service/scripts apps/account-service/*.json scripts/build/*.mjs scripts/build/*.ts apps/mobile/app apps/mobile/src apps/mobile/*.json apps/mobile/*.cjs apps/gateway/src apps/gateway/test apps/gateway/*.json"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "ajv": "8.20.0",
+    "decode-uri-component": "file:vendor/decode-uri-component-0.5.0-cookmate.2.tgz",
+    "json-schema-to-typescript": "16.0.0",
+    "prettier": "3.8.3",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3"
+  }
+}

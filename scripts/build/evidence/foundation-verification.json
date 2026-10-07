@@ -1,0 +1,58 @@
+{
+  "recordedAt": "2026-09-28T02:03:10.102Z",
+  "node": "v24.13.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "lockfileSha256": "20813d7d7fa42f972f367fe76101210cd357cab3937ea4637a1a29ecc9bff095",
+  "checks": [
+    {
+      "command": "npm run contracts:check",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 5082,
+      "log": "contracts-check.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 8612,
+      "log": "typecheck.log"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 9107,
+      "log": "test.log"
+    },
+    {
+      "command": "npm run test:mobile",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 36043,
+      "log": "test-mobile.log"
+    },
+    {
+      "command": "npm run mobile:check",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 5310,
+      "log": "mobile-check.log"
+    },
+    {
+      "command": "npm run format:check",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 810,
+      "log": "format-check.log"
+    },
+    {
+      "command": "npm run mobile:bundle",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 40881,
+      "log": "mobile-bundle.log"
+    }
+  ]
+}

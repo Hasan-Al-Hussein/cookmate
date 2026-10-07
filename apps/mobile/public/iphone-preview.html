@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CookMate · iPhone preview</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, sans-serif;
+        color: #292c30;
+        background: #e9e7e3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        padding: 14px 16px 10px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      h1 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 650;
+      }
+      .dimensions {
+        margin: 3px 0 0;
+        font-size: 11px;
+        color: #606166;
+      }
+      .zoom {
+        display: flex;
+        gap: 3px;
+        padding: 3px;
+        border-radius: 9px;
+        background: #dcdad6;
+      }
+      select {
+        border: 1px solid #cec8bd;
+        border-radius: 6px;
+        padding: 6px;
+        background: #fffdf9;
+        color: inherit;
+        font: inherit;
+        font-size: 11px;
+      }
+      body.actual-size {
+        height: auto;
+        min-height: 100dvh;
+      }
+      body.actual-size .stage {
+        overflow: visible;
+        flex: none;
+      }
+      button {
+        border: 0;
+        border-radius: 6px;
+        padding: 6px 9px;
+        color: inherit;
+        background: transparent;
+        font: inherit;
+        font-size: 11px;
+        cursor: pointer;
+      }
+      button[aria-pressed='true'] {
+        background: #fffdf9;
+        box-shadow: 0 1px 3px #00000015;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 2px solid #8e101a;
+        outline-offset: 3px;
+      }
+      .stage {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+      }
+      .sizing-box {
+        position: relative;
+        margin: 12px auto 16px;
+      }
+      .phone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 452px;
+        height: 950px;
+        padding: 12px;
+        border-radius: 56px;
+        background: #161718;
+        box-shadow:
+          inset 0 0 0 2px #6c6d70,
+          inset 0 0 0 5px #303133,
+          0 14px 30px #22222228;
+        transform-origin: top left;
+      }
+      .phone::before,
+      .phone::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        border-radius: 2px;
+        background: #444548;
+      }
+      .phone::before {
+        left: -3px;
+        top: 160px;
+        height: 44px;
+        box-shadow: 0 58px #444548;
+      }
+      .phone::after {
+        right: -3px;
+        top: 200px;
+        height: 78px;
+      }
+      iframe {
+        display: block;
+        width: 428px;
+        height: 926px;
+        border: 0;
+        border-radius: 44px;
+        background: #f7f4ee;
+      }
+      footer {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 5px 12px 12px;
+        color: #606166;
+        font-size: 10px;
+        text-align: center;
+      }
+      a {
+        color: #6c1620;
+        text-underline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>iPhone 13 Pro Max</h1>
+        <p class="dimensions">CookMate · 428 × 926</p>
+      </div>
+      <select id="device-size" aria-label="Preview dimensions">
+        <option value="428,926">428 × 926 · iPhone 13 Pro Max</option>
+        <option value="390,844">390 × 844 · compact preview</option>
+        <option value="360,800">360 × 800 · narrow preview</option>
+        <option value="320,740">320 × 740 · smallest preview</option>
+      </select>
+      <select id="preview-screen" aria-label="Preview content">
+        <option value="/">CookMate app</option>
+        <option value="/proofs">Fictional visual examples</option>
+      </select>
+      <div class="zoom" role="group" aria-label="Preview zoom">
+        <button type="button" id="fit" aria-pressed="true">Fit screen</button>
+        <button type="button" id="actual" aria-pressed="false">100%</button>
+      </div>
+    </header>
+    <main class="stage" aria-label="Interactive phone preview">
+      <div class="sizing-box">
+        <div class="phone">
+          <iframe
+            id="cookmate-app"
+            title="CookMate interactive iPhone-sized web preview"
+            src="/"
+            allow="autoplay; fullscreen"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <span>Web layout preview · not native iOS</span>
+      <a href="/">Open without frame</a>
+    </footer>
+    <script>
+      let deviceWidth = 452;
+      let deviceHeight = 950;
+      const stage = document.querySelector('.stage');
+      const sizingBox = document.querySelector('.sizing-box');
+      const phone = document.querySelector('.phone');
+      const fitButton = document.querySelector('#fit');
+      const actualButton = document.querySelector('#actual');
+      const dimensions = document.querySelector('#device-size');
+      const appFrame = document.querySelector('#cookmate-app');
+      let fitToPanel = true;
+
+      // Scale the outer frame; the app keeps its 428 × 926 layout viewport.
+      function sizePreview() {
+        const scale = fitToPanel
+          ? Math.max(
+              0.1,
+              Math.min(
+                1,
+                (stage.clientWidth - 40) / deviceWidth,
+                (stage.clientHeight - 36) / deviceHeight,
+              ),
+            )
+          : 1;
+        sizingBox.style.width = `${deviceWidth * scale}px`;
+        sizingBox.style.height = `${deviceHeight * scale}px`;
+        phone.style.transform = `scale(${scale})`;
+      }
+
+      function chooseZoom(fit) {
+        fitToPanel = fit;
+        document.body.classList.toggle('actual-size', !fit);
+        fitButton.setAttribute('aria-pressed', String(fit));
+        actualButton.setAttribute('aria-pressed', String(!fit));
+        sizePreview();
+      }
+
+      fitButton.addEventListener('click', () => chooseZoom(true));
+      actualButton.addEventListener('click', () => chooseZoom(false));
+      document.querySelector('#preview-screen').addEventListener('change', (event) => {
+        appFrame.src = event.target.value === '/proofs' ? '/proofs' : '/';
+      });
+      dimensions.addEventListener('change', () => {
+        const [width, height] = dimensions.value.split(',').map(Number);
+        deviceWidth = width + 24;
+        deviceHeight = height + 24;
+        phone.style.width = `${deviceWidth}px`;
+        phone.style.height = `${deviceHeight}px`;
+        appFrame.style.width = `${width}px`;
+        appFrame.style.height = `${height}px`;
+        document.querySelector('h1').textContent =
+          width === 428 ? 'iPhone 13 Pro Max' : 'Compact layout preview';
+        document.querySelector('.dimensions').textContent = `CookMate · ${width} × ${height}`;
+        sizePreview();
+      });
+      new ResizeObserver(sizePreview).observe(stage);
+      sizePreview();
+    </script>
+  </body>
+</html>

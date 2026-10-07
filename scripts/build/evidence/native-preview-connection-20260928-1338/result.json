@@ -1,0 +1,9 @@
+{
+  "task": "iOS JavaScript export after connection support repair",
+  "startedAtUtc": "2026-09-28T13:37:32.1188841Z",
+  "endedAtUtc": "2026-09-28T13:37:43.8690504Z",
+  "exitCode": 0,
+  "output": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\native-preview-connection-20260928-1338\\ios-export",
+  "nativeArtifact": false,
+  "providerRequests": 0
+}

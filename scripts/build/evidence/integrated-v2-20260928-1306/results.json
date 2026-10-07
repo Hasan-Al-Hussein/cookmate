@@ -1,0 +1,97 @@
+[
+  {
+    "name": "gateway-types",
+    "arguments": [
+      "run",
+      "typecheck",
+      "--workspace",
+      "@cookmate/gateway"
+    ],
+    "start": "2026-09-28T13:05:33.8863810Z",
+    "end": "2026-09-28T13:05:37.8192183Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\gateway-types.log"
+  },
+  {
+    "name": "gateway-tests",
+    "arguments": [
+      "run",
+      "test:gateway"
+    ],
+    "start": "2026-09-28T13:05:37.8445904Z",
+    "end": "2026-09-28T13:05:53.6927842Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\gateway-tests.log"
+  },
+  {
+    "name": "probe-tests",
+    "arguments": [
+      "run",
+      "test:probes"
+    ],
+    "start": "2026-09-28T13:05:53.6960912Z",
+    "end": "2026-09-28T13:05:54.2915105Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\probe-tests.log"
+  },
+  {
+    "name": "assistant-tests",
+    "arguments": [
+      "run",
+      "test:assistant"
+    ],
+    "start": "2026-09-28T13:05:54.2942971Z",
+    "end": "2026-09-28T13:05:56.0006367Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\assistant-tests.log"
+  },
+  {
+    "name": "mobile-tests",
+    "arguments": [
+      "run",
+      "test:mobile"
+    ],
+    "start": "2026-09-28T13:05:56.0039203Z",
+    "end": "2026-09-28T13:06:08.1645446Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\mobile-tests.log"
+  },
+  {
+    "name": "mobile-dependencies",
+    "arguments": [
+      "run",
+      "mobile:check"
+    ],
+    "start": "2026-09-28T13:06:08.1673144Z",
+    "end": "2026-09-28T13:06:12.8252758Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\mobile-dependencies.log"
+  },
+  {
+    "name": "format",
+    "arguments": [
+      "run",
+      "format:check"
+    ],
+    "start": "2026-09-28T13:06:12.8273028Z",
+    "end": "2026-09-28T13:06:17.5733938Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\format.log"
+  },
+  {
+    "name": "ios-export",
+    "arguments": [
+      "run",
+      "export:native",
+      "--workspace",
+      "@cookmate/mobile",
+      "--",
+      "--output-dir",
+      "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\ios-export"
+    ],
+    "start": "2026-09-28T13:06:17.5757000Z",
+    "end": "2026-09-28T13:06:54.2819550Z",
+    "exitCode": 0,
+    "log": "C:\\Users\\hp\\OneDrive - ku.ac.ae\\Documents\\ChatGPT\\App Development\\cookmate-app\\scripts\\build\\evidence\\integrated-v2-20260928-1306\\ios-export.log"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "recordedAt": "2026-09-28T12:58:31.658Z",
+  "node": "v24.13.0",
+  "platform": "win32",
+  "architecture": "x64",
+  "lockfileSha256": "d6c9cdb49533c12badba678d52bcb630048d4a3404fc731b26738d646a155468",
+  "checks": [
+    {
+      "command": "npm run contracts:check",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 2838,
+      "log": "contracts-check.log"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0,
+      "signal": null,
+      "milliseconds": 17854,
+      "log": "typecheck.log"
+    },
+    {
+      "command": "npm run test",
+      "exitCode": 1,
+      "signal": null,
+      "milliseconds": 42504,
+      "log": "test.log"
+    }
+  ]
+}

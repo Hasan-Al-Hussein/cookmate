@@ -1,0 +1,9 @@
+# Local source configuration only. No project has been provisioned or deployed.
+[functions.cookmate-account]
+verify_jwt = true
+entrypoint = "./functions/cookmate-account/index.ts"
+
+# Only capability-bound deletion status is reachable here; it cannot delete or read account data.
+[functions.cookmate-account-deletion-status]
+verify_jwt = false
+entrypoint = "./functions/cookmate-account-deletion-status/index.ts"

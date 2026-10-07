@@ -1,0 +1,86 @@
+{
+  "formatVersion": 1,
+  "frozenAtUtc": "2026-09-28T06:11:48.779Z",
+  "status": "Data draft-only notification follow-on frozen for integration",
+  "scope": "Exact acknowledged saveDraft event payload; Data desktop evidence only",
+  "baselineManifest": "packages/domain/evidence/current/data-recovery-performance-amendment.json",
+  "baselineManifestSha256": "b9baf700335b84197bffad8af566878cebf17a53f8f99f0e171463f8639c0fd3",
+  "baselineFileCount": 85,
+  "unchangedBaselineFiles": 81,
+  "apiVersion": "2",
+  "localCommandSchemaVersion": 2,
+  "databaseSchemaVersion": 2,
+  "operationReceiptSchemaVersion": 1,
+  "contractSchemaFingerprint": "af10dd470af0c2f68e02713d88dd2b21b655673dfedccde610e255a70c36d569",
+  "catalogueVersion": "cookmate-2026-09-27.v1",
+  "catalogueFingerprint": "1c564aed197f0ff13e0c8a81c95d775960f8c7f021cd3e948f116ae471b5e1ef",
+  "checks": [
+    {
+      "command": "node --import tsx --test --test-concurrency=1 --test-reporter=tap packages/domain/test/*.test.ts packages/catalogue/test/*.test.ts",
+      "result": "170 passed, 0 failed",
+      "durationMs": 28658.2629
+    },
+    {
+      "command": "focused localStore/conversation/memoryPersistence/recoveryGate tests",
+      "result": "50 passed, 0 failed",
+      "durationMs": 14947.9282
+    },
+    {
+      "command": "domain and all-Data strict TypeScript; four-file Prettier check",
+      "result": "passed, no diagnostics"
+    },
+    {
+      "command": "independent two named factory tests and isolated concurrent/deferred-ACK probe",
+      "result": "2 passed; probe exit0; no concrete defect",
+      "durationMs": 1467.1559
+    }
+  ],
+  "evidence": [
+    {
+      "path": "packages/domain/evidence/current/draft-notification-suite.tap",
+      "sha256": "b2122dbc60c78ded7db254947853a96f7b26ec1089d0873254fdcb1c87295665"
+    },
+    {
+      "path": "packages/domain/evidence/current/draft-notification-focused.tap",
+      "sha256": "ee8b17b1d63e6fd39bf88b770c9d0f98f1efb32fb401cbb9c9df6357653c18d6"
+    },
+    {
+      "path": "packages/domain/evidence/current/draft-notification-review.md",
+      "sha256": "35d38eeccfd8b7e653d9516f148a6228d9c8f335b49a005f01cbe822b8278565"
+    },
+    {
+      "path": "packages/domain/evidence/current/draft-notification-probe.ts",
+      "sha256": "da1895953d9c7f85cc1f5ec7568635dd8914b48af81099bb4a9a8c628a04fa2e"
+    },
+    {
+      "path": "packages/domain/evidence/current/DRAFT_NOTIFICATION_AMENDMENT_2026-09-28.md",
+      "sha256": "4b6deb6aaa653d759d0f5e187c4a5b3df81d53f9611cfde31db2f359366aa265"
+    }
+  ],
+  "files": [
+    {
+      "path": "apps/mobile/src/data/assistantTurnRepository.ts",
+      "previousSha256": "5a2a4ca4e551e791c79b6b92c253d559a82117b28fddbb0af836e85bc2894375",
+      "sha256": "50085331a2176e1487ca5e17e9711dea33e31147597bf8e0cb55075c6eb731f5",
+      "bytes": 31326
+    },
+    {
+      "path": "apps/mobile/src/data/localStore.ts",
+      "previousSha256": "8b63190debb37518785a3b17b63e098801d98f91e07fe31d7c7e924759217e16",
+      "sha256": "614c62c7298aa1991020f99f940e9946d73b3378c4c61d6886730e55addf3312",
+      "bytes": 14439
+    },
+    {
+      "path": "packages/domain/src/services.ts",
+      "previousSha256": "3e66651806edd5ec99fb77d79ba5b96f1f8cde53104aa4ad479f9261097b7a94",
+      "sha256": "45481fb25c05f9692c2ba0dad03fa88f047565c672218ea867fe41e430b28b1b",
+      "bytes": 5566
+    },
+    {
+      "path": "packages/domain/test/localStore.test.ts",
+      "previousSha256": "a9280866ef05068281725ac28d90b7eddc552e6bb1f2e823fb71d42940a02444",
+      "sha256": "abe5ebac3ca45a4859b64dd14cec9954ec596f601a5630af53fe0daac3d735a5",
+      "bytes": 42895
+    }
+  ]
+}
