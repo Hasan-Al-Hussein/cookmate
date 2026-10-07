@@ -14,7 +14,7 @@
 [![Tests](https://img.shields.io/badge/TESTS-986_PASSING-44BB44?style=for-the-badge)](scripts/build/evidence/)
 [![License](https://img.shields.io/badge/LICENSE-MIT-F5A623?style=for-the-badge)](LICENSE)
 
-[Why CookMate exists](#why-cookmate-exists) · [Product journey](#product-journey) · [Architecture](#architecture) · [Monorepo layout](#monorepo-structure) · [What I engineered](#what-i-engineered) · [System capabilities](#system-capabilities) · [Verification & quality](#verification-and-quality-gates) · [Local development](#local-development)
+[Why CookMate exists](#why-cookmate-exists) · [Quick demo](#quick-product-demo) · [Product journey](#product-journey) · [Architecture](#architecture) · [Monorepo layout](#monorepo-structure) · [What I engineered](#what-i-engineered) · [System capabilities](#system-capabilities) · [Verification & quality](#verification-and-quality-gates) · [Local development](#local-development)
 
 </div>
 
@@ -53,6 +53,16 @@ CookMate solves the daily friction of: **“What should I cook, when should I co
 | **On-Device Database** | **SQLite local-first engine** with schema migrations, transactional integrity, and zero cloud lock-in |
 | **AI Validation Boundary** | **Strict Ajv runtime validation** ensuring every Gemini response satisfies typed domain contracts |
 | **Mobile Architecture** | **Expo SDK 57 / React Native 0.86** with TypeScript strict mode, responsive 320–428pt viewports, and dark mode |
+
+---
+
+## Quick product demo
+
+<div align="center">
+  <img src="docs/media/cookmate-quick-demo.gif" width="360" alt="CookMate mobile workflow demo showing recipe discovery, meal planning, and interactive navigation" />
+  <br /><br />
+  <p><strong>Mobile interaction demo:</strong> Curated discovery, high-resolution recipe cards, multi-ingredient filtering, and responsive transitions on a 428 × 926 mobile viewport.</p>
+</div>
 
 ---
 
