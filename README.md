@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/media/cookmate-hero.png" width="100%" alt="CookMate AI Meal Planner - Local-first mobile meal planning, smart grocery shopping, and grounded recipe discovery" />
+<img src="docs/media/cookmate-hero.svg" width="100%" alt="CookMate AI Meal Planner - Local-first mobile meal planning, smart grocery shopping, and grounded recipe discovery" />
 
 # CookMate AI Meal Planner
 
@@ -115,43 +115,20 @@ These captures show the actual application running on the 428 × 926 mobile view
 
 ## Architecture
 
-```
-                    +------------------------------------------+
-                    |          React Native / Expo App         |
-                    |   (Expo Router 57, TypeScript Strict)    |
-                    +--------------------+---------------------+
-                                         |
-                       +-----------------+-----------------+
-                       |                                   |
-                       v                                   v
-        +-----------------------------+     +-----------------------------+
-        |     Local SQLite Store      |     |     Local Domain Engine     |
-        |  (expo-sqlite / migrations) |     |  (search, planner, pantry)  |
-        +-----------------------------+     +--------------+--------------+
-                       ^                                   |
-                       |       (Validated Proposals)       |
-                       +-----------------------------------+
-                                         |
-                                         | Secure Pairing / Loopback
-                                         v
-                    +------------------------------------------+
-                    |        Private Fastify AI Gateway        |
-                    |   (Node.js, Schema Compilers, Ajv 8.2)   |
-                    +--------------------+---------------------+
-                                         |
-                                         | Strict JSON Schema Prompting
-                                         v
-                    +------------------------------------------+
-                    |             Google Gemini API            |
-                    |  (gemini-2.5-flash / grounded inference) |
-                    +--------------------+---------------------+
-```
+<div align="center">
+  <img src="docs/media/cookmate-architecture.svg" width="100%" alt="CookMate System Architecture and Dataflow Boundaries" />
+</div>
 
-### Key Architectural Invariants
+### Six Core Reliability Invariants
 
-- **Unidirectional State Flow:** Local SQLite is the single source of truth. External AI suggestions cannot mutate the database directly; they emit typed proposals that require explicit user confirmation.
-- **Contract-First Monorepo:** Shared TypeScript schemas in `packages/contracts` generate runtime Ajv validators for the Fastify gateway and mobile adapters.
-- **Fail-Safe Offline Mode:** If the AI gateway is unreachable or quota is exceeded, the mobile application seamlessly functions with zero degraded UX for all core browsing, planning, and shopping features.
+CookMate is engineered around six non-negotiable guarantees:
+
+1. **On-Device SQLite is Authoritative:** The user's device holds the ground truth. Recipes, weekly meal plans, pantry ingredients, shopping checklists, and kitchen notes live in a local SQLite database. No external cloud service can alter or lock this data.
+2. **Deterministic Multi-Ingredient Matching:** Pantry ingredient filtering executes strict mathematical set intersections on-device (`A ∩ B ∩ C`). No black-box AI ranking or fuzzy hallucinations decide what meals you can make with your pantry.
+3. **Unidirectional AI Proposal Gate:** Upstream Gemini recommendations cannot mutate local state directly. The AI gateway emits strongly typed JSON proposal payloads that require explicit human review and confirmation before modifying the database.
+4. **Precompiled Schema Compilation:** The private Fastify gateway enforces strict Ajv 8.2 JSON Schemas on all model outputs. Responses with unknown fields, malformed types, or invalid ingredient structures are immediately rejected.
+5. **Fail-Safe Offline Continuity:** Network failures, gateway downtime, or upstream API rate limits cause zero degradation to local features. All 100 recipes, filters, step-by-step cooking mode, weekly planner, and shopping lists remain 100% usable without an internet connection.
+6. **Curated Culinary Grounding:** The 100-recipe dataset contains 960 verified ingredients and 706 ordered instructions. Measurements, times, and steps are curated from authentic culinary sources rather than synthetic approximations.
 
 ---
 
@@ -211,6 +188,15 @@ cookmate-app/
 
 The project maintains a rigorous, reproducible test suite:
 
+| Test Suite | Package / Scope | What is Verified |
+| :--- | :--- | :--- |
+| **`test:contracts`** | `packages/contracts` | JSON Schema compilation, schema drift prevention, TypeScript interface sync |
+| **`test:catalogue`** | `packages/catalogue` | 100 recipe definitions, 960 ingredient records, image hashes, passage ordering |
+| **`test:domain`** | `packages/domain` | Multi-ingredient set intersections, weekly calendar scheduling, grocery aggregator math |
+| **`test:gateway`** | `apps/gateway` | Fastify endpoint handlers, Ajv runtime validator, pairing auth tokens, backoff |
+| **`test:mobile`** | `apps/mobile` | React Native component rendering, Expo Router stacks, Dark/Light theme tokens, WCAG AA a11y |
+| **Total** | **Full Monorepo** | **986 automated assertions passing with zero flaky network mocks** |
+
 ```powershell
 # Run all workspace test suites sequentially
 npm test
@@ -228,6 +214,13 @@ npm run typecheck
 # Verify build foundation
 npm run verify:foundation
 ```
+
+### Interactive Browser Preview
+
+To inspect the responsive mobile interface without installing mobile simulators:
+1. Open [`apps/mobile/public/iphone-preview.html`](apps/mobile/public/iphone-preview.html) in any browser.
+2. Select between viewport scaling modes (100%, 75%, 50%, or auto-fit).
+3. Test layout responsiveness and theme switching directly.
 
 ---
 

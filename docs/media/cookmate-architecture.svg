@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 560" role="img" aria-labelledby="arch-title arch-desc">
+  <title id="arch-title">CookMate Architecture and Reliability Topology</title>
+  <desc id="arch-desc">System topology showing the React Native mobile client, local SQLite store, domain engine, contract boundary, Fastify AI gateway, and Google Gemini API.</desc>
+  <defs>
+    <linearGradient id="arch-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071018" />
+      <stop offset="50%" stop-color="#0b1b2a" />
+      <stop offset="100%" stop-color="#102538" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#122a40" stop-opacity="0.96" />
+      <stop offset="100%" stop-color="#0d1e2e" stop-opacity="0.92" />
+    </linearGradient>
+    <pattern id="arch-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#60A5FA" stroke-width="1" opacity="0.05" />
+    </pattern>
+    <filter id="arch-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#02080e" flood-opacity="0.45" />
+    </filter>
+    <marker id="arch-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#38BDF8" />
+    </marker>
+    <marker id="arch-arrow-amber" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#F59E0B" />
+    </marker>
+    <marker id="arch-arrow-purple" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#c084fc" />
+    </marker>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .layer-title { fill: #ffffff; font-size: 17px; font-weight: 750; }
+      .layer-subtitle { fill: #8cb1cc; font-size: 13px; font-weight: 600; letter-spacing: 1px; }
+      .item-title { fill: #ffffff; font-size: 14.5px; font-weight: 650; }
+      .item-desc { fill: #9ec2db; font-size: 12.5px; }
+      .tag-text { fill: #a7f3d0; font-size: 11.5px; font-weight: 700; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="560" rx="24" fill="url(#arch-bg)" />
+  <rect width="1400" height="560" rx="24" fill="url(#arch-grid)" />
+
+  <!-- HEADER -->
+  <g transform="translate(60 40)">
+    <rect width="210" height="28" rx="14" fill="#0d2b3a" stroke="#10B981" stroke-width="1.2" />
+    <circle cx="16" cy="14" r="4" fill="#10B981" />
+    <text class="sans" x="32" y="19" fill="#a7f3d0" font-size="12" font-weight="700" letter-spacing="1.2">SYSTEM TOPOLOGY</text>
+    <text class="sans" x="0" y="56" fill="#ffffff" font-size="24" font-weight="800">CookMate Architecture &amp; Dataflow Boundaries</text>
+  </g>
+
+  <!-- BOX 1: CLIENT APPLICATION (Top Left) -->
+  <g transform="translate(60 110)" filter="url(#arch-shadow)">
+    <rect width="580" height="190" rx="18" fill="url(#card-grad)" stroke="#2b5375" stroke-width="1.5" />
+    <text class="sans layer-subtitle" x="24" y="32">MOBILE APPLICATION CLIENT</text>
+    <text class="sans layer-title" x="24" y="56">React Native (Expo SDK 57 / TypeScript Strict)</text>
+    
+    <!-- Submodules inside Mobile -->
+    <g transform="translate(24 76)">
+      <rect width="165" height="92" rx="12" fill="#0e2336" stroke="#234969" />
+      <text class="sans item-title" x="14" y="28">UI &amp; Views</text>
+      <text class="sans item-desc" x="14" y="50">Expo Router routes</text>
+      <text class="sans item-desc" x="14" y="70">Kitchen mode, a11y</text>
+    </g>
+
+    <g transform="translate(205 76)">
+      <rect width="170" height="92" rx="12" fill="#0e2336" stroke="#234969" />
+      <text class="sans item-title" x="14" y="28">Domain Reducers</text>
+      <text class="sans item-desc" x="14" y="50">Meal plan calendar</text>
+      <text class="sans item-desc" x="14" y="70">Grocery consolidation</text>
+    </g>
+
+    <g transform="translate(391 76)">
+      <rect width="165" height="92" rx="12" fill="#0e2336" stroke="#234969" />
+      <text class="sans item-title" x="14" y="28">Client Gateway</text>
+      <text class="sans item-desc" x="14" y="50">Pairing credentials</text>
+      <text class="sans item-desc" x="14" y="70">Proposal review UI</text>
+    </g>
+  </g>
+
+  <!-- BOX 2: LOCAL PERSISTENCE & CURATED STORE (Bottom Left) -->
+  <g transform="translate(60 330)" filter="url(#arch-shadow)">
+    <rect width="580" height="190" rx="18" fill="url(#card-grad)" stroke="#10B981" stroke-width="1.5" />
+    <text class="sans layer-subtitle" x="24" y="32">AUTHORITATIVE PERSISTENCE LAYER (100% OFFLINE)</text>
+    <text class="sans layer-title" x="24" y="56">Local SQLite Store &amp; Curated Catalogue Engine</text>
+    
+    <g transform="translate(24 76)">
+      <rect width="165" height="92" rx="12" fill="#092723" stroke="#16594b" />
+      <text class="sans item-title" x="14" y="28">100 Recipes</text>
+      <text class="sans item-desc" x="14" y="50">960 ingredients</text>
+      <text class="sans item-desc" x="14" y="70">706 instructions</text>
+    </g>
+
+    <g transform="translate(205 76)">
+      <rect width="170" height="92" rx="12" fill="#092723" stroke="#16594b" />
+      <text class="sans item-title" x="14" y="28">SQLite DB</text>
+      <text class="sans item-desc" x="14" y="50">Schema migrations</text>
+      <text class="sans item-desc" x="14" y="70">Plans, notes, checks</text>
+    </g>
+
+    <g transform="translate(391 76)">
+      <rect width="165" height="92" rx="12" fill="#092723" stroke="#16594b" />
+      <text class="sans item-title" x="14" y="28">Search Matcher</text>
+      <text class="sans item-desc" x="14" y="50">Multi-pantry match</text>
+      <text class="sans item-desc" x="14" y="70">Intersection logic</text>
+    </g>
+  </g>
+
+  <!-- Connect Client <-> SQLite -->
+  <path d="M 200 300 V 330" fill="none" stroke="#10B981" stroke-width="3" marker-end="url(#arch-arrow)" />
+  <path d="M 230 330 V 300" fill="none" stroke="#10B981" stroke-width="3" marker-end="url(#arch-arrow)" />
+
+  <!-- BOX 3: SHARED CONTRACT BOUNDARY (Middle Vertical Strip) -->
+  <g transform="translate(680 160)" filter="url(#arch-shadow)">
+    <rect width="200" height="310" rx="16" fill="#17223b" stroke="#F59E0B" stroke-width="1.8" />
+    <text class="sans layer-subtitle" x="20" y="32">SHARED CONTRACT</text>
+    <text class="sans layer-title" x="20" y="56">packages/contracts</text>
+    <text class="sans item-desc" x="20" y="86">Strict JSON Schemas</text>
+    <text class="sans item-desc" x="20" y="106">&amp; TypeScript types</text>
+
+    <rect x="20" y="130" width="160" height="42" rx="8" fill="#1e2c4c" stroke="#334773" />
+    <text class="sans" x="30" y="156" fill="#fde68a" font-size="12" font-weight="650">Ajv 8.2 Validator</text>
+
+    <rect x="20" y="184" width="160" height="42" rx="8" fill="#1e2c4c" stroke="#334773" />
+    <text class="sans" x="30" y="210" fill="#fde68a" font-size="12" font-weight="650">Pairing Handshake</text>
+
+    <rect x="20" y="238" width="160" height="42" rx="8" fill="#1e2c4c" stroke="#334773" />
+    <text class="sans" x="30" y="264" fill="#fde68a" font-size="12" font-weight="650">Proposal Schemas</text>
+  </g>
+
+  <!-- Client to Contract to Gateway Connectors -->
+  <path d="M 640 205 H 680" fill="none" stroke="#F59E0B" stroke-width="3" marker-end="url(#arch-arrow-amber)" />
+  <path d="M 880 235 H 930" fill="none" stroke="#F59E0B" stroke-width="3" marker-end="url(#arch-arrow-amber)" />
+
+  <!-- BOX 4: PRIVATE FASTIFY AI GATEWAY (Right) -->
+  <g transform="translate(930 110)" filter="url(#arch-shadow)">
+    <rect width="410" height="190" rx="18" fill="url(#card-grad)" stroke="#c084fc" stroke-width="1.5" />
+    <text class="sans layer-subtitle" x="24" y="32">PRIVATE AI PROXY GATEWAY</text>
+    <text class="sans layer-title" x="24" y="56">Node.js + Fastify (Loopback / Paired)</text>
+    
+    <g transform="translate(24 76)">
+      <rect width="175" height="92" rx="12" fill="#201a33" stroke="#46366b" />
+      <text class="sans item-title" x="14" y="28">Schema Compiler</text>
+      <text class="sans item-desc" x="14" y="50">Precompiled Ajv</text>
+      <text class="sans item-desc" x="14" y="70">Rejects rogue keys</text>
+    </g>
+
+    <g transform="translate(211 76)">
+      <rect width="175" height="92" rx="12" fill="#201a33" stroke="#46366b" />
+      <text class="sans item-title" x="14" y="28">Safety &amp; Backoff</text>
+      <text class="sans item-desc" x="14" y="50">Rate limit buffer</text>
+      <text class="sans item-desc" x="14" y="70">Pairing auth token</text>
+    </g>
+  </g>
+
+  <!-- BOX 5: GOOGLE GEMINI UPSTREAM (Bottom Right) -->
+  <g transform="translate(930 330)" filter="url(#arch-shadow)">
+    <rect width="410" height="190" rx="18" fill="url(#card-grad)" stroke="#38BDF8" stroke-width="1.5" />
+    <text class="sans layer-subtitle" x="24" y="32">FOUNDATION MODEL INFERENCE</text>
+    <text class="sans layer-title" x="24" y="56">Google Gemini API (gemini-2.5-flash)</text>
+    
+    <g transform="translate(24 76)">
+      <rect width="175" height="92" rx="12" fill="#0d273a" stroke="#1d4d6e" />
+      <text class="sans item-title" x="14" y="28">Structured Output</text>
+      <text class="sans item-desc" x="14" y="50">responseSchema</text>
+      <text class="sans item-desc" x="14" y="70">JSON-enforced AST</text>
+    </g>
+
+    <g transform="translate(211 76)">
+      <rect width="175" height="92" rx="12" fill="#0d273a" stroke="#1d4d6e" />
+      <text class="sans item-title" x="14" y="28">Grounding Guard</text>
+      <text class="sans item-desc" x="14" y="50">Bounded recipe pool</text>
+      <text class="sans item-desc" x="14" y="70">No hallucinated steps</text>
+    </g>
+  </g>
+
+  <!-- Connect Gateway <-> Gemini -->
+  <path d="M 1130 300 V 330" fill="none" stroke="#c084fc" stroke-width="3" marker-end="url(#arch-arrow-purple)" />
+  <path d="M 1150 330 V 300" fill="none" stroke="#38BDF8" stroke-width="3" marker-end="url(#arch-arrow)" />
+
+</svg>

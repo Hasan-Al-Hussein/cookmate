@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 620" role="img" aria-labelledby="title desc">
+  <title id="title">CookMate AI Local-First Meal Planning and Cooking Pipeline</title>
+  <desc id="desc">CookMate turns curated recipes, multi-ingredient search, weekly calendar slots, and dynamic groceries into an evidence-grounded culinary workflow backed by local SQLite and private Gemini AI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071018" />
+      <stop offset="55%" stop-color="#0c1b29" />
+      <stop offset="100%" stop-color="#112538" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#142c42" stop-opacity="0.96" />
+      <stop offset="100%" stop-color="#0f2132" stop-opacity="0.92" />
+    </linearGradient>
+    <linearGradient id="saffron" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#FB923C" />
+    </linearGradient>
+    <linearGradient id="emerald" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#60A5FA" stroke-width="1" opacity="0.07" />
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#02080e" flood-opacity="0.55" />
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 9 4.5 L 0 9 z" fill="#38BDF8" />
+    </marker>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .stage-box { fill: #13304a; stroke: #2a5578; stroke-width: 1.5; }
+      .stage-accent { fill: #1a3832; stroke: #2e7363; stroke-width: 1.5; }
+      .stage-ai { fill: #2c253d; stroke: #5b4b7c; stroke-width: 1.5; }
+      .stage-title { fill: #ffffff; font-size: 16px; font-weight: 700; }
+      .stage-note { fill: #9ec2db; font-size: 13px; font-weight: 400; }
+      .flow-path { fill: none; stroke: #38BDF8; stroke-width: 3.5; stroke-linecap: round; marker-end: url(#arrow); }
+      .chip-rect { fill: #0e2438; stroke: #254b6d; stroke-width: 1.2; }
+      .chip-label { fill: #cbe3f5; font-size: 13px; font-weight: 650; text-anchor: middle; }
+      @media (prefers-reduced-motion: reduce) { .motion-dot { display: none; } }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1600" height="620" rx="28" fill="url(#bg)" />
+  <rect width="1600" height="620" rx="28" fill="url(#grid)" />
+
+  <!-- Ambient Radiant Flares -->
+  <circle cx="1500" cy="80" r="280" fill="#38BDF8" opacity="0.05" />
+  <circle cx="1100" cy="560" r="320" fill="#F59E0B" opacity="0.04" />
+  <circle cx="200" cy="40" r="220" fill="#10B981" opacity="0.04" />
+
+  <!-- LEFT HERO COLUMN -->
+  <g transform="translate(64 60)">
+    <!-- Pill Badge -->
+    <rect width="280" height="38" rx="19" fill="#0d2b3a" stroke="#10B981" stroke-width="1.4" />
+    <circle cx="22" cy="19" r="5.5" fill="#10B981" filter="url(#glow)" />
+    <text class="sans" x="40" y="25" fill="#a7f3d0" font-size="13.5" font-weight="700" letter-spacing="1.2">LOCAL-FIRST • OFFLINE-READY</text>
+
+    <!-- App Identity Row -->
+    <g transform="translate(0 76)">
+      <!-- Distinctive Culinary Icon -->
+      <rect width="72" height="72" rx="18" fill="#152b3e" stroke="#F59E0B" stroke-width="2.2" />
+      <g transform="translate(18 16)">
+        <!-- Chef Hat + Saffron Whisk Icon -->
+        <path d="M 18 4 C 13 4 9 7 9 12 C 4 13 1 18 1 23 C 1 28 5 32 10 33 L 26 33 C 31 32 35 28 35 23 C 35 18 32 13 27 12 C 27 7 23 4 18 4 Z" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linejoin="round" />
+        <path d="M 6 38 L 30 38" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" />
+        <circle cx="18" cy="22" r="3" fill="#10B981" />
+      </g>
+      <text class="sans" x="92" y="52" fill="#ffffff" font-size="62" font-weight="800" letter-spacing="-1.5">CookMate AI</text>
+    </g>
+
+    <!-- Value Propositions -->
+    <text class="sans" x="0" y="222" fill="#ffffff" font-size="29" font-weight="750">Cook with certainty. Plan with clarity.</text>
+    <text class="sans" x="0" y="262" fill="#F59E0B" font-size="29" font-weight="750">Grounded recipes. Local-first proof.</text>
+    
+    <text class="sans" x="0" y="314" fill="#a5c4db" font-size="17.5" font-weight="400">Curated 100-recipe dataset, deterministic intersection search,</text>
+    <text class="sans" x="0" y="342" fill="#a5c4db" font-size="17.5" font-weight="400">weekly calendar slots, dynamic grocery consolidation,</text>
+    <text class="sans" x="0" y="370" fill="#a5c4db" font-size="17.5" font-weight="400">and a private, schema-validated Gemini AI gateway.</text>
+
+    <!-- Tech Stack Badges Row -->
+    <g transform="translate(0 422)">
+      <rect class="chip-rect" width="112" height="36" rx="9" /><text class="sans chip-label" x="56" y="23">React Native</text>
+      <rect class="chip-rect" x="122" width="116" height="36" rx="9" /><text class="sans chip-label" x="180" y="23">Expo SDK 57</text>
+      <rect class="chip-rect" x="248" width="134" height="36" rx="9" /><text class="sans chip-label" x="315" y="23">TypeScript Strict</text>
+      <rect class="chip-rect" x="392" width="102" height="36" rx="9" /><text class="sans chip-label" x="443" y="23">SQLite DB</text>
+      <rect class="chip-rect" x="504" width="98" height="36" rx="9" /><text class="sans chip-label" x="553" y="23">Fastify</text>
+      <rect class="chip-rect" x="612" width="106" height="36" rx="9" /><text class="sans chip-label" x="665" y="23">Gemini API</text>
+    </g>
+  </g>
+
+  <!-- RIGHT INTERACTIVE PIPELINE PANEL -->
+  <g transform="translate(770 48)" filter="url(#shadow)">
+    <!-- Container Card -->
+    <rect width="770" height="524" rx="26" fill="url(#panel)" stroke="#2b5375" stroke-width="1.5" />
+    
+    <!-- Panel Header -->
+    <text class="sans" x="36" y="44" fill="#8cb1cc" font-size="14" font-weight="700" letter-spacing="1.8">EVIDENCE-BOUND COOKING PIPELINE</text>
+    
+    <!-- Status Chip -->
+    <rect x="582" y="24" width="152" height="32" rx="16" fill="#133649" stroke="#10B981" stroke-width="1.4" />
+    <circle cx="600" cy="40" r="4.5" fill="#10B981" filter="url(#glow)" />
+    <text class="sans" x="614" y="45" fill="#a7f3d0" font-size="12.5" font-weight="700">FAIL-SAFE OFFLINE</text>
+
+    <!-- STAGE 1: Curated Dataset -->
+    <g transform="translate(36 78)">
+      <rect class="stage-box" width="210" height="98" rx="15" />
+      <circle cx="28" cy="28" r="16" fill="#0d253a" stroke="#F59E0B" stroke-width="2" />
+      <text class="sans" x="28" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">1</text>
+      <text class="sans stage-title" x="56" y="34">Curated Dataset</text>
+      <text class="sans stage-note" x="18" y="63">100 photo-rich recipes</text>
+      <text class="sans stage-note" x="18" y="82">960 verified ingredients</text>
+    </g>
+
+    <!-- Connect 1 -> 2 -->
+    <path class="flow-path" d="M 248 127 H 286" />
+
+    <!-- STAGE 2: SQLite Search Engine -->
+    <g transform="translate(296 78)">
+      <rect class="stage-accent" width="210" height="98" rx="15" />
+      <circle cx="28" cy="28" r="16" fill="#0d253a" stroke="#34D399" stroke-width="2" />
+      <text class="sans" x="28" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">2</text>
+      <text class="sans stage-title" x="56" y="34">SQLite Engine</text>
+      <text class="sans stage-note" x="18" y="63">Local-first indexer</text>
+      <text class="sans stage-note" x="18" y="82">Pantry intersection match</text>
+    </g>
+
+    <!-- Connect 2 -> 3 -->
+    <path class="flow-path" d="M 508 127 H 546" />
+
+    <!-- STAGE 3: Weekly Meal Planner -->
+    <g transform="translate(556 78)">
+      <rect class="stage-box" width="178" height="98" rx="15" />
+      <circle cx="28" cy="28" r="16" fill="#0d253a" stroke="#38BDF8" stroke-width="2" />
+      <text class="sans" x="28" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">3</text>
+      <text class="sans stage-title" x="56" y="34">Meal Planner</text>
+      <text class="sans stage-note" x="18" y="63">7-day calendar slots</text>
+      <text class="sans stage-note" x="18" y="82">Conflict guard state</text>
+    </g>
+
+    <!-- Connect 3 -> 4 (Vertical drop) -->
+    <path class="flow-path" d="M 645 178 V 226" />
+
+    <!-- STAGE 4: Smart Groceries -->
+    <g transform="translate(526 238)">
+      <rect class="stage-box" width="208" height="98" rx="15" />
+      <circle cx="28" cy="28" r="16" fill="#0d253a" stroke="#38BDF8" stroke-width="2" />
+      <text class="sans" x="28" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">4</text>
+      <text class="sans stage-title" x="56" y="34">Smart Groceries</text>
+      <text class="sans stage-note" x="18" y="63">Merged quantities</text>
+      <text class="sans stage-note" x="18" y="82">Aisle taxonomy + checks</text>
+    </g>
+
+    <!-- Connect 4 -> 5 (Horizontal left) -->
+    <path class="flow-path" d="M 524 287 H 486" />
+
+    <!-- STAGE 5: Fastify Gateway -->
+    <g transform="translate(266 238)">
+      <rect class="stage-ai" width="210" height="98" rx="15" />
+      <circle cx="28" cy="28" r="16" fill="#1b172a" stroke="#c084fc" stroke-width="2" />
+      <text class="sans" x="28" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">5</text>
+      <text class="sans stage-title" x="56" y="34">Fastify Gateway</text>
+      <text class="sans stage-note" x="18" y="63">Decoupled proxy runtime</text>
+      <text class="sans stage-note" x="18" y="82">Strict Ajv JSON schema</text>
+    </g>
+
+    <!-- Connect 5 -> 6 (Horizontal left) -->
+    <path class="flow-path" d="M 264 287 H 226" />
+
+    <!-- STAGE 6: Gemini AI Assistant -->
+    <g transform="translate(36 238)">
+      <rect class="stage-ai" width="180" height="98" rx="15" />
+      <circle cx="28" cy="28" r="16" fill="#1b172a" stroke="#c084fc" stroke-width="2" />
+      <text class="sans" x="28" y="34" fill="#ffffff" font-size="15" font-weight="800" text-anchor="middle">6</text>
+      <text class="sans stage-title" x="56" y="34">Gemini AI</text>
+      <text class="sans stage-note" x="18" y="63">Grounded suggestions</text>
+      <text class="sans stage-note" x="18" y="82">User confirmation gate</text>
+    </g>
+
+    <!-- ANIMATED FLOW PULSE SIGNALS -->
+    <g class="motion-dot" pointer-events="none" fill="#ffffff" filter="url(#glow)">
+      <!-- Pulse 1: 1 -> 2 -->
+      <circle r="5" opacity="0" fill="#F59E0B">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.85;0.95;1" dur="5s" repeatCount="indefinite" />
+        <animateMotion path="M 248 127 H 286" keyPoints="0;1;1" keyTimes="0;0.2;1" calcMode="linear" dur="5s" repeatCount="indefinite" />
+      </circle>
+      <!-- Pulse 2: 2 -> 3 -->
+      <circle r="5" opacity="0" fill="#34D399">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.85;0.95;1" dur="5s" begin="0.8s" repeatCount="indefinite" />
+        <animateMotion path="M 508 127 H 546" keyPoints="0;1;1" keyTimes="0;0.2;1" calcMode="linear" dur="5s" begin="0.8s" repeatCount="indefinite" />
+      </circle>
+      <!-- Pulse 3: 3 -> 4 (Drop) -->
+      <circle r="5" opacity="0" fill="#38BDF8">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.85;0.95;1" dur="5s" begin="1.7s" repeatCount="indefinite" />
+        <animateMotion path="M 645 178 V 226" keyPoints="0;1;1" keyTimes="0;0.2;1" calcMode="linear" dur="5s" begin="1.7s" repeatCount="indefinite" />
+      </circle>
+      <!-- Pulse 4: 4 -> 5 -->
+      <circle r="5" opacity="0" fill="#38BDF8">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.85;0.95;1" dur="5s" begin="2.6s" repeatCount="indefinite" />
+        <animateMotion path="M 524 287 H 486" keyPoints="0;1;1" keyTimes="0;0.2;1" calcMode="linear" dur="5s" begin="2.6s" repeatCount="indefinite" />
+      </circle>
+      <!-- Pulse 5: 5 -> 6 -->
+      <circle r="5" opacity="0" fill="#c084fc">
+        <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.05;0.85;0.95;1" dur="5s" begin="3.5s" repeatCount="indefinite" />
+        <animateMotion path="M 264 287 H 226" keyPoints="0;1;1" keyTimes="0;0.2;1" calcMode="linear" dur="5s" begin="3.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+
+    <!-- Bottom Architectural Guarantee Banner -->
+    <rect x="36" y="368" width="698" height="74" rx="16" fill="#0d2133" stroke="#254b6d" />
+    <circle cx="64" cy="405" r="8" fill="#10B981" />
+    <text class="sans" x="84" y="400" fill="#ffffff" font-size="15.5" font-weight="700">On-device SQLite is authoritative</text>
+    <text class="sans" x="84" y="423" fill="#99bad2" font-size="13.5">AI proposals require explicit user review before state mutations.</text>
+    
+    <rect x="528" y="386" width="188" height="38" rx="10" fill="#15364e" stroke="#366b96" />
+    <text class="sans" x="622" y="410" fill="#e2f1fc" font-size="13" font-weight="750" text-anchor="middle">DEVICE AUTHORITATIVE</text>
+
+    <!-- Footer Note -->
+    <text class="sans" x="38" y="474" fill="#6f94b0" font-size="13">Strict contract typing · Zero cloud lock-in · Full offline functionality</text>
+  </g>
+</svg>

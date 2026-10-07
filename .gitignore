@@ -21,3 +21,6 @@ local-state/
 apps/mobile/android/
 apps/mobile/ios/
 scripts/build/evidence/local-*
+
+.preview/
+**/.preview/
