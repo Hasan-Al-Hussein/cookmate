@@ -58,43 +58,55 @@ CookMate solves the daily friction of: **“What should I cook, when should I co
 
 ## Product journey
 
-These production captures illustrate the end-to-end cooking, planning, and shopping lifecycle:
+These captures show the actual application running on the 428 × 926 mobile viewport across its core workflows:
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <strong>01: Discover & Filter Recipes</strong><br /><br />
-      <img src="docs/media/screenshots/01-recipe-plan-assistant.png" width="100%" alt="CookMate recipe discovery and planning assistant" />
-      <p>Browse 100 photo-rich recipes with instant multi-facet filtering across cuisines, dietary tags, and pantry ingredients.</p>
+      <strong>01: Discover & Browse 100 Recipes</strong><br /><br />
+      <img src="docs/media/screenshots/01-discover-home.png" width="100%" alt="CookMate Discover Home view with curated recipe cards" />
+      <p>Clean editorial discovery featuring photo-rich recipe cards, fast category chips, and instant search entry.</p>
     </td>
     <td width="50%" valign="top">
-      <strong>02: Inspect Grounded Details & Plan</strong><br /><br />
-      <img src="docs/media/screenshots/02-discover-details-plan.png" width="100%" alt="Recipe details and weekly meal scheduling" />
-      <p>Inspect structured ingredient lists, ordered instructions, notes, and schedule directly into breakfast, lunch, or dinner slots.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <strong>03: Dynamic Grocery Shopping Aggregation</strong><br /><br />
-      <img src="docs/media/screenshots/03-shopping-inventory.png" width="100%" alt="Consolidated grocery shopping list" />
-      <p>Generate a consolidated grocery checklist from scheduled meals, merge duplicate ingredients, and check off in-store items.</p>
-    </td>
-    <td width="50%" valign="top">
-      <strong>04: Editorial Recipe Experience</strong><br /><br />
-      <img src="docs/media/screenshots/04-editorial-recipe.png" width="100%" alt="Editorial recipe layout" />
-      <p>Clean typographic presentation tailored for kitchen use with scalable text, high-contrast states, and distraction-free cooking mode.</p>
+      <strong>02: Multi-Ingredient Intersection Filtering</strong><br /><br />
+      <img src="docs/media/screenshots/02-filter-ingredients.png" width="100%" alt="Multi-ingredient filtering with search" />
+      <p>Filter by specific pantry items with strict "Match all selected ingredients" intersection logic and instant count updates.</p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <strong>05: Comprehensive Home Feed & Collections</strong><br /><br />
-      <img src="docs/media/screenshots/05-home-editorial.png" width="100%" alt="Editorial home view" />
-      <p>Personalized favorites, recent views, quick meal slots, and seasonal inspiration stored privately on device.</p>
+      <strong>03: Grounded Recipe Details & Quantities</strong><br /><br />
+      <img src="docs/media/screenshots/03-recipe-details.png" width="100%" alt="Recipe details view showing exact ingredients and measurements" />
+      <p>Detailed view with exact ingredient amounts, provenance links, video button, and direct "Add to plan" action.</p>
     </td>
     <td width="50%" valign="top">
-      <strong>06: Deep Category Exploration</strong><br /><br />
-      <img src="docs/media/screenshots/06-discovery-sections.png" width="100%" alt="Discovery sections by cuisine and category" />
-      <p>Structured taxonomy navigation across global cuisines, vegetarian/vegan tags, preparation times, and difficulty levels.</p>
+      <strong>04: Distraction-Free Cooking View</strong><br /><br />
+      <img src="docs/media/screenshots/04-cooking-mode.png" width="100%" alt="Step-by-step cooking passage reader" />
+      <p>Focused cooking reader with large typography, step-by-step passage progression, and embedded ingredient quick-sheet.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>05: Weekly Meal Calendar & Slotting</strong><br /><br />
+      <img src="docs/media/screenshots/05-weekly-meal-plan.png" width="100%" alt="Weekly meal plan showing breakfast, lunch, and dinner slots" />
+      <p>7-day calendar view organizing Breakfast, Lunch, and Dinner slots with conflict guards and consequence reviews.</p>
+    </td>
+    <td width="50%" valign="top">
+      <strong>06: Dynamic Grocery Shopping Checklist</strong><br /><br />
+      <img src="docs/media/screenshots/06-shopping-checklist.png" width="100%" alt="Consolidated shopping checklist with ingredient sources" />
+      <p>Automatic ingredient aggregation from selected meals, merged quantities, manual item additions, and checked state.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <strong>07: Dark Mode · Discover Home</strong><br /><br />
+      <img src="docs/media/screenshots/07-dark-mode-discover.png" width="100%" alt="Dark mode recipe discovery view" />
+      <p>Warm dark-mode theme designed for comfortable evening kitchen usage, fully compliant with WCAG AA contrast standards.</p>
+    </td>
+    <td width="50%" valign="top">
+      <strong>08: Dark Mode · Recipe Details</strong><br /><br />
+      <img src="docs/media/screenshots/08-dark-mode-recipe.png" width="100%" alt="Dark mode recipe details view" />
+      <p>High-contrast dark presentation preserving authentic food imagery and legible typography across all components.</p>
     </td>
   </tr>
 </table>
@@ -132,7 +144,7 @@ These production captures illustrate the end-to-end cooking, planning, and shopp
                     +------------------------------------------+
                     |             Google Gemini API            |
                     |  (gemini-2.5-flash / grounded inference) |
-                    +------------------------------------------+
+                    +--------------------+---------------------+
 ```
 
 ### Key Architectural Invariants
